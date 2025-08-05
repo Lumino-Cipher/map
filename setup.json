@@ -1,0 +1,1787 @@
+[
+  {
+    "name": "China",
+    "territories": [
+      {
+        "name": "Szechwan",
+        "units": {
+          "INF 1940": 6,
+          "INF 1942": 2,
+          "FTR 1940": 1,
+          "FTR 1942": 1
+        }
+      },
+      {
+        "name": "Yunnan",
+        "units": {
+          "INF 1940": 4,
+          "INF 1942": 2
+        }
+      },
+      {
+        "name": "Hunan",
+        "units": {
+          "INF 1940": 2
+        }
+      },
+      {
+        "name": "Kweichow",
+        "units": {
+          "INF 1940": 2,
+          "INF 1942": 1
+        }
+      },
+      {
+        "name": "Anhwei",
+        "units": {
+          "INF 1942": 2
+        }
+      },
+      {
+        "name": "Shensi",
+        "units": {
+          "INF 1940": 1,
+          "INF 1942": 2
+        }
+      },
+      {
+        "name": "Suiyuan",
+        "units": {
+          "INF 1940": 2
+        }
+      },
+      {
+        "name": "",
+        "units": {}
+      }
+    ]
+  },
+  {
+    "name": "Commonwealth",
+    "territories": [
+      {
+        "name": "New South Wales",
+        "units": {
+          "INF 1940": 2,
+          "INF 1942": 2,
+          "AAA 1940": 2,
+          "AAA 1942": 1,
+          "FTR 1942": 1,
+          "Minor Industrial Complex 1940": 1,
+          "Minor Industrial Complex 1942": 1,
+          "Naval Base": 1
+        }
+      },
+      {
+        "name": "Queensland",
+        "units": {
+          "INF 1940": 2,
+          "INF 1942": 2,
+          "ART 1940": 1,
+          "ART 1942": 1,
+          "FTR 1940": 1,
+          "FTR 1942": 1,
+          "Air Base": 1,
+          "Naval Base": 1
+        }
+      },
+      {
+        "name": "New Zealand",
+        "units": {
+          "INF 1940": 1,
+          "INF 1942": 1,
+          "FTR 1940": 2,
+          "FTR 1942": 1,
+          "Air Base": 1,
+          "Naval Base": 1
+        }
+      },
+      {
+        "name": "Union of South Africa",
+        "units": {
+          "INF 1940": 1,
+          "INF 1942": 1,
+          "ART 1940": 1,
+          "ART 1942": 1,
+          "Minor Industrial Complex 1940": 1,
+          "Minor Industrial Complex 1942": 1,
+          "Naval Base": 1
+        }
+      },
+      {
+        "name": "New Brunswick Nova Scotia",
+        "units": {
+          "INF 1942": 1,
+          "FTR 1942": 1,
+          "Air Base in 1942 Setup": 1,
+          "Naval Base": 1
+        }
+      },
+      {
+        "name": "Northern Territory",
+        "units": {
+          "INF 1942": 2,
+          "AAA 1942": 1
+        }
+      },
+      {
+        "name": "Malaya",
+        "units": {
+          "INF 1940": 1
+        }
+      },
+      {
+        "name": "Solomon Islands",
+        "units": {
+          "INF 1942": 1
+        }
+      },
+      {
+        "name": "New Guinea",
+        "units": {
+          "INF 1942": 1
+        }
+      },
+      {
+        "name": "Ontario",
+        "units": {
+          "INF 1940": 1,
+          "ART 1940": 1
+        }
+      },
+      {
+        "name": "Quebec",
+        "units": {
+          "INF 1940": 1,
+          "TANK 1940": 1,
+          "TANK 1942": 1,
+          "Minor Industrial Complex 1940": 1,
+          "Minor Industrial Complex 1942": 1
+        }
+      },
+      {
+        "name": "Scotland",
+        "units": {
+          "INF 1940": 2,
+          "INF 1942": 2,
+          "ART 1942": 1
+        }
+      },
+      {
+        "name": "India",
+        "units": {
+          "INF 1940": 1,
+          "INF 1942": 1
+        }
+      },
+      {
+        "name": "54",
+        "units": {
+          "DTR 1942": 1
+        }
+      },
+      {
+        "name": "61",
+        "units": {
+          "TPT 1942": 1
+        }
+      },
+      {
+        "name": "62",
+        "units": {
+          "DTR 1940": 1,
+          "DTR 1942": 1,
+          "TPT 1940": 1,
+          "TPT 1942": 1
+        }
+      },
+      {
+        "name": "63",
+        "units": {
+          "CSR 1940": 1,
+          "CSR 1942": 1
+        }
+      },
+      {
+        "name": "106",
+        "units": {
+          "DTR 1940": 1,
+          "DTR 1942": 1,
+          "TPT 1940": 1,
+          "TPT 1942": 1
+        }
+      },
+      {
+        "name": "",
+        "units": {}
+      }
+    ]
+  },
+  {
+    "name": "France",
+    "territories": [
+      {
+        "name": "France",
+        "units": {
+          "INF 1940": 6,
+          "ART 1940": 1,
+          "AAA 1940": 1,
+          "TANK 1940": 1,
+          "FTR 1940": 1,
+          "Minor Industrial Complex 1942": 1,
+          "Major Industrial Complex 1940": 1,
+          "Air Base": 1
+        }
+      },
+      {
+        "name": "United Kingdom",
+        "units": {
+          "INF 1940": 2,
+          "INF 1942": 2,
+          "FTR 1940": 1,
+          "FTR 1942": 1
+        }
+      },
+      {
+        "name": "Normandy Bordeaux",
+        "units": {
+          "INF 1940": 2,
+          "ART 1940": 1,
+          "Minor Industrial Complex 1940": 1,
+          "Minor Industrial Complex 1942": 1,
+          "Naval Base": 1
+        }
+      },
+      {
+        "name": "France City of Vichy",
+        "units": {
+          "INF 1940": 2,
+          "ART 1940": 1,
+          "Minor Industrial Complex 1940": 1,
+          "Minor Industrial Complex 1942": 1,
+          "Naval Base": 1
+        }
+      },
+      {
+        "name": "French West Africa",
+        "units": {
+          "INF 1940": 1,
+          "INF 1942": 1
+        }
+      },
+      {
+        "name": "Morocco",
+        "units": {
+          "INF 1940": 1,
+          "INF 1942": 1
+        }
+      },
+      {
+        "name": "Algeria",
+        "units": {
+          "INF 1940": 1,
+          "INF 1942": 1
+        }
+      },
+      {
+        "name": "Tunisia",
+        "units": {
+          "INF 1940": 1
+        }
+      },
+      {
+        "name": "Syria",
+        "units": {
+          "INF 1940": 1,
+          "INF 1942": 1
+        }
+      },
+      {
+        "name": "French Indo China",
+        "units": {
+          "INF 1940": 1
+        }
+      },
+      {
+        "name": "72",
+        "units": {
+          "DTR 1940": 1,
+          "DTR 1942": 1
+        }
+      },
+      {
+        "name": "83",
+        "units": {
+          "CSR 1942": 1
+        }
+      },
+      {
+        "name": "93",
+        "units": {
+          "CSR 1940": 1,
+          "DTR 1940": 1
+        }
+      },
+      {
+        "name": "110",
+        "units": {
+          "CSR 1940": 1
+        }
+      },
+      {
+        "name": "",
+        "units": {}
+      }
+    ]
+  },
+  {
+    "name": "US",
+    "territories": [
+      {
+        "name": "Eastern United States",
+        "units": {
+          "INF 1940": 1,
+          "INF 1942": 2,
+          "ART 1940": 1,
+          "ART 1942": 1,
+          "MECH 1942": 2,
+          "AAA 1940": 2,
+          "AAA 1942": 1,
+          "TANK 1942": 1,
+          "FTR 1940": 1,
+          "FTR 1942": 1,
+          "SBR 1942": 1,
+          "Minor Industrial Complex 1940": 1,
+          "Major Industrial Complex 1942": 1,
+          "Air Base": 1,
+          "Naval Base": 1
+        }
+      },
+      {
+        "name": "Central United States",
+        "units": {
+          "INF 1940": 1,
+          "INF 1942": 1,
+          "MECH 1940": 3,
+          "TANK 1940": 1,
+          "SBR 1940": 1,
+          "Minor Industrial Complex 1940": 1,
+          "Major Industrial Complex 1942": 1
+        }
+      },
+      {
+        "name": "Western United States",
+        "units": {
+          "INF 1940": 2,
+          "INF 1942": 6,
+          "ART 1940": 1,
+          "ART 1942": 1,
+          "MECH 1940": 1,
+          "MECH 1942": 1,
+          "AAA 1940": 2,
+          "AAA 1942": 1,
+          "TANK 1942": 1,
+          "FTR 1940": 1,
+          "FTR 1942": 2,
+          "TBR 1942": 1,
+          "SBR 1942": 1,
+          "Minor Industrial Complex 1940": 1,
+          "Major Industrial Complex 1942": 1,
+          "Air Base": 1,
+          "Naval Base": 1
+        }
+      },
+      {
+        "name": "Alaska",
+        "units": {
+          "INF 1942": 1
+        }
+      },
+      {
+        "name": "Hawaiian Islands",
+        "units": {
+          "INF 1940": 2,
+          "INF 1942": 2,
+          "ART 1942": 1,
+          "AAA 1942": 1,
+          "FTR 1940": 2,
+          "FTR 1942": 2,
+          "Air Base": 1,
+          "Naval Base": 1
+        }
+      },
+      {
+        "name": "Iceland",
+        "units": {
+          "INF 1942": 1,
+          "Air Base": 1
+        }
+      },
+      {
+        "name": "Midway",
+        "units": {
+          "INF 1942": 1,
+          "FTR 1942": 1,
+          "Air Base": 1
+        }
+      },
+      {
+        "name": "Wake Island",
+        "units": {
+          "Air Base": 1
+        }
+      },
+      {
+        "name": "Guam",
+        "units": {
+          "Air Base": 1
+        }
+      },
+      {
+        "name": "Philippines",
+        "units": {
+          "INF 1940": 2,
+          "FTR 1940": 1,
+          "Air Base": 1,
+          "Naval Base": 1
+        }
+      },
+      {
+        "name": "Johnston Island",
+        "units": {
+          "INF 1942": 1
+        }
+      },
+      {
+        "name": "101",
+        "units": {
+          "CSR 1940": 1,
+          "DTR 1942": 1,
+          "TPT 1940": 1,
+          "TPT 1942": 2
+        }
+      },
+      {
+        "name": "10",
+        "units": {
+          "FTR 1940": 1,
+          "TBR 1940": 1,
+          "BTS 1940": 1,
+          "BTS 1942": 1,
+          "ACC 1940": 1,
+          "CSR 1940": 1,
+          "CSR 1942": 1,
+          "DTR 1940": 1,
+          "DTR 1942": 1,
+          "TPT 1940": 1,
+          "TPT 1942": 2,
+          "SUB 1942": 1
+        }
+      },
+      {
+        "name": "12",
+        "units": {
+          "CSR 1942": 1
+        }
+      },
+      {
+        "name": "13",
+        "units": {
+          "BTS 1942": 1,
+          "DTR 1942": 1
+        }
+      },
+      {
+        "name": "26",
+        "units": {
+          "FTR 1942": 1,
+          "ACC 1942": 1,
+          "CSR 1940": 1,
+          "DTR 1940": 1,
+          "DTR 1942": 1,
+          "TPT 1940": 1,
+          "TPT 1942": 1,
+          "SUB 1940": 1,
+          "SUB 1942": 2
+        }
+      },
+      {
+        "name": "28",
+        "units": {
+          "FTR 1942": 1,
+          "TBR 1942": 1,
+          "ACC 1942": 1
+        }
+      },
+      {
+        "name": "35",
+        "units": {
+          "DTR 1940": 1,
+          "SUB 1940": 1
+        }
+      },
+      {
+        "name": "",
+        "units": {}
+      }
+    ]
+  },
+  {
+    "name": "Italy",
+    "territories": [
+      {
+        "name": "Southern Italy",
+        "units": {
+          "INF 1940": 6,
+          "INF 1942": 2,
+          "AAA 1940": 2,
+          "AAA 1942": 1,
+          "FTR 1940": 2,
+          "FTR 1942": 1,
+          "TBR 1942": 1,
+          "Minor Industrial Complex 1940": 1,
+          "Minor Industrial Complex 1942": 1,
+          "Air Base": 1,
+          "Naval Base": 1
+        }
+      },
+      {
+        "name": "Northern Italy",
+        "units": {
+          "INF 1940": 2,
+          "INF 1942": 1,
+          "ART 1940": 2,
+          "ART 1942": 1,
+          "AAA 1940": 2,
+          "AAA 1942": 1,
+          "TANK 1940": 1,
+          "TANK 1942": 1,
+          "FTR 1942": 1,
+          "SBR 1940": 1,
+          "SBR 1942": 1,
+          "Major Industrial Complex 1940": 1,
+          "Major Industrial Complex 1942": 1
+        }
+      },
+      {
+        "name": "Albania",
+        "units": {
+          "INF 1940": 2,
+          "INF 1942": 1,
+          "TANK 1940": 1,
+          "TANK 1942": 1
+        }
+      },
+      {
+        "name": "Italian Libya",
+        "units": {
+          "INF 1940": 1,
+          "INF 1942": 2,
+          "ART 1940": 1,
+          "FTR 1942": 1
+        }
+      },
+      {
+        "name": "Italian Libya City of Tobruk",
+        "units": {
+          "INF 1940": 3,
+          "INF 1942": 1,
+          "ART 1940": 1,
+          "ART 1942": 1,
+          "MECH 1940": 1,
+          "TANK 1940": 1
+        }
+      },
+      {
+        "name": "Italian Somaliland",
+        "units": {
+          "INF 1940": 1
+        }
+      },
+      {
+        "name": "Ethiopia",
+        "units": {
+          "INF 1940": 2,
+          "ART 1940": 1
+        }
+      },
+      {
+        "name": "Greece",
+        "units": {
+          "INF 1942": 1,
+          "Control Marker 1942": "TRUE"
+        }
+      },
+      {
+        "name": "Tunisia",
+        "units": {
+          "MECH 1942": 1,
+          "Control Marker 1942": "TRUE"
+        }
+      },
+      {
+        "name": "95",
+        "units": {
+          "CSR 1940": 1,
+          "CSR 1942": 1,
+          "DTR 1940": 1,
+          "TPT 1940": 1,
+          "TPT 1942": 1,
+          "SUB 1940": 1
+        }
+      },
+      {
+        "name": "96",
+        "units": {
+          "DTR 1940": 1,
+          "TPT 1940": 1
+        }
+      },
+      {
+        "name": "97",
+        "units": {
+          "BTS 1940": 1,
+          "BTS 1942": 1,
+          "CSR 1940": 1,
+          "TPT 1940": 1
+        }
+      },
+      {
+        "name": "",
+        "units": {}
+      }
+    ]
+  },
+  {
+    "name": "Germany",
+    "territories": [
+      {
+        "name": "Baltic States",
+        "units": {
+          "INF 1942": 1,
+          "TANK 1942": 1,
+          "Control Marker 1942": "TRUE"
+        }
+      },
+      {
+        "name": "Belarus",
+        "units": {
+          "INF 1942": 3,
+          "TANK 1942": 1,
+          "Control Marker 1942": "TRUE"
+        }
+      },
+      {
+        "name": "Bessarabia",
+        "units": {
+          "Control Marker 1942": "TRUE"
+        }
+      },
+      {
+        "name": "Bulgaria",
+        "units": {
+          "INF 1942": 1,
+          "TANK 1942": 1,
+          "Control Marker 1942": "TRUE"
+        }
+      },
+      {
+        "name": "Eastern Poland",
+        "units": {
+          "INF 1942": 2,
+          "FTR 1942": 1,
+          "TBR 1942": 1,
+          "Control Marker 1942": "TRUE"
+        }
+      },
+      {
+        "name": "Finland",
+        "units": {
+          "INF 1942": 3,
+          "Control Marker 1942": "TRUE"
+        }
+      },
+      {
+        "name": "France",
+        "units": {
+          "INF 1942": 1,
+          "AAA 1942": 1,
+          "TANK 1942": 2,
+          "Minor Industrial Complex 1942": 1,
+          "Control Marker 1942": "TRUE"
+        }
+      },
+      {
+        "name": "Greece",
+        "units": {
+          "INF 1942": 1,
+          "MECH 1942": 1
+        }
+      },
+      {
+        "name": "Normandy Bordeaux",
+        "units": {
+          "INF 1942": 1,
+          "ART 1942": 1,
+          "TANK 1942": 1,
+          "Control Marker 1942": "TRUE"
+        }
+      },
+      {
+        "name": "Russia City of Smolensk",
+        "units": {
+          "INF 1942": 3,
+          "ART 1942": 1,
+          "TANK 1942": 1,
+          "Control Marker 1942": "TRUE"
+        }
+      },
+      {
+        "name": "France City of Vichy",
+        "units": {
+          "INF 1942": 1,
+          "TANK 1942": 1,
+          "Control Marker 1942": "TRUE"
+        }
+      },
+      {
+        "name": "Italian Libya City of Tobruk",
+        "units": {
+          "INF 1942": 1,
+          "MECH 1942": 1,
+          "TANK 1942": 1
+        }
+      },
+      {
+        "name": "Ukraine",
+        "units": {
+          "INF 1942": 3,
+          "ART 1942": 1,
+          "TANK 1942": 1,
+          "FTR 1942": 1,
+          "Minor Industrial Complex 1942": 1,
+          "Control Marker 1942": "TRUE"
+        }
+      },
+      {
+        "name": "Western Ukraine",
+        "units": {
+          "INF 1942": 1,
+          "Control Marker 1942": "TRUE"
+        }
+      },
+      {
+        "name": "Yugoslavia",
+        "units": {
+          "TANK 1942": 1,
+          "Control Marker 1942": "TRUE"
+        }
+      },
+      {
+        "name": "Crete",
+        "units": {
+          "Control Marker 1942": "TRUE"
+        }
+      },
+      {
+        "name": "93",
+        "units": {
+          "DTR 1942": 1,
+          "TPT 1942": 1
+        }
+      },
+      {
+        "name": "97",
+        "units": {
+          "SUB 1942": 2
+        }
+      },
+      {
+        "name": "Germany",
+        "units": {
+          "INF 1940": 11,
+          "INF 1942": 3,
+          "ART 1940": 3,
+          "ART 1942": 3,
+          "AAA 1940": 3,
+          "AAA 1942": 1,
+          "TANK 1942": 2,
+          "FTR 1942": 1,
+          "TBR 1940": 1,
+          "SBR 1940": 2,
+          "SBR 1942": 1,
+          "Major Industrial Complex 1940": 1,
+          "Major Industrial Complex 1942": 1
+        }
+      },
+      {
+        "name": "Western Germany",
+        "units": {
+          "INF 1940": 3,
+          "INF 1942": 1,
+          "ART 1940": 1,
+          "MECH 1940": 4,
+          "AAA 1940": 3,
+          "AAA 1942": 1,
+          "TANK 1942": 1,
+          "FTR 1940": 2,
+          "FTR 1942": 1,
+          "TBR 1940": 3,
+          "TBR 1942": 1,
+          "Major Industrial Complex 1940": 1,
+          "Major Industrial Complex 1942": 1,
+          "Air Base": 1,
+          "Naval Base": 1
+        }
+      },
+      {
+        "name": "Denmark",
+        "units": {
+          "INF 1940": 2,
+          "INF 1942": 1
+        }
+      },
+      {
+        "name": "Norway",
+        "units": {
+          "INF 1940": 3,
+          "INF 1942": 2,
+          "FTR 1940": 1,
+          "FTR 1942": 1
+        }
+      },
+      {
+        "name": "Poland",
+        "units": {
+          "INF 1940": 3,
+          "MECH 1942": 4,
+          "TANK 1940": 1,
+          "TBR 1940": 1
+        }
+      },
+      {
+        "name": "Holland Belgium",
+        "units": {
+          "INF 1940": 4,
+          "INF 1942": 1,
+          "ART 1940": 2,
+          "TANK 1940": 3,
+          "TANK 1942": 1,
+          "FTR 1940": 1,
+          "FTR 1942": 1,
+          "TBR 1942": 1
+        }
+      },
+      {
+        "name": "Greater Southern Germany",
+        "units": {
+          "INF 1940": 6,
+          "INF 1942": 1,
+          "ART 1940": 2,
+          "TANK 1940": 3
+        }
+      },
+      {
+        "name": "Slovakia Hungary",
+        "units": {
+          "INF 1940": 2,
+          "INF 1942": 1,
+          "TANK 1940": 1,
+          "FTR 1940": 1
+        }
+      },
+      {
+        "name": "Romania",
+        "units": {
+          "INF 1940": 2,
+          "INF 1942": 2,
+          "TANK 1940": 1,
+          "TANK 1942": 1,
+          "FTR 1942": 1
+        }
+      },
+      {
+        "name": "103",
+        "units": {
+          "SUB 1940": 1
+        }
+      },
+      {
+        "name": "108",
+        "units": {
+          "SUB 1940": 1
+        }
+      },
+      {
+        "name": "113",
+        "units": {
+          "BTS 1940": 1,
+          "CSR 1942": 1,
+          "DTR 1940": 1,
+          "DTR 1942": 1,
+          "TPT 1942": 1,
+          "SUB 1942": 2
+        }
+      },
+      {
+        "name": "114",
+        "units": {
+          "CSR 1940": 1,
+          "TPT 1940": 1
+        }
+      },
+      {
+        "name": "117",
+        "units": {
+          "SUB 1940": 1
+        }
+      },
+      {
+        "name": "118",
+        "units": {
+          "SUB 1940": 1
+        }
+      },
+      {
+        "name": "124",
+        "units": {
+          "SUB 1940": 1
+        }
+      },
+      {
+        "name": "",
+        "units": {}
+      }
+    ]
+  },
+  {
+    "name": "USSR",
+    "territories": [
+      {
+        "name": "Russia City of Moscow",
+        "units": {
+          "INF 1940": 3,
+          "INF 1942": 4,
+          "ART 1940": 1,
+          "ART 1942": 1,
+          "MECH 1940": 1,
+          "MECH 1942": 1,
+          "AAA 1940": 2,
+          "AAA 1942": 1,
+          "TANK 1940": 1,
+          "TANK 1942": 2,
+          "FTR 1940": 1,
+          "FTR 1942": 1,
+          "TBR 1940": 1,
+          "TBR 1942": 1,
+          "Major Industrial Complex 1940": 1,
+          "Major Industrial Complex 1942": 1,
+          "Air Base": 1
+        }
+      },
+      {
+        "name": "Russia City of Archangel",
+        "units": {
+          "INF 1940": 1,
+          "INF 1942": 4,
+          "TANK 1942": 1
+        }
+      },
+      {
+        "name": "Karelia",
+        "units": {
+          "INF 1940": 2,
+          "INF 1942": 1,
+          "FTR 1940": 1,
+          "FTR 1942": 1
+        }
+      },
+      {
+        "name": "Russia City of Leningrad",
+        "units": {
+          "INF 1940": 6,
+          "INF 1942": 4,
+          "ART 1940": 1,
+          "ART 1942": 1,
+          "AAA 1940": 2,
+          "AAA 1942": 2,
+          "Minor Industrial Complex 1940": 1,
+          "Minor Industrial Complex 1942": 1,
+          "Air Base": 1,
+          "Naval Base": 1
+        }
+      },
+      {
+        "name": "Vyborg",
+        "units": {
+          "INF 1940": 3,
+          "INF 1942": 1
+        }
+      },
+      {
+        "name": "Baltic States",
+        "units": {
+          "INF 1940": 3
+        }
+      },
+      {
+        "name": "Eastern Poland",
+        "units": {
+          "INF 1940": 2
+        }
+      },
+      {
+        "name": "Belarus",
+        "units": {
+          "INF 1940": 3
+        }
+      },
+      {
+        "name": "Western Ukraine",
+        "units": {
+          "INF 1940": 1,
+          "ART 1940": 1
+        }
+      },
+      {
+        "name": "Bessarabia",
+        "units": {
+          "INF 1940": 2
+        }
+      },
+      {
+        "name": "Ukraine",
+        "units": {
+          "INF 1940": 3,
+          "Minor Industrial Complex 1940": 1,
+          "Minor Industrial Complex 1942": 1
+        }
+      },
+      {
+        "name": "Caucasus",
+        "units": {
+          "INF 1940": 2,
+          "INF 1942": 1
+        }
+      },
+      {
+        "name": "Russia City of Stalingrad",
+        "units": {
+          "MECH 1940": 1,
+          "MECH 1942": 1,
+          "AAA 1942": 1,
+          "TANK 1940": 1,
+          "TANK 1942": 1,
+          "Minor Industrial Complex 1940": 1,
+          "Minor Industrial Complex 1942": 1
+        }
+      },
+      {
+        "name": "Yakut SSR",
+        "units": {
+          "INF 1940": 6
+        }
+      },
+      {
+        "name": "Buryatia",
+        "units": {
+          "INF 1940": 6,
+          "INF 1942": 2
+        }
+      },
+      {
+        "name": "Sakha",
+        "units": {
+          "INF 1940": 6,
+          "AAA 1940": 2
+        }
+      },
+      {
+        "name": "115",
+        "units": {
+          "CSR 1940": 1,
+          "SUB 1940": 1
+        }
+      },
+      {
+        "name": "127",
+        "units": {
+          "SUB 1940": 1,
+          "SUB 1942": 1
+        }
+      },
+      {
+        "name": "Russia City of Bryansk",
+        "units": {
+          "INF 1942": 4,
+          "ART 1942": 1
+        }
+      },
+      {
+        "name": "Evenkiyskiy",
+        "units": {
+          "INF 1942": 2
+        }
+      },
+      {
+        "name": "Kazakh SSR",
+        "units": {
+          "INF 1942": 1
+        }
+      },
+      {
+        "name": "Novosibirsk",
+        "units": {
+          "INF 1942": 1
+        }
+      },
+      {
+        "name": "Russia City of Rostov",
+        "units": {
+          "INF 1942": 4,
+          "ART 1942": 1
+        }
+      },
+      {
+        "name": "Siberia",
+        "units": {
+          "INF 1942": 2
+        }
+      },
+      {
+        "name": "Urals",
+        "units": {
+          "TANK 1942": 3,
+          "FTR 1942": 1
+        }
+      },
+      {
+        "name": "Yakut SSR",
+        "units": {
+          "INF 1942": 1
+        }
+      },
+      {
+        "name": "Northwest Iran",
+        "units": {
+          "INF 1942": 1,
+          "Control Marker 1942": "TRUE"
+        }
+      },
+      {
+        "name": "100",
+        "units": {
+          "CSR 1940": 1,
+          "CSR 1942": 1,
+          "DTR 1940": 1,
+          "DTR 1942": 1
+        }
+      },
+      {
+        "name": "",
+        "units": {}
+      }
+    ]
+  },
+  {
+    "name": "UK",
+    "territories": [
+      {
+        "name": "United Kingdom",
+        "units": {
+          "INF 1940": 2,
+          "INF 1942": 2,
+          "ART 1942": 1,
+          "MECH 1940": 1,
+          "AAA 1940": 4,
+          "AAA 1942": 1,
+          "TANK 1942": 1,
+          "FTR 1940": 2,
+          "FTR 1942": 2,
+          "SBR 1940": 1,
+          "SBR 1942": 1,
+          "Major Industrial Complex 1940": 1,
+          "Major Industrial Complex 1942": 1,
+          "Air Base": 1,
+          "Naval Base": 1
+        }
+      },
+      {
+        "name": "France",
+        "units": {
+          "ART 1940": 1,
+          "TANK 1940": 1
+        }
+      },
+      {
+        "name": "Scotland",
+        "units": {
+          "AAA 1940": 1,
+          "FTR 1940": 1,
+          "TBR 1942": 1,
+          "Air Base": 1
+        }
+      },
+      {
+        "name": "Ireland",
+        "units": {
+          "Air Base": 1
+        }
+      },
+      {
+        "name": "Gibraltar",
+        "units": {
+          "FTR 1940": 1,
+          "Naval Base": 1
+        }
+      },
+      {
+        "name": "Malta",
+        "units": {
+          "INF 1940": 1,
+          "AAA 1940": 1,
+          "AAA 1942": 1,
+          "FTR 1940": 1,
+          "FTR 1942": 1
+        }
+      },
+      {
+        "name": "Egypt City of El Alamein",
+        "units": {
+          "INF 1940": 2,
+          "ART 1940": 1,
+          "ART 1942": 1,
+          "MECH 1942": 1,
+          "TANK 1940": 1,
+          "TANK 1942": 1
+        }
+      },
+      {
+        "name": "Egypt",
+        "units": {
+          "INF 1940": 3,
+          "INF 1942": 2,
+          "ART 1940": 1,
+          "ART 1942": 1,
+          "MECH 1940": 1,
+          "MECH 1942": 1,
+          "TBR 1940": 1,
+          "TBR 1942": 1,
+          "Naval Base": 1
+        }
+      },
+      {
+        "name": "Anglo-Egyptian Sudan",
+        "units": {
+          "INF 1940": 1,
+          "INF 1942": 1
+        }
+      },
+      {
+        "name": "Trans-Jordan",
+        "units": {
+          "INF 1942": 1
+        }
+      },
+      {
+        "name": "West India",
+        "units": {
+          "INF 1940": 1,
+          "INF 1942": 1
+        }
+      },
+      {
+        "name": "India",
+        "units": {
+          "INF 1940": 6,
+          "INF 1942": 4,
+          "ART 1940": 1,
+          "ART 1942": 1,
+          "AAA 1940": 3,
+          "AAA 1942": 2,
+          "TANK 1940": 1,
+          "TANK 1942": 1,
+          "FTR 1940": 1,
+          "FTR 1942": 1,
+          "Major Industrial Complex 1940": 1,
+          "Major Industrial Complex 1942": 1,
+          "Air Base": 1,
+          "Naval Base": 1
+        }
+      },
+      {
+        "name": "Burma",
+        "units": {
+          "INF 1940": 2,
+          "INF 1942": 1,
+          "FTR 1940": 1,
+          "TBR 1942": 1
+        }
+      },
+      {
+        "name": "Malaya",
+        "units": {
+          "INF 1940": 3,
+          "Naval Base": 1
+        }
+      },
+      {
+        "name": "Kwangtung",
+        "units": {
+          "INF 1940": 2,
+          "Naval Base": 1
+        }
+      },
+      {
+        "name": "Iran",
+        "units": {
+          "INF 1942": 1,
+          "Control Marker 1942": "TRUE"
+        }
+      },
+      {
+        "name": "Eastern Iran",
+        "units": {
+          "Control Marker 1942": "TRUE"
+        }
+      },
+      {
+        "name": "Ethiopia",
+        "units": {
+          "Control Marker 1942": "TRUE"
+        }
+      },
+      {
+        "name": "Italian Somaliland",
+        "units": {
+          "Control Marker 1942": "TRUE"
+        }
+      },
+      {
+        "name": "Iraq",
+        "units": {
+          "INF 1942": 1,
+          "Control Marker 1942": "TRUE"
+        }
+      },
+      {
+        "name": "37",
+        "units": {
+          "BTS 1940": 1
+        }
+      },
+      {
+        "name": "39",
+        "units": {
+          "FTR 1942": 1,
+          "ACC 1942": 1,
+          "CSR 1940": 1,
+          "CSR 1942": 1,
+          "DTR 1940": 1,
+          "TPT 1940": 1,
+          "TPT 1942": 1
+        }
+      },
+      {
+        "name": "71",
+        "units": {
+          "DTR 1940": 1
+        }
+      },
+      {
+        "name": "80",
+        "units": {
+          "DTR 1942": 1
+        }
+      },
+      {
+        "name": "91",
+        "units": {
+          "CSR 1940": 1,
+          "DTR 1942": 1
+        }
+      },
+      {
+        "name": "98",
+        "units": {
+          "TBR 1940": 1,
+          "ACC 1940": 1,
+          "CSR 1940": 1,
+          "CSR 1942": 1,
+          "DTR 1940": 1,
+          "TPT 1940": 1
+        }
+      },
+      {
+        "name": "109",
+        "units": {
+          "DTR 1940": 1,
+          "TPT 1940": 1
+        }
+      },
+      {
+        "name": "110",
+        "units": {
+          "BTS 1940": 1,
+          "CSR 1940": 1
+        }
+      },
+      {
+        "name": "111",
+        "units": {
+          "BTS 1940": 1,
+          "CSR 1940": 1,
+          "DTR 1940": 1
+        }
+      },
+      {
+        "name": "119",
+        "units": {
+          "BTS 1942": 1,
+          "DTR 1942": 1,
+          "TPT 1942": 1
+        }
+      },
+      {
+        "name": "",
+        "units": {}
+      }
+    ]
+  },
+  {
+    "name": "Japan",
+    "territories": [
+      {
+        "name": "Borneo",
+        "units": {
+          "INF 1942": 1,
+          "Control Marker 1942": "TRUE"
+        }
+      },
+      {
+        "name": "Celebes",
+        "units": {
+          "INF 1942": 2,
+          "ART 1942": 1,
+          "Air Base": 1,
+          "Control Marker 1942": "TRUE"
+        }
+      },
+      {
+        "name": "Dutch New Guinea",
+        "units": {
+          "INF 1942": 1,
+          "Control Marker 1942": "TRUE"
+        }
+      },
+      {
+        "name": "New Britain",
+        "units": {
+          "INF 1942": 2,
+          "Control Marker 1942": "TRUE"
+        }
+      },
+      {
+        "name": "Gilbert Islands",
+        "units": {
+          "INF 1942": 1,
+          "Control Marker 1942": "TRUE"
+        }
+      },
+      {
+        "name": "Philippines",
+        "units": {
+          "INF 1942": 2,
+          "Air Base": 1,
+          "Naval Base": 1,
+          "Control Marker 1942": "TRUE"
+        }
+      },
+      {
+        "name": "French Indo China",
+        "units": {
+          "INF 1942": 2,
+          "ART 1942": 1,
+          "FTR 1942": 1,
+          "Control Marker 1942": "TRUE"
+        }
+      },
+      {
+        "name": "Malaya",
+        "units": {
+          "INF 1942": 1,
+          "Naval Base": 1,
+          "Control Marker 1942": "TRUE"
+        }
+      },
+      {
+        "name": "Kwangtung",
+        "units": {
+          "INF 1942": 1,
+          "Naval Base": 1,
+          "Control Marker 1942": "TRUE"
+        }
+      },
+      {
+        "name": "Shan State",
+        "units": {
+          "INF 1942": 2,
+          "Control Marker 1942": "TRUE"
+        }
+      },
+      {
+        "name": "Guam",
+        "units": {
+          "INF 1942": 1,
+          "Air Base": 1,
+          "Control Marker 1942": "TRUE"
+        }
+      },
+      {
+        "name": "Wake Island",
+        "units": {
+          "INF 1942": 1,
+          "Air Base": 1,
+          "Control Marker 1942": "TRUE"
+        }
+      },
+      {
+        "name": "24",
+        "units": {
+          "FTR 1942": 1,
+          "TBR 1942": 1,
+          "ACC 1942": 1,
+          "DTR 1942": 1
+        }
+      },
+      {
+        "name": "31",
+        "units": {
+          "FTR 1942": 1,
+          "ACC 1942": 1,
+          "CSR 1942": 1
+        }
+      },
+      {
+        "name": "35",
+        "units": {
+          "DTR 1942": 1,
+          "SUB 1942": 1
+        }
+      },
+      {
+        "name": "37",
+        "units": {
+          "CSR 1942": 1
+        }
+      },
+      {
+        "name": "44",
+        "units": {
+          "BTS 1942": 1,
+          "DTR 1942": 1,
+          "TPT 1942": 2
+        }
+      },
+      {
+        "name": "47",
+        "units": {
+          "CSR 1942": 1,
+          "DTR 1942": 1,
+          "TPT 1942": 1,
+          "SUB 1942": 1
+        }
+      },
+      {
+        "name": "Japan",
+        "units": {
+          "INF 1940": 6,
+          "INF 1942": 4,
+          "ART 1940": 2,
+          "ART 1942": 1,
+          "AAA 1940": 3,
+          "AAA 1942": 1,
+          "TANK 1940": 1,
+          "TANK 1942": 1,
+          "FTR 1940": 2,
+          "FTR 1942": 1,
+          "TBR 1940": 2,
+          "TBR 1942": 1,
+          "SBR 1940": 2,
+          "SBR 1942": 1,
+          "Major Industrial Complex 1940": 1,
+          "Major Industrial Complex 1942": 1,
+          "Air Base": 1,
+          "Naval Base": 1
+        }
+      },
+      {
+        "name": "Iwo Jima",
+        "units": {
+          "INF 1940": 1,
+          "INF 1942": 1
+        }
+      },
+      {
+        "name": "Okinawa",
+        "units": {
+          "INF 1940": 1,
+          "INF 1942": 1,
+          "FTR 1940": 1,
+          "Air Base": 1
+        }
+      },
+      {
+        "name": "Manchuria",
+        "units": {
+          "INF 1940": 6,
+          "INF 1942": 3,
+          "ART 1940": 1,
+          "ART 1942": 1,
+          "MECH 1940": 1,
+          "AAA 1940": 1,
+          "FTR 1940": 2,
+          "FTR 1942": 1,
+          "TBR 1940": 2,
+          "TBR 1942": 1,
+          "Control Marker": "TRUE"
+        }
+      },
+      {
+        "name": "Korea",
+        "units": {
+          "INF 1940": 4,
+          "INF 1942": 1,
+          "FTR 1940": 1
+        }
+      },
+      {
+        "name": "Jehol",
+        "units": {
+          "INF 1940": 2,
+          "INF 1942": 1,
+          "ART 1940": 1,
+          "Control Marker": "TRUE"
+        }
+      },
+      {
+        "name": "Shantung",
+        "units": {
+          "INF 1940": 3,
+          "INF 1942": 1,
+          "ART 1940": 1,
+          "ART 1942": 1,
+          "Control Marker": "TRUE"
+        }
+      },
+      {
+        "name": "Kiangsu",
+        "units": {
+          "INF 1940": 3,
+          "INF 1942": 4,
+          "ART 1940": 1,
+          "ART 1942": 1,
+          "FTR 1940": 1,
+          "FTR 1942": 1,
+          "TBR 1940": 1,
+          "TBR 1942": 1,
+          "Control Marker": "TRUE"
+        }
+      },
+      {
+        "name": "Kiangsi",
+        "units": {
+          "INF 1940": 3,
+          "INF 1942": 1,
+          "ART 1940": 1,
+          "Control Marker": "TRUE"
+        }
+      },
+      {
+        "name": "Kwangsi",
+        "units": {
+          "INF 1940": 3,
+          "INF 1942": 3,
+          "ART 1940": 1,
+          "ART 1942": 1,
+          "Control Marker": "TRUE"
+        }
+      },
+      {
+        "name": "Thailand",
+        "units": {
+          "INF 1942": 1,
+          "Control Marker 1942": "TRUE"
+        }
+      },
+      {
+        "name": "Taiwan",
+        "units": {
+          "FTR 1940": 1,
+          "FTR 1942": 1
+        }
+      },
+      {
+        "name": "Caroline Islands",
+        "units": {
+          "INF 1940": 2,
+          "INF 1942": 2,
+          "AAA 1940": 1,
+          "Air Base": 1,
+          "Naval Base": 1
+        }
+      },
+      {
+        "name": "Palau",
+        "units": {
+          "INF 1940": 1,
+          "INF 1942": 1
+        }
+      },
+      {
+        "name": "6",
+        "units": {
+          "FTR 1940": 2,
+          "FTR 1942": 1,
+          "TBR 1940": 2,
+          "TBR 1942": 1,
+          "BTS 1940": 1,
+          "BTS 1942": 1,
+          "ACC 1940": 2,
+          "ACC 1942": 1,
+          "CSR 1940": 1,
+          "DTR 1940": 2,
+          "TPT 1940": 1,
+          "SUB 1940": 1
+        }
+      },
+      {
+        "name": "19",
+        "units": {
+          "BTS 1940": 1,
+          "DTR 1940": 1,
+          "TPT 1940": 1,
+          "SUB 1940": 1
+        }
+      },
+      {
+        "name": "20",
+        "units": {
+          "CSR 1940": 1,
+          "TPT 1940": 1
+        }
+      },
+      {
+        "name": "33",
+        "units": {
+          "FTR 1940": 1,
+          "FTR 1942": 1,
+          "TBR 1940": 1,
+          "ACC 1940": 1,
+          "ACC 1942": 1,
+          "DTR 1940": 1
+        }
+      }
+    ]
+  }
+]

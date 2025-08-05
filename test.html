@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Recolor & Outline Debugger</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh; /* Use min-height to allow content to expand */
+            width: 100vw;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+            background-color: #282c34;
+            font-family: Arial, sans-serif;
+            color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        h1 {
+            color: #f0f0f0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .unit-display-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Adjusted for better spacing */
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+            background-color: #3a3f47;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .unit-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            border: 1px solid #555;
+            border-radius: 8px;
+            background-color: #4a4f57;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .unit-card h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #e0e0e0;
+            font-size: 0.9em; /* Smaller font for unit names */
+        }
+
+        .unit-svg-container {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* No overflow: visible here; it's set on the SVG itself */
+        }
+
+        /* Basic SVG styling for units within the debug container */
+        .unit-svg-container svg {
+            overflow: visible; /* Crucial for filters that extend beyond bounds */
+            /* Ensure the SVG itself has a viewBox for consistent scaling */
+        }
+
+        /* Ensure images within the SVG are scaled correctly */
+        .unit-svg-container image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <h1>Unit Recolor & Outline Debugger</h1>
+    <div class="unit-display-grid" id="unitGrid">
+        </div>
+
+    <script>
+        // Define your dark mode color palette for each data-power value
+        const powerColors = {
+            'US': '#4CAF50',        // A muted green
+            'UK': '#2199F3',        // A soft blue
+            'USSR': '#DC143C',      // A crimson red
+            'Germany': '#607D8B',   // A dark grey-blue
+            'Japan': '#FFC107',     // A warm amber
+            'Italy': '#9C27B0',     // A muted purple
+            'China': '#FF5722',     // A burnt orange
+            'Commonwealth': '#00BCD4', // A calm cyan
+            'France': '#3F51B5',    // A deep indigo
+            'Neutral': '#757575',   // A neutral grey
+        };
+
+        const UNIT_IMAGE_MAP = {
+            'INF': 'Units/infantry.png',
+            'ART': 'Units/artillery.png',
+            'MECH': 'Units/mechanized-infantry.png',
+            'AAA': 'Units/anti-aircraft.png',
+            'TANK': 'Units/tank.png',
+            'FTR': 'Units/fighter.png',
+            'TBR': 'Units/tactical-bomber.png',
+            'SBR': 'Units/strategic-bomber.png',
+            'BTS': 'Units/battleship.png',
+            'ACC': 'Units/aircraft-carrier.png',
+            'CSR': 'Units/cruiser.png',
+            'DTR': 'Units/destroyer.png',
+            'TPT': 'Units/transport.png',
+            'SUB': 'Units/submarine.png'
+        };
+
+        const SEA_UNIT_TYPES = ['BTS', 'ACC', 'CSR', 'DTR', 'TPT', 'SUB'];
+
+        /**
+         * Darkens a hex color by a given percentage.
+         * @param {string} hex - The hex color string (e.g., "#RRGGBB").
+         * @param {number} percent - The percentage to darken (e.g., 0.2 for 20% darker).
+         * @returns {string} The darkened hex color string.
+         */
+        function darkenColor(hex, percent) {
+            let f = parseInt(hex.slice(1), 16), t = percent < 0 ? 0 : 255, p = percent < 0 ? percent * -1 : percent,
+                R = f >> 16, G = (f >> 8) & 0x00FF, B = f & 0x0000FF;
+            return "#" + (0x1000000 + (Math.round((t - R) * p) + R) * 0x10000 + (Math.round((t - G) * p) + G) * 0x100 + (Math.round((t - B) * p) + B)).toString(16).slice(1);
+        }
+
+        /**
+         * Generates SVG color filters for each power color and appends them to a global SVG's defs.
+         * Creates two filters per power: one for land/air units (darkened) and one for sea units (original color).
+         * Filters convert black images to the specified power color and add a black outline.
+         * @param {SVGElement} svgElement - The SVG root element where filters will be defined.
+         */
+        function generateColorFilters(svgElement) {
+            let defs = svgElement.querySelector('defs');
+            if (!defs) {
+                defs = svgElement.ownerDocument.createElementNS('http://www.w3.org/2000/svg', 'defs');
+                svgElement.insertBefore(defs, svgElement.firstChild);
+            }
+
+            // Remove existing unit filters to prevent duplicates on reload (if this function is called multiple times)
+            defs.querySelectorAll('[id^="colorize-"]').forEach(filter => filter.remove());
+
+            const outlineColor = 'black';
+            const outlineBlur = 3; // Adjusted for a slightly finer outline
+
+            for (const powerName in powerColors) {
+                const baseColor = powerColors[powerName];
+                const darkerColor = darkenColor(baseColor, 0.5); // Darken by 50% for land/air units
+
+                // Helper to create a filter
+                const createFilter = (id, color) => {
+                    let filter = svgElement.ownerDocument.createElementNS('http://www.w3.org/2000/svg', 'filter');
+                    filter.setAttribute('id', id);
+                    // Extend filter area to accommodate blur/outline
+                    filter.setAttribute('x', '-50%');
+                    filter.setAttribute('y', '-50%');
+                    filter.setAttribute('width', '200%');
+                    filter.setAttribute('height', '200%');
+
+                    // 1. Create the outline (black, blurred, from SourceAlpha)
+                    let feGaussianBlur = svgElement.ownerDocument.createElementNS('http://www.w3.org/2000/svg', 'feGaussianBlur');
+                    feGaussianBlur.setAttribute('in', 'SourceAlpha');
+                    feGaussianBlur.setAttribute('stdDeviation', outlineBlur);
+                    feGaussianBlur.setAttribute('result', 'blur');
+
+                    let feFloodOutline = svgElement.ownerDocument.createElementNS('http://www.w3.org/2000/svg', 'feFlood');
+                    feFloodOutline.setAttribute('flood-color', outlineColor);
+                    feFloodOutline.setAttribute('result', 'outlineColorFlood');
+
+                    let feCompositeOutline = svgElement.ownerDocument.createElementNS('http://www.w3.org/2000/svg', 'feComposite');
+                    feCompositeOutline.setAttribute('in', 'outlineColorFlood');
+                    feCompositeOutline.setAttribute('in2', 'blur');
+                    feCompositeOutline.setAttribute('operator', 'in'); // "in" clips flood to blurred shape
+                    feCompositeOutline.setAttribute('result', 'outline');
+
+                    // 2. Recolor the original unit image (from SourceGraphic)
+                    // This method takes the SourceGraphic's alpha and floods it with the desired color.
+                    let feFloodColoredUnit = svgElement.ownerDocument.createElementNS('http://www.w3.org/2000/svg', 'feFlood');
+                    feFloodColoredUnit.setAttribute('flood-color', color);
+                    feFloodColoredUnit.setAttribute('result', 'unitColorFlood');
+
+                    let feCompositeColoredUnit = svgElement.ownerDocument.createElementNS('http://www.w3.org/2000/svg', 'feComposite');
+                    feCompositeColoredUnit.setAttribute('in', 'unitColorFlood');
+                    feCompositeColoredUnit.setAttribute('in2', 'SourceAlpha'); // Use SourceAlpha to cut out the shape
+                    feCompositeColoredUnit.setAttribute('operator', 'in');
+                    feCompositeColoredUnit.setAttribute('result', 'coloredUnit');
+
+                    // 3. Merge outline and colored unit (outline under colored unit)
+                    let feMerge = svgElement.ownerDocument.createElementNS('http://www.w3.org/2000/svg', 'feMerge');
+                    let feMergeNode1 = svgElement.ownerDocument.createElementNS('http://www.w3.org/2000/svg', 'feMergeNode');
+                    feMergeNode1.setAttribute('in', 'outline'); // Outline goes first (bottom layer)
+                    let feMergeNode2 = svgElement.ownerDocument.createElementNS('http://www.w3.org/2000/svg', 'feMergeNode');
+                    feMergeNode2.setAttribute('in', 'coloredUnit'); // Colored unit goes second (top layer)
+                    feMerge.appendChild(feMergeNode1);
+                    feMerge.appendChild(feMergeNode2);
+                    feMerge.setAttribute('result', 'output');
+
+                    filter.appendChild(feGaussianBlur);
+                    filter.appendChild(feFloodOutline);
+                    filter.appendChild(feCompositeOutline);
+                    filter.appendChild(feFloodColoredUnit);
+                    filter.appendChild(feCompositeColoredUnit);
+                    filter.appendChild(feMerge);
+
+                    return filter;
+                };
+
+                // Add filter for land/air units
+                defs.appendChild(createFilter(`colorize-${powerName}-land`, darkerColor));
+                // Add filter for sea units
+                defs.appendChild(createFilter(`colorize-${powerName}-sea`, baseColor));
+            }
+        }
+
+        /**
+         * Places a single unit for debugging purposes.
+         * @param {HTMLElement} container - The HTML element to append the unit SVG to.
+         * @param {string} unitType - The type of the unit (e.g., 'INF', 'BTS').
+         * @param {string} powerName - The name of the power (e.g., 'US', 'Germany').
+         * @param {number} unitSize - The desired size of the unit image.
+         */
+        function placeDebugUnit(container, unitType, powerName, unitSize) {
+            const imageFileName = UNIT_IMAGE_MAP[unitType];
+            const isSeaUnit = SEA_UNIT_TYPES.includes(unitType);
+            const filterId = `url(#colorize-${powerName}-${isSeaUnit ? 'sea' : 'land'})`;
+
+            // Create a new SVG element for each unit to contain its image and filters
+            const unitSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            unitSvg.setAttribute('width', unitSize);
+            unitSvg.setAttribute('height', unitSize);
+            unitSvg.setAttribute('viewBox', `0 0 ${unitSize} ${unitSize}`); // Set a viewBox for consistency
+            unitSvg.style.overflow = 'visible'; // Allow filter effects to extend outside the SVG bounds
+
+            // Create the image element
+            const unitImage = document.createElementNS('http://www.w3.org/2000/svg', 'image');
+            unitImage.setAttribute('href', imageFileName);
+            unitImage.setAttribute('x', 0);
+            unitImage.setAttribute('y', 0);
+            unitImage.setAttribute('width', unitSize); // Match image size to SVG size
+            unitImage.setAttribute('height', unitSize);
+            unitImage.setAttribute('filter', filterId); // Apply the color filter
+            unitSvg.appendChild(unitImage);
+
+            container.appendChild(unitSvg);
+        }
+
+        /**
+         * Initializes the debug viewer by generating filters and placing units.
+         */
+        function initDebugViewer() {
+            const unitGrid = document.getElementById('unitGrid');
+
+            // Create a single hidden SVG element to contain all filter definitions
+            const globalFiltersSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            globalFiltersSvg.setAttribute('width', '0');
+            globalFiltersSvg.setAttribute('height', '0');
+            globalFiltersSvg.style.position = 'absolute';
+            globalFiltersSvg.style.overflow = 'hidden';
+            document.body.appendChild(globalFiltersSvg);
+
+            // Generate all necessary filters in the global SVG's defs
+            generateColorFilters(globalFiltersSvg);
+
+            const debugUnitSize = 80; // Larger size for debugging
+
+            for (const powerName in powerColors) {
+                for (const unitType in UNIT_IMAGE_MAP) {
+                    const unitCard = document.createElement('div');
+                    unitCard.classList.add('unit-card');
+
+                    const unitTitle = document.createElement('h3');
+                    unitTitle.textContent = `${powerName} ${unitType}`;
+                    unitCard.appendChild(unitTitle);
+
+                    const unitSvgContainer = document.createElement('div');
+                    unitSvgContainer.classList.add('unit-svg-container');
+                    unitCard.appendChild(unitSvgContainer);
+
+                    placeDebugUnit(unitSvgContainer, unitType, powerName, debugUnitSize);
+                    unitGrid.appendChild(unitCard);
+                }
+            }
+        }
+
+        window.onload = initDebugViewer;
+    </script>
+</body>
+</html>

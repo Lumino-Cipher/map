@@ -1,0 +1,300 @@
+{
+  "Peru": [
+    {
+      "territory": "Peru",
+      "x": 78.19,
+      "y": 935.78
+    }
+  ],
+  "Sweden": [
+    {
+      "territory": "Sweden",
+      "x": 887.3,
+      "y": 154.92
+    }
+  ],
+  "Brazil": [
+    {
+      "territory": "Brazil",
+      "x": 208.52,
+      "y": 900.72
+    }
+  ],
+  "Bulgaria": [
+    {
+      "territory": "Bulgaria",
+      "x": 1056.54,
+      "y": 638.13
+    }
+  ],
+  "Iraq": [
+    {
+      "territory": "Iraq",
+      "x": 1202.74,
+      "y": 816.16
+    }
+  ],
+  "Ecuador": [
+    {
+      "territory": "Ecuador",
+      "x": 47.88,
+      "y": 888.98
+    }
+  ],
+  "Colombia": [
+    {
+      "territory": "Colombia",
+      "x": 88.5,
+      "y": 852.51
+    }
+  ],
+  "Venezuela": [
+    {
+      "territory": "Venezuela",
+      "x": 167.91,
+      "y": 824.97
+    }
+  ],
+  "Netherlands": [
+    {
+      "territory": "Suriname",
+      "x": 209.34,
+      "y": 858.91
+    },
+    {
+      "territory": "Sumatra",
+      "x": 1726.06,
+      "y": 1086.59
+    },
+    {
+      "territory": "Java",
+      "x": 1828.71,
+      "y": 1134.58
+    },
+    {
+      "territory": "Celebes",
+      "x": 2042.27,
+      "y": 1025.02
+    },
+    {
+      "territory": "Dutch New Guinea",
+      "x": 2202.17,
+      "y": 1060.23
+    }
+  ],
+  "Bolivia": [
+    {
+      "territory": "Bolivia",
+      "x": 133.37,
+      "y": 982.47
+    }
+  ],
+  "Paraguay": [
+    {
+      "territory": "Paraguay",
+      "x": 164.69,
+      "y": 1028.73
+    }
+  ],
+  "Uruguay": [
+    {
+      "territory": "Uruguay",
+      "x": 170.19,
+      "y": 1090.3
+    }
+  ],
+  "Argentina": [
+    {
+      "territory": "Argentina",
+      "x": 117.55,
+      "y": 1111.06
+    }
+  ],
+  "Chile": [
+    {
+      "territory": "Chile",
+      "x": 54.32,
+      "y": 1141.83
+    }
+  ],
+  "Spain": [
+    {
+      "territory": "Rio de Oro",
+      "x": 530.08,
+      "y": 943.44
+    },
+    {
+      "territory": "Spanish Morocco",
+      "x": 626.05,
+      "y": 839.51
+    },
+    {
+      "territory": "Galicia Navarra",
+      "x": 516.47,
+      "y": 666.9
+    },
+    {
+      "territory": "Castilla",
+      "x": 532.65,
+      "y": 709.71
+    },
+    {
+      "territory": "Aragon",
+      "x": 633.38,
+      "y": 642.3
+    }
+  ],
+  "Portugal": [
+    {
+      "territory": "Portuguese Guinea",
+      "x": 500.93,
+      "y": 975.8
+    },
+    {
+      "territory": "Azores",
+      "x": 425.67,
+      "y": 754.77
+    },
+    {
+      "territory": "Portugal",
+      "x": 488.55,
+      "y": 697.99
+    },
+    {
+      "territory": "Mozambique",
+      "x": 1071.6,
+      "y": 1212.05
+    },
+    {
+      "territory": "Angola",
+      "x": 897.11,
+      "y": 1237.24
+    }
+  ],
+  "Eire": [
+    {
+      "territory": "Eire",
+      "x": 521.02,
+      "y": 231.92
+    }
+  ],
+  "Switzerland": [
+    {
+      "territory": "Switzerland",
+      "x": 751.29,
+      "y": 519.5
+    }
+  ],
+  "Yugoslavia": [
+    {
+      "territory": "Yugoslavia",
+      "x": 949.31,
+      "y": 589.37
+    }
+  ],
+  "Greece": [
+    {
+      "territory": "Greece",
+      "x": 978.26,
+      "y": 725.41
+    }
+  ],
+  "Crete": [
+    {
+      "territory": "Crete",
+      "x": 960.05,
+      "y": 788.06
+    }
+  ],
+  "Turkey": [
+    {
+      "territory": "Marmara",
+      "x": 1105.16,
+      "y": 683.82
+    },
+    {
+      "territory": "Central Anatolia",
+      "x": 1147.92,
+      "y": 678.14
+    },
+    {
+      "territory": "Eastern Anatolia",
+      "x": 1235.07,
+      "y": 740.04
+    }
+  ],
+  "Iran": [
+    {
+      "territory": "Northwest Iran",
+      "x": 1291.57,
+      "y": 800.44
+    },
+    {
+      "territory": "Iran",
+      "x": 1261.23,
+      "y": 830.42
+    },
+    {
+      "territory": "Eastern Iran",
+      "x": 1382.39,
+      "y": 850.34
+    }
+  ],
+  "Afghanistan": [
+    {
+      "territory": "Afghanistan",
+      "x": 1455.23,
+      "y": 758.06
+    }
+  ],
+  "Mongolia": [
+    {
+      "territory": "Olgiy",
+      "x": 1658.47,
+      "y": 304.71
+    },
+    {
+      "territory": "Dzavhan",
+      "x": 1762.74,
+      "y": 227.98
+    },
+    {
+      "territory": "Dornod",
+      "x": 1882.58,
+      "y": 258.57
+    },
+    {
+      "territory": "Dornogobi",
+      "x": 1890.79,
+      "y": 307.96
+    }
+  ],
+  "Saudi Arabia": [
+    {
+      "territory": "Saudi Arabia",
+      "x": 1211.64,
+      "y": 917.41
+    }
+  ],
+  "Liberia": [
+    {
+      "territory": "Liberia",
+      "x": 598.44,
+      "y": 1057.32
+    }
+  ],
+  "Thailand": [
+    {
+        "territory": "Thailand",
+        "x": 1733.60,
+        "y": 841.60 
+    }
+  ],
+  "Finland": [
+    {
+        "territory": "Finland",
+        "x": 965.989013671875,
+        "y": 154.92
+    }
+  ]
+}

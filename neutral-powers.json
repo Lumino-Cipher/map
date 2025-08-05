@@ -1,0 +1,80 @@
+{
+  "Neutral": [
+    "Venezuela",
+    "Colombia",
+    "Ecuador",
+    "Peru",
+    "Bolivia",
+    "Paraguay",
+    "Uruguay",
+    "Chile",
+    {
+      "Netherlands": [
+        "Suriname",
+        "Sumatra",
+        "Java",
+        "Celebes",
+        "Dutch New Guinea"
+      ]
+    },
+    {
+      "Portugal": [
+        "Portugal",
+        "Azores",
+        "Portuguese Guinea",
+        "Angola",
+        "Mozambique"
+      ]
+    },
+    "Liberia",
+    "Switzerland",
+    "Sweden",
+    {
+      "Turkey": [
+        "Marmara",
+        "Central Anatolia",
+        "Eastern Anatolia"
+      ]
+    },
+    "Saudi Arabia",
+    {
+      "Mongolia": [
+        "Olgiy",
+        "Dzavhan",
+        "Dornod",
+        "Dornogobi"
+      ]
+    },
+    "Afghanistan"
+  ],
+  "Pro-Axis Neutral": [
+    "Brazil",
+    {
+      "Spain": [
+        "Galicia Navarra",
+        "Castilla",
+        "Aragon",
+        "Spanish Morocco",
+        "Rio de Oro"
+      ]
+    },
+    "Bulgaria",
+    "Iraq",
+    {
+    	"Iran": [
+    	"Iran",
+    	"Northwest Iran",
+    	"Eastern Iran"
+	    ]
+    },
+    "Thailand",
+    "Finland"
+  ],
+  "Pro-Allied Neutral": [
+    "Argentina",
+    "Eire",
+    "Yugoslavia",
+    "Greece",
+    "Crete"
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "Galicia Navarra": [
+    {
+      "unitType": "INF",
+      "count": 2,
+      "x": 561.58,
+      "y": 625.23
+    }
+  ],
+  "Portugal": [
+    {
+      "unitType": "INF",
+      "count": 4,
+      "x": 472.66,
+      "y": 753.88
+    }
+  ],
+  "Castilla": [
+    {
+      "unitType": "INF",
+      "count": 2,
+      "x": 579.98,
+      "y": 732.82
+    }
+  ],
+  "Aragon": [
+    {
+      "unitType": "INF",
+      "count": 1,
+      "x": 585.93,
+      "y": 676.3
+    }
+  ],
+  "Azores": [
+    {
+      "unitType": "INF",
+      "count": 1,
+      "x": 385.45,
+      "y": 727.22
+    }
+  ],
+  "Venezuela": [
+    {
+      "unitType": "INF",
+      "count": 2,
+      "x": 127.69,
+      "y": 814.75
+    }
+  ],
+  "Brazil": [
+    {
+      "unitType": "INF",
+      "count": 2,
+      "x": 198.52,
+      "y": 958.72
+    }
+  ],
+  "Argentina": [
+    {
+      "unitType": "INF",
+      "count": 2,
+      "x": 100.44,
+      "y": 1017.73
+    }
+  ],
+  "Chile": [
+    {
+      "unitType": "INF",
+      "count": 2,
+      "x": 30.99,
+      "y": 1148.49
+    }
+  ],
+  "Spanish Morocco": [
+    {
+      "unitType": "INF",
+      "count": 1,
+      "x": 619.72,
+      "y": 792.85
+    }
+  ],
+  "Saudi Arabia": [
+    {
+      "unitType": "INF",
+      "count": 5,
+      "x": 1220.24,
+      "y": 975.01
+    }
+  ],
+  "Iraq": [
+    {
+      "unitType": "INF",
+      "count": 2,
+      "x": 1207.74,
+      "y": 774.16
+    }
+  ],
+  "Marmara": [
+    {
+      "unitType": "TBR",
+      "count": 3,
+      "x": 1048.5,
+      "y": 722.16
+    },
+    {
+      "unitType": "INF",
+      "count": 6,
+      "x": 1071.5,
+      "y": 737.16
+    }
+  ],
+  "Central Anatolia": [
+    {
+      "unitType": "ART",
+      "count": 2,
+      "x": 1114.36,
+      "y": 722.02
+    },
+    {
+      "unitType": "INF",
+      "count": 2,
+      "x": 1154.36,
+      "y": 722.02
+    }
+  ],
+  "Eastern Anatolia": [
+    {
+      "unitType": "TANK",
+      "count": 2,
+      "x": 1182.18,
+      "y": 683.26
+    }
+  ],
+  "Northwest Iran": [
+    {
+      "unitType": "INF",
+      "count": 2,
+      "x": 1285.68,
+      "y": 730.44
+    }
+  ],
+  "Iran": [
+    {
+      "unitType": "INF",
+      "count": 2,
+      "x": 1293.12,
+      "y": 866.75
+    }
+  ],
+  "Afghanistan": [
+    {
+      "unitType": "INF",
+      "count": 4,
+      "x": 1443.34,
+      "y": 698.39
+    }
+  ],
+  "Thailand": [
+    {
+      "unitType": "INF",
+      "count": 4,
+      "x": 1747,
+      "y": 913.01
+    }
+  ],
+  "Olgiy": [
+    {
+      "unitType": "CAV",
+      "count": 2,
+      "x": 1644.5,
+      "y": 236.23
+    }
+  ],
+  "Dzavhan": [
+    {
+      "unitType": "INF",
+      "count": 2,
+      "x": 1750.5,
+      "y": 283.32
+    }
+  ],
+  "Dornod": [
+    {
+      "unitType": "INF",
+      "count": 2,
+      "x": 1865.58,
+      "y": 199.51
+    }
+  ],
+  "Dornogobi": [
+    {
+      "unitType": "CAV",
+      "count": 2,
+      "x": 1920.66,
+      "y": 255.65
+    }
+  ],
+  "Yugoslavia": [
+    {
+      "unitType": "INF",
+      "count": 5,
+      "x": 907.86,
+      "y": 584.71
+    }
+  ],
+  "Bulgaria": [
+    {
+      "unitType": "INF",
+      "count": 4,
+      "x": 1014.54,
+      "y": 626.13
+    }
+  ],
+  "Greece": [
+    {
+      "unitType": "INF",
+      "count": 4,
+      "x": 946.59,
+      "y": 682.64
+    }
+  ],
+  "Sweden": [
+    {
+      "unitType": "INF",
+      "count": 6,
+      "x": 825.3,
+      "y": 196.92
+    }
+  ],
+  "Finland": [
+    {
+      "unitType": "INF",
+      "x": 1000.32,
+      "count": 4,
+      "y": 106.01
+    }
+  ],
+  "Switzerland": [
+    {
+      "unitType": "INF",
+      "count": 2,
+      "x": 733.51,
+      "y": 533.94
+    }
+  ],
+  "Angola": [
+    {
+      "unitType": "INF",
+      "count": 2,
+      "x": 829.11,
+      "y": 1258.24
+    }
+  ],
+  "Mozambique": [
+    {
+      "unitType": "INF",
+      "count": 2,
+      "x": 1012.4,
+      "y": 1246.45
+    }
+  ]
+}

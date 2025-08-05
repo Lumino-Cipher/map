@@ -1,0 +1,392 @@
+[
+  {
+    "territory": "France",
+    "unitType": "Major Industrial Complex",
+    "x": 676.62109375,
+    "y": 432.431640625
+  },
+  {
+    "territory": "Northern Italy",
+    "unitType": "Major Industrial Complex",
+    "x": 711.1614379882812,
+    "y": 534.1281127929688
+  },
+  {
+    "territory": "Germany",
+    "unitType": "Major Industrial Complex",
+    "x": 833.3172607421875,
+    "y": 296.37408447265625
+  },
+  {
+    "territory": "Western Germany",
+    "unitType": "Major Industrial Complex",
+    "x": 750.633544921875,
+    "y": 464.66607666015625
+  },
+  {
+    "territory": "Russia City of Moscow",
+    "unitType": "Major Industrial Complex",
+    "x": 1301.638427734375,
+    "y": 199.58596801757812
+  },
+  {
+    "territory": "United Kingdom",
+    "unitType": "Major Industrial Complex",
+    "x": 516.4005737304688,
+    "y": 337.59942626953125
+  },
+  {
+    "territory": "India",
+    "unitType": "Major Industrial Complex",
+    "x": 1523.7001953125,
+    "y": 740.13623046875
+  },
+  {
+    "territory": "Japan",
+    "unitType": "Major Industrial Complex",
+    "x": 2175.24609375,
+    "y": 399.2743225097
+  },
+  {
+    "territory": "New South Wales",
+    "unitType": "Naval Base",
+    "x": 2346.353515625,
+    "y": 1247.8304443359375
+  },
+  {
+    "territory": "Queensland",
+    "unitType": "Air Base",
+    "x": 2277.7705078125,
+    "y": 1116.77001953125
+  },
+  {
+    "territory": "Queensland",
+    "unitType": "Naval Base",
+    "x": 2319.7705078125,
+    "y": 1177.77001953125
+  },
+  {
+    "territory": "New Zealand",
+    "unitType": "Air Base",
+    "x": 2533.65234375,
+    "y": 1231.761962890625
+  },
+  {
+    "territory": "New Zealand",
+    "unitType": "Naval Base",
+    "x": 2567.362060546875,
+    "y": 1309.2781982421875
+  },
+  {
+    "territory": "Union of South Africa",
+    "unitType": "Naval Base",
+    "x": 999.4224243164062,
+    "y": 1276.60693359375
+  },
+  {
+    "territory": "New Brunswick Nova Scotia",
+    "unitType": "Naval Base",
+    "x": 241.4296646118164,
+    "y": 386.5947570800781
+  },
+  {
+    "territory": "France",
+    "unitType": "Air Base",
+    "x": 644.1211242675781,
+    "y": 470.931640625
+  },
+  {
+    "territory": "Normandy Bordeaux",
+    "unitType": "Naval Base",
+    "x": 565.08544921875,
+    "y": 417.7864074707031
+  },
+  {
+    "territory": "France City of Vichy",
+    "unitType": "Naval Base",
+    "x": 648.0127563476562,
+    "y": 601.2460327148438
+  },
+  {
+    "territory": "Eastern United States",
+    "unitType": "Air Base",
+    "x": 87.1881103515625,
+    "y": 429.5719299316406
+  },
+  {
+    "territory": "Eastern United States",
+    "unitType": "Naval Base",
+    "x": 87.7057876586914,
+    "y": 561.91748046875
+  },
+  {
+    "territory": "Western United States",
+    "unitType": "Air Base",
+    "x": 2876.437255859375,
+    "y": 197.23989868164062
+  },
+  {
+    "territory": "Western United States",
+    "unitType": "Naval Base",
+    "x": 2835.891357421875,
+    "y": 234.43157958984375
+  },
+  {
+    "territory": "Hawaiian Islands",
+    "unitType": "Air Base",
+    "x": 2737.1982421875,
+    "y": 630.6033935546875
+  },
+  {
+    "territory": "Hawaiian Islands",
+    "unitType": "Naval Base",
+    "x": 2728.837890625,
+    "y": 665.4595336914062
+  },
+  {
+    "territory": "Iceland",
+    "unitType": "Air Base",
+    "x": 431.2615661621094,
+    "y": 90.73514556884766
+  },
+  {
+    "territory": "Midway",
+    "unitType": "Air Base",
+    "x": 2553.8917236328125,
+    "y": 493.88067626953125
+  },
+  {
+    "territory": "Wake Island",
+    "unitType": "Air Base",
+    "x": 2508.1905517578125,
+    "y": 629.7102966308594
+  },
+  {
+    "territory": "Philippines",
+    "unitType": "Air Base",
+    "x": 2103.62939453125,
+    "y": 884.9974975585938
+  },
+  {
+    "territory": "Philippines",
+    "unitType": "Naval Base",
+    "x": 2059.59716796875,
+    "y": 884.9974975585938
+  },
+  {
+    "territory": "Southern Italy",
+    "unitType": "Air Base",
+    "x": 784.9412231445312,
+    "y": 617.0139770507812
+  },
+  {
+    "territory": "Southern Italy",
+    "unitType": "Naval Base",
+    "x": 846.9788208007812,
+    "y": 625.1742553710938
+  },
+  {
+    "territory": "Western Germany",
+    "unitType": "Air Base",
+    "x": 761.633544921875,
+    "y": 442.66607666015625
+  },
+  {
+    "territory": "Western Germany",
+    "unitType": "Naval Base",
+    "x": 744.633544921875,
+    "y": 330.6660614013672
+  },
+  {
+    "territory": "Russia City of Moscow",
+    "unitType": "Air Base",
+    "x": 1247.138427734375,
+    "y": 206.08596801757812
+  },
+  {
+    "territory": "Russia City of Leningrad",
+    "unitType": "Air Base",
+    "x": 1132.8568115234375,
+    "y": 163.65908813476562
+  },
+  {
+    "territory": "Russia City of Leningrad",
+    "unitType": "Naval Base",
+    "x": 1080.362548828125,
+    "y": 107.99209594726562
+  },
+  {
+    "territory": "United Kingdom",
+    "unitType": "Air Base",
+    "x": 533.2402954101562,
+    "y": 310.80889892578125
+  },
+  {
+    "territory": "United Kingdom",
+    "unitType": "Naval Base",
+    "x": 525.5858764648438,
+    "y": 286.314697265625
+  },
+  {
+    "territory": "Scotland",
+    "unitType": "Air Base",
+    "x": 566.2941284179688,
+    "y": 111.72016143798828
+  },
+  {
+    "territory": "Gibraltar",
+    "unitType": "Naval Base",
+    "x": 517.0396728515625,
+    "y": 771.3038940429688
+  },
+  {
+    "territory": "Egypt",
+    "unitType": "Naval Base",
+    "x": 1049.7344970703125,
+    "y": 953.2427368164062
+  },
+  {
+    "territory": "India",
+    "unitType": "Air Base",
+    "x": 1523.7001953125,
+    "y": 790.13623046875
+  },
+  {
+    "territory": "India",
+    "unitType": "Naval Base",
+    "x": 1523.820556640625,
+    "y": 886.5574340820312
+  },
+  {
+    "territory": "Malaya",
+    "unitType": "Naval Base",
+    "x": 1760.4085693359375,
+    "y": 1015.1903076171875
+  },
+  {
+    "territory": "Kwangtung",
+    "unitType": "Naval Base",
+    "x": 1895.4517822265625,
+    "y": 705.3231201171875
+  },
+  {
+    "territory": "Celebes",
+    "unitType": "Air Base",
+    "x": 1968.5877685546875,
+    "y": 999.0718383789062
+  },
+  {
+    "territory": "Guam",
+    "unitType": "Air Base",
+    "x": 2153.1572265625,
+    "y": 708.0533447265625
+  },
+  {
+    "territory": "Wake Island",
+    "unitType": "Air Base",
+    "x": 2508.1905517578125,
+    "y": 629.7102966308594
+  },
+  {
+    "territory": "Japan",
+    "unitType": "Air Base",
+    "x": 2285.2314453125,
+    "y": 339.5511779785156
+  },
+  {
+    "territory": "Japan",
+    "unitType": "Naval Base",
+    "x": 2308.80859375,
+    "y": 310.43695068359375
+  },
+  {
+    "territory": "Okinawa",
+    "unitType": "Air Base",
+    "x": 1947.978515625,
+    "y": 479.64857482910156
+  },
+  {
+    "territory": "Caroline Islands",
+    "unitType": "Air Base",
+    "x": 2393.322998046875,
+    "y": 878.8684692382812
+  },
+  {
+    "territory": "Caroline Islands",
+    "unitType": "Naval Base",
+    "x": 2345.419189453125,
+    "y": 875.3201293945312
+  },
+  {
+    "territory": "New South Wales",
+    "unitType": "Minor Industrial Complex",
+    "x": 2259.615478515625,
+    "y": 1224.9552001953125
+  },
+  {
+    "territory": "Union of South Africa",
+    "unitType": "Minor Industrial Complex",
+    "x": 928.4224243164062,
+    "y": 1343.60693359375
+  },
+  {
+    "territory": "Quebec",
+    "unitType": "Minor Industrial Complex",
+    "x": 178.15115356445312,
+    "y": 300.1221618652344
+  },
+  {
+    "territory": "Normandy Bordeaux",
+    "unitType": "Minor Industrial Complex",
+    "x": 583.4464111328125,
+    "y": 444.210693359375
+  },
+  {
+    "territory": "France City of Vichy",
+    "unitType": "Minor Industrial Complex",
+    "x": 613.738525390625,
+    "y": 551.1653442382812
+  },
+  {
+    "territory": "Eastern United States",
+    "unitType": "Minor Industrial Complex",
+    "x": 84.43522644042969,
+    "y": 544.312255859375
+  },
+  {
+    "territory": "Central United States",
+    "unitType": "Minor Industrial Complex",
+    "x": 0.28856655955314636,
+    "y": 553.91162109375
+  },
+  {
+    "territory": "Western United States",
+    "unitType": "Minor Industrial Complex",
+    "x": 2925.6448974609375,
+    "y": 284.75657653808594
+  },
+  {
+    "territory": "Southern Italy",
+    "unitType": "Minor Industrial Complex",
+    "x": 820.0531005859375,
+    "y": 608.6934814453125
+  },
+  {
+    "territory": "Russia City of Leningrad",
+    "unitType": "Minor Industrial Complex",
+    "x": 1124.4862060546875,
+    "y": 154.4737548828125
+  },
+  {
+    "territory": "Ukraine",
+    "unitType": "Minor Industrial Complex",
+    "x": 1179.86767578125,
+    "y": 528.2961883544922
+  },
+  {
+    "territory": "Russia City of Stalingrad",
+    "unitType": "Minor Industrial Complex",
+    "x": 1374.2501831054688,
+    "y": 508.29197692871094
+  }
+]

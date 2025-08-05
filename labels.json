@@ -1,0 +1,3758 @@
+{
+  "1": {
+    "x": 2839.5158220715425,
+    "y": 204.0876799811014,
+    "fontSize": 14,
+    "originalText": "1",
+    "isSplit": false
+  },
+  "2": {
+    "x": 2658.9771612551126,
+    "y": 131.92952901656494,
+    "fontSize": 14,
+    "originalText": "2",
+    "isSplit": false
+  },
+  "3": {
+    "x": 2644.608644403406,
+    "y": 131.86010196159458,
+    "fontSize": 14,
+    "originalText": "3",
+    "isSplit": false
+  },
+  "4": {
+    "x": 2441.7538496775587,
+    "y": 191.3631796503545,
+    "fontSize": 14,
+    "originalText": "4",
+    "isSplit": false
+  },
+  "5": {
+    "x": 2425.532108990268,
+    "y": 191.18446548249605,
+    "fontSize": 14,
+    "originalText": "5",
+    "isSplit": false
+  },
+  "6": {
+    "x": 2365.339419935747,
+    "y": 435.5289268759565,
+    "fontSize": 14,
+    "originalText": "6",
+    "isSplit": false
+  },
+  "7": {
+    "x": 2432.791608509657,
+    "y": 208.15141155982886,
+    "fontSize": 14,
+    "originalText": "7",
+    "isSplit": false
+  },
+  "8": {
+    "x": 2653.9199917976866,
+    "y": 147.56900514500467,
+    "fontSize": 14,
+    "originalText": "8",
+    "isSplit": false
+  },
+  "9": {
+    "x": 2769.002956521834,
+    "y": 474.0410799774415,
+    "fontSize": 14,
+    "originalText": "9",
+    "isSplit": false
+  },
+  "10": {
+    "x": 2840.334575449933,
+    "y": 221.3912066710394,
+    "fontSize": 14,
+    "originalText": "10",
+    "isSplit": false
+  },
+  "11": {
+    "x": 2919.558003978779,
+    "y": 646.8435024393457,
+    "fontSize": 14,
+    "originalText": "11",
+    "isSplit": false
+  },
+  "12": {
+    "x": 2770.7615551498416,
+    "y": 493.589688151789,
+    "fontSize": 14,
+    "originalText": "12",
+    "isSplit": false
+  },
+  "13": {
+    "x": 2750.704397276145,
+    "y": 483.49714334659603,
+    "fontSize": 14,
+    "originalText": "13",
+    "isSplit": false
+  },
+  "14": {
+    "x": 2646.733479623205,
+    "y": 427.584082830674,
+    "fontSize": 14,
+    "originalText": "14",
+    "isSplit": false
+  },
+  "15": {
+    "x": 2625.3525486316794,
+    "y": 427.3446907813048,
+    "fontSize": 14,
+    "originalText": "15",
+    "isSplit": false
+  },
+  "16": {
+    "x": 2383.49201405112,
+    "y": 434.8107439573196,
+    "fontSize": 14,
+    "originalText": "16",
+    "isSplit": false
+  },
+  "17": {
+    "x": 2370.5647905994538,
+    "y": 452.8849105466177,
+    "fontSize": 14,
+    "originalText": "17",
+    "isSplit": false
+  },
+  "18": {
+    "x": 2136.9331603652754,
+    "y": 544.4673089994724,
+    "fontSize": 14,
+    "originalText": "18",
+    "isSplit": false
+  },
+  "19": {
+    "x": 2116.9957019555372,
+    "y": 543.1829786606729,
+    "fontSize": 14,
+    "originalText": "19",
+    "isSplit": false
+  },
+  "20": {
+    "x": 1971.8267484582966,
+    "y": 783.5725026730579,
+    "fontSize": 14,
+    "originalText": "20",
+    "isSplit": false
+  },
+  "21": {
+    "x": 2230.7787615496313,
+    "y": 769.8804611677305,
+    "fontSize": 14,
+    "originalText": "21",
+    "isSplit": false
+  },
+  "22": {
+    "x": 2252.0686814896453,
+    "y": 769.7311419107593,
+    "fontSize": 14,
+    "originalText": "22",
+    "isSplit": false
+  },
+  "23": {
+    "x": 2421.9532471748034,
+    "y": 745.5786589114972,
+    "fontSize": 14,
+    "originalText": "23",
+    "isSplit": false
+  },
+  "24": {
+    "x": 2508.978273666108,
+    "y": 452.88491054661773,
+    "fontSize": 14,
+    "originalText": "24",
+    "isSplit": false
+  },
+  "25": {
+    "x": 2530.7779636278756,
+    "y": 452.34627667601274,
+    "fontSize": 14,
+    "originalText": "25",
+    "isSplit": false
+  },
+  "26": {
+    "x": 2686.3378819960662,
+    "y": 678.9595410599572,
+    "fontSize": 14,
+    "originalText": "26",
+    "isSplit": false
+  },
+  "27": {
+    "x": 2770.8950162173646,
+    "y": 787.7645045652149,
+    "fontSize": 14,
+    "originalText": "27",
+    "isSplit": false
+  },
+  "28": {
+    "x": 2920.440761720947,
+    "y": 667.2267501140565,
+    "fontSize": 14,
+    "originalText": "28",
+    "isSplit": false
+  },
+  "29": {
+    "x": 2769.8529430663425,
+    "y": 805.0891403663926,
+    "fontSize": 14,
+    "originalText": "29",
+    "isSplit": false
+  },
+  "30": {
+    "x": 2749.164178205022,
+    "y": 794.1004233486949,
+    "fontSize": 14,
+    "originalText": "30",
+    "isSplit": false
+  },
+  "31": {
+    "x": 2444.00141636693,
+    "y": 736.4873340078614,
+    "fontSize": 14,
+    "originalText": "31",
+    "isSplit": false
+  },
+  "32": {
+    "x": 2443.681448352685,
+    "y": 756.7494361658567,
+    "fontSize": 14,
+    "originalText": "32",
+    "isSplit": false
+  },
+  "33": {
+    "x": 2303.000337300319,
+    "y": 940.1554290840721,
+    "fontSize": 14,
+    "originalText": "33",
+    "isSplit": false
+  },
+  "34": {
+    "x": 2281.7539254445883,
+    "y": 940.3936958010867,
+    "fontSize": 14,
+    "originalText": "34",
+    "isSplit": false
+  },
+  "35": {
+    "x": 2123.8288540289045,
+    "y": 940.0428277148375,
+    "fontSize": 14,
+    "originalText": "35",
+    "isSplit": false
+  },
+  "36": {
+    "x": 1972.341575323052,
+    "y": 800.4472871247714,
+    "fontSize": 14,
+    "originalText": "36",
+    "isSplit": false
+  },
+  "37": {
+    "x": 1851.2575164510847,
+    "y": 1067.3593289312603,
+    "fontSize": 14,
+    "originalText": "37",
+    "isSplit": false
+  },
+  "38": {
+    "x": 1601.8873302830762,
+    "y": 990.5337574434276,
+    "fontSize": 14,
+    "originalText": "38",
+    "isSplit": false
+  },
+  "39": {
+    "x": 1581.2661869681283,
+    "y": 1019.2318028930277,
+    "fontSize": 14,
+    "originalText": "39",
+    "isSplit": false
+  },
+  "40": {
+    "x": 1581.5477660162874,
+    "y": 1035.921636297437,
+    "fontSize": 14,
+    "originalText": "40",
+    "isSplit": false
+  },
+  "41": {
+    "x": 1601.6218751454942,
+    "y": 1007.1599860859781,
+    "fontSize": 14,
+    "originalText": "41",
+    "isSplit": false
+  },
+  "42": {
+    "x": 1862.0163511082474,
+    "y": 1082.3019451984226,
+    "fontSize": 14,
+    "originalText": "42",
+    "isSplit": false
+  },
+  "43": {
+    "x": 1872.3141552272648,
+    "y": 1067.3300894329286,
+    "fontSize": 14,
+    "originalText": "43",
+    "isSplit": false
+  },
+  "44": {
+    "x": 2114.150988330823,
+    "y": 957.0068806199862,
+    "fontSize": 14,
+    "originalText": "44",
+    "isSplit": false
+  },
+  "45": {
+    "x": 2134.256333527712,
+    "y": 957.4199201775217,
+    "fontSize": 14,
+    "originalText": "45",
+    "isSplit": false
+  },
+  "46": {
+    "x": 2291.438093018568,
+    "y": 956.2821138732646,
+    "fontSize": 14,
+    "originalText": "46",
+    "isSplit": false
+  },
+  "47": {
+    "x": 2457.759792156156,
+    "y": 984.3103410744708,
+    "fontSize": 14,
+    "originalText": "47",
+    "isSplit": false
+  },
+  "48": {
+    "x": 2478.3710609831965,
+    "y": 977.3838421157469,
+    "fontSize": 14,
+    "originalText": "48",
+    "isSplit": false
+  },
+  "49": {
+    "x": 2472.411062039344,
+    "y": 993.1000979857527,
+    "fontSize": 14,
+    "originalText": "49",
+    "isSplit": false
+  },
+  "50": {
+    "x": 2664.8506054349814,
+    "y": 1186.338162093274,
+    "fontSize": 14,
+    "originalText": "50",
+    "isSplit": false
+  },
+  "51": {
+    "x": 2870.9085237508375,
+    "y": 1160.7237667583595,
+    "fontSize": 14,
+    "originalText": "51",
+    "isSplit": false
+  },
+  "52": {
+    "x": 2871.417194025972,
+    "y": 1182.4180904661503,
+    "fontSize": 14,
+    "originalText": "52",
+    "isSplit": false
+  },
+  "53": {
+    "x": 2640.822866259761,
+    "y": 1187.6312410413962,
+    "fontSize": 14,
+    "originalText": "53",
+    "isSplit": false
+  },
+  "54": {
+    "x": 2414.8791963339236,
+    "y": 1232.7092885888394,
+    "fontSize": 14,
+    "originalText": "54",
+    "isSplit": false
+  },
+  "55": {
+    "x": 2132.210329767642,
+    "y": 1118.0794807899672,
+    "fontSize": 14,
+    "originalText": "55",
+    "isSplit": false
+  },
+  "56": {
+    "x": 1983.187984099371,
+    "y": 1290.9057628621383,
+    "fontSize": 14,
+    "originalText": "56",
+    "isSplit": false
+  },
+  "57": {
+    "x": 1961.5979742241534,
+    "y": 1282.4282282890013,
+    "fontSize": 14,
+    "originalText": "57",
+    "isSplit": false
+  },
+  "58": {
+    "x": 1693.8456988524313,
+    "y": 1283.08122716124,
+    "fontSize": 14,
+    "originalText": "58",
+    "isSplit": false
+  },
+  "59": {
+    "x": 1649.7093085661074,
+    "y": 1300.19577427711,
+    "fontSize": 14,
+    "originalText": "59",
+    "isSplit": false
+  },
+  "60": {
+    "x": 1962.133040275964,
+    "y": 1299.5427754048712,
+    "fontSize": 14,
+    "originalText": "60",
+    "isSplit": false
+  },
+  "61": {
+    "x": 2190.5568483954776,
+    "y": 1318.706295530485,
+    "fontSize": 14,
+    "originalText": "61",
+    "isSplit": false
+  },
+  "62": {
+    "x": 2414.1891062476516,
+    "y": 1248.5708707517479,
+    "fontSize": 14,
+    "originalText": "62",
+    "isSplit": false
+  },
+  "63": {
+    "x": 2435.1968821007063,
+    "y": 1241.1790088632947,
+    "fontSize": 14,
+    "originalText": "63",
+    "isSplit": false
+  },
+  "64": {
+    "x": 30.84925644195724,
+    "y": 808.8877804147004,
+    "fontSize": 14,
+    "originalText": "64",
+    "isSplit": false
+  },
+  "65": {
+    "x": 44.75314666931825,
+    "y": 1018.894455723799,
+    "fontSize": 14,
+    "originalText": "65",
+    "isSplit": false
+  },
+  "66": {
+    "x": 67.70904876345075,
+    "y": 1260.3665499797412,
+    "fontSize": 14,
+    "originalText": "66",
+    "isSplit": false
+  },
+  "67": {
+    "x": 215.0758019544906,
+    "y": 1254.893271248407,
+    "fontSize": 14,
+    "originalText": "67",
+    "isSplit": false
+  },
+  "68": {
+    "x": 479.23279390325524,
+    "y": 1200.3992434344082,
+    "fontSize": 14,
+    "originalText": "68",
+    "isSplit": false
+  },
+  "69": {
+    "x": 680.8139978155098,
+    "y": 1200.3992434344084,
+    "fontSize": 14,
+    "originalText": "69",
+    "isSplit": false
+  },
+  "70": {
+    "x": 773.4304124396623,
+    "y": 1291.1660866755824,
+    "fontSize": 14,
+    "originalText": "70",
+    "isSplit": false
+  },
+  "71": {
+    "x": 1032.576078063765,
+    "y": 1319.1829704270585,
+    "fontSize": 14,
+    "originalText": "71",
+    "isSplit": false
+  },
+  "72": {
+    "x": 1259.5073408613002,
+    "y": 1181.1528224317292,
+    "fontSize": 14,
+    "originalText": "72",
+    "isSplit": false
+  },
+  "73": {
+    "x": 1399.0904332000941,
+    "y": 1301.5017720215874,
+    "fontSize": 14,
+    "originalText": "73",
+    "isSplit": false
+  },
+  "74": {
+    "x": 1510.29647466236,
+    "y": 1300.8487731493487,
+    "fontSize": 14,
+    "originalText": "74",
+    "isSplit": false
+  },
+  "75": {
+    "x": 1488.755669864012,
+    "y": 1282.4282282890013,
+    "fontSize": 14,
+    "originalText": "75",
+    "isSplit": false
+  },
+  "76": {
+    "x": 1257.3063543399987,
+    "y": 1163.413096449305,
+    "fontSize": 14,
+    "originalText": "76",
+    "isSplit": false
+  },
+  "77": {
+    "x": 1281.823998345067,
+    "y": 1178.2753904454657,
+    "fontSize": 14,
+    "originalText": "77",
+    "isSplit": false
+  },
+  "78": {
+    "x": 1506.858370696169,
+    "y": 1036.5746351696757,
+    "fontSize": 14,
+    "originalText": "78",
+    "isSplit": false
+  },
+  "79": {
+    "x": 1485.3171573692846,
+    "y": 1018.0164648276316,
+    "fontSize": 14,
+    "originalText": "79",
+    "isSplit": false
+  },
+  "80": {
+    "x": 1400.6134927268167,
+    "y": 1017.5301224495336,
+    "fontSize": 14,
+    "originalText": "80",
+    "isSplit": false
+  },
+  "81": {
+    "x": 1079.6314875471899,
+    "y": 936.0267301396561,
+    "fontSize": 14,
+    "originalText": "81",
+    "isSplit": false
+  },
+  "82": {
+    "x": 743.9346286711683,
+    "y": 1120.347221493396,
+    "fontSize": 14,
+    "originalText": "82",
+    "isSplit": false
+  },
+  "83": {
+    "x": 663.4270518914501,
+    "y": 1179.9229032717926,
+    "fontSize": 14,
+    "originalText": "83",
+    "isSplit": false
+  },
+  "84": {
+    "x": 464.1722326868497,
+    "y": 1180.183409916037,
+    "fontSize": 14,
+    "originalText": "84",
+    "isSplit": false
+  },
+  "85": {
+    "x": 232.3374950232432,
+    "y": 1078.21218379629,
+    "fontSize": 14,
+    "originalText": "85",
+    "isSplit": false
+  },
+  "86": {
+    "x": 357.94491639847524,
+    "y": 921.6973966133604,
+    "fontSize": 14,
+    "originalText": "86",
+    "isSplit": false
+  },
+  "87": {
+    "x": 428.12719726046686,
+    "y": 875.1047511644306,
+    "fontSize": 14,
+    "originalText": "87",
+    "isSplit": false
+  },
+  "88": {
+    "x": 195.3265820407322,
+    "y": 766.3600082817134,
+    "fontSize": 14,
+    "originalText": "88",
+    "isSplit": false
+  },
+  "89": {
+    "x": 133.47146232358813,
+    "y": 710.5397056807869,
+    "fontSize": 14,
+    "originalText": "89",
+    "isSplit": false
+  },
+  "90": {
+    "x": 236.21130243319743,
+    "y": 626.8669668525902,
+    "fontSize": 14,
+    "originalText": "90",
+    "isSplit": false
+  },
+  "91": {
+    "x": 375.4909512410813,
+    "y": 624.1117465280681,
+    "fontSize": 14,
+    "originalText": "91",
+    "isSplit": false
+  },
+  "92": {
+    "x": 618.0757917347249,
+    "y": 789.5892899942728,
+    "fontSize": 14,
+    "originalText": "92",
+    "isSplit": false
+  },
+  "93": {
+    "x": 673.6738232609382,
+    "y": 657.8154599465397,
+    "fontSize": 14,
+    "originalText": "93",
+    "isSplit": false
+  },
+  "94": {
+    "x": 739.7214325507148,
+    "y": 779.5742239694462,
+    "fontSize": 14,
+    "originalText": "94",
+    "isSplit": false
+  },
+  "95": {
+    "x": 799.6124659620612,
+    "y": 706.9899441993903,
+    "fontSize": 14,
+    "originalText": "95",
+    "isSplit": false
+  },
+  "96": {
+    "x": 866.3478570645337,
+    "y": 823.1665693640157,
+    "fontSize": 14,
+    "originalText": "96",
+    "isSplit": false
+  },
+  "97": {
+    "x": 912.5584806207161,
+    "y": 718.3245412811577,
+    "fontSize": 14,
+    "originalText": "97",
+    "isSplit": false
+  },
+  "98": {
+    "x": 1018.7986989040512,
+    "y": 833.1277946282119,
+    "fontSize": 14,
+    "originalText": "98",
+    "isSplit": false
+  },
+  "99": {
+    "x": 1026.8482331859595,
+    "y": 737.2317552372755,
+    "fontSize": 14,
+    "originalText": "99",
+    "isSplit": false
+  },
+  "100": {
+    "x": 1144.015705018381,
+    "y": 643.5441724972445,
+    "fontSize": 14,
+    "originalText": "100",
+    "isSplit": false
+  },
+  "101": {
+    "x": 196.02653208373764,
+    "y": 608.359770507571,
+    "fontSize": 14,
+    "originalText": "101",
+    "isSplit": false
+  },
+  "102": {
+    "x": 310.1851822863937,
+    "y": 471.83366582249585,
+    "fontSize": 14,
+    "originalText": "102",
+    "isSplit": false
+  },
+  "103": {
+    "x": 338.82015738990873,
+    "y": 472.45015486066563,
+    "fontSize": 14,
+    "originalText": "103",
+    "isSplit": false
+  },
+  "104": {
+    "x": 496.7327943454081,
+    "y": 449.4289004876154,
+    "fontSize": 14,
+    "originalText": "104",
+    "isSplit": false
+  },
+  "105": {
+    "x": 513.9870085122209,
+    "y": 502.5056653024143,
+    "fontSize": 14,
+    "originalText": "105",
+    "isSplit": false
+  },
+  "106": {
+    "x": 297.1957273889037,
+    "y": 455.6037844219664,
+    "fontSize": 14,
+    "originalText": "106",
+    "isSplit": false
+  },
+  "107": {
+    "x": 387.12966955851283,
+    "y": 455.4852233984479,
+    "fontSize": 14,
+    "originalText": "107",
+    "isSplit": false
+  },
+  "108": {
+    "x": 413.93480220964005,
+    "y": 468.97518549978065,
+    "fontSize": 14,
+    "originalText": "108",
+    "isSplit": false
+  },
+  "109": {
+    "x": 479.50202401871,
+    "y": 432.25067793009737,
+    "fontSize": 14,
+    "originalText": "109",
+    "isSplit": false
+  },
+  "110": {
+    "x": 623.4965337924286,
+    "y": 377.9524931308732,
+    "fontSize": 14,
+    "originalText": "110",
+    "isSplit": false
+  },
+  "111": {
+    "x": 671.4157299751683,
+    "y": 257.63803580362827,
+    "fontSize": 14,
+    "originalText": "111",
+    "isSplit": false
+  },
+  "112": {
+    "x": 697.7341834761473,
+    "y": 257.3810005230873,
+    "fontSize": 14,
+    "originalText": "112",
+    "isSplit": false
+  },
+  "113": {
+    "x": 826.8564976085389,
+    "y": 274.30589158386306,
+    "fontSize": 14,
+    "originalText": "113",
+    "isSplit": false
+  },
+  "114": {
+    "x": 905.8523229503492,
+    "y": 236.44994346045507,
+    "fontSize": 14,
+    "originalText": "114",
+    "isSplit": false
+  },
+  "115": {
+    "x": 978.0688839033334,
+    "y": 121.83359515294177,
+    "fontSize": 14,
+    "originalText": "115",
+    "isSplit": false
+  },
+  "116": {
+    "x": 298.00781933337197,
+    "y": 160.98656069383287,
+    "fontSize": 14,
+    "originalText": "116",
+    "isSplit": false
+  },
+  "117": {
+    "x": 387.12966955851283,
+    "y": 160.4807889220935,
+    "fontSize": 14,
+    "originalText": "117",
+    "isSplit": false
+  },
+  "118": {
+    "x": 465.4019458700599,
+    "y": 160.95054286433924,
+    "fontSize": 14,
+    "originalText": "118",
+    "isSplit": false
+  },
+  "119": {
+    "x": 544.9492167541267,
+    "y": 119.72695113873158,
+    "fontSize": 14,
+    "originalText": "119",
+    "isSplit": false
+  },
+  "120": {
+    "x": 66.84946711450921,
+    "y": 188.87783041031258,
+    "fontSize": 14,
+    "originalText": "120",
+    "isSplit": false
+  },
+  "121": {
+    "x": 255.37655303840504,
+    "y": 139.53053271697155,
+    "fontSize": 14,
+    "originalText": "121",
+    "isSplit": false
+  },
+  "122": {
+    "x": 379.2474275645546,
+    "y": 140.68325383724027,
+    "fontSize": 14,
+    "originalText": "122",
+    "isSplit": false
+  },
+  "123": {
+    "x": 528.9105579499666,
+    "y": 102.75119047655335,
+    "fontSize": 14,
+    "originalText": "123",
+    "isSplit": false
+  },
+  "124": {
+    "x": 554.5293125653889,
+    "y": 101.88112582338435,
+    "fontSize": 14,
+    "originalText": "124",
+    "isSplit": false
+  },
+  "125": {
+    "x": 681.177608392314,
+    "y": 141.3364242662474,
+    "fontSize": 14,
+    "originalText": "125",
+    "isSplit": false
+  },
+  "126": {
+    "x": 849.4948829214384,
+    "y": 49.94476937357091,
+    "fontSize": 14,
+    "originalText": "126",
+    "isSplit": false
+  },
+  "127": {
+    "x": 1139.6373512494235,
+    "y": 52.941423607522765,
+    "fontSize": 14,
+    "originalText": "127",
+    "isSplit": false
+  },
+  "128": {
+    "x": 1363.646887343403,
+    "y": 678.5627268884741,
+    "fontSize": 14,
+    "originalText": "128",
+    "isSplit": false
+  },
+  "6A": {
+    "x": 2383.6037768547894,
+    "y": 326.2233090902262,
+    "fontSize": 14,
+    "originalText": "6A",
+    "isSplit": false
+  },
+  "Spanish Morocco": {
+    "x": 592.7188866645365,
+    "y": 827.8476307247381,
+    "fontSize": 14,
+    "originalText": "Spanish Morocco",
+    "isSplit": false
+  },
+  "Morocco": {
+    "x": 604.9449209204038,
+    "y": 871.5460190062687,
+    "fontSize": 14,
+    "originalText": "Morocco",
+    "isSplit": false,
+    "ipcsX": 604.9449209204038,
+    "ipcsY": 852.9178932749489,
+    "ipcsFontSize": 16
+  },
+  "Morocco City of Casablanca": {
+    "x": 542.0828696105046,
+    "y": 876.0561938897977,
+    "fontSize": 14,
+    "originalText": "Morocco City of Casablanca",
+    "isSplit": true,
+    "words": [
+      {
+        "text": "Morocco",
+        "x": 534.8453842369032,
+        "y": 859.7296280988581,
+        "fontSize": 14
+      },
+      {
+        "text": "City",
+        "x": 528.1024039686145,
+        "y": 874.2421310241377,
+        "fontSize": 14
+      },
+      {
+        "text": "of",
+        "x": 549.3391210731445,
+        "y": 875.1491624569676,
+        "fontSize": 14
+      },
+      {
+        "text": "Casablanca",
+        "x": 542.2609836407057,
+        "y": 889.6616653822474,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Rio de Oro": {
+    "x": 528.2682760799216,
+    "y": 929.6032115721853,
+    "fontSize": 14,
+    "originalText": "Rio de Oro",
+    "isSplit": true,
+    "words": [
+      {
+        "text": "Rio",
+        "x": 498.86827607992166,
+        "y": 929.6032115721853,
+        "fontSize": 14
+      },
+      {
+        "text": "de",
+        "x": 524.0682760799216,
+        "y": 929.6032115721853,
+        "fontSize": 14
+      },
+      {
+        "text": "Oro",
+        "x": 549.2682760799216,
+        "y": 929.6032115721853,
+        "fontSize": 14
+      }
+    ]
+  },
+  "French West Africa": {
+    "x": 630.4735486497013,
+    "y": 981.7523775749103,
+    "fontSize": 14,
+    "originalText": "French West Africa",
+    "isSplit": true,
+    "ipcsX": 625.9383914855515,
+    "ipcsY": 960.4031575451004,
+    "ipcsFontSize": 16,
+    "words": [
+      {
+        "text": "French",
+        "x": 627.2391831568605,
+        "y": 979.9383147092503,
+        "fontSize": 14
+      },
+      {
+        "text": "West",
+        "x": 601.7836999632918,
+        "y": 994.45081763453,
+        "fontSize": 14
+      },
+      {
+        "text": "Africa",
+        "x": 644.3555742319718,
+        "y": 994.45081763453,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Portuguese Guinea": {
+    "x": 535.9272789658476,
+    "y": 961.3565766579204,
+    "fontSize": 14,
+    "originalText": "Portuguese Guinea",
+    "isSplit": true,
+    "words": [
+      {
+        "text": "Portuguese",
+        "x": 538.2733791148969,
+        "y": 961.3565766579204,
+        "fontSize": 14
+      },
+      {
+        "text": "Guinea",
+        "x": 541.6460216526484,
+        "y": 976.7761110160302,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Sierra Leone": {
+    "x": 550.1122482225717,
+    "y": 1015.8588393266491,
+    "fontSize": 14,
+    "originalText": "Sierra Leone",
+    "isSplit": true,
+    "ipcsX": 566.4388140135113,
+    "ipcsY": 996.3236821624992,
+    "ipcsFontSize": 16,
+    "words": [
+      {
+        "text": "Sierra",
+        "x": 563.0075684014311,
+        "y": 1011.3236821624992,
+        "fontSize": 14
+      },
+      {
+        "text": "Leone",
+        "x": 564.427871028612,
+        "y": 1022.208059356459,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Liberia": {
+    "x": 603.1895079145396,
+    "y": 1043.6683382056767,
+    "fontSize": 14,
+    "originalText": "Liberia",
+    "isSplit": false
+  },
+  "Gold Coast": {
+    "x": 691.9028706892244,
+    "y": 1021.4912053797473,
+    "fontSize": 14,
+    "originalText": "Gold Coast",
+    "isSplit": true,
+    "ipcsX": 691.9028706892244,
+    "ipcsY": 1000.1419853499374,
+    "ipcsFontSize": 16,
+    "words": [
+      {
+        "text": "Gold",
+        "x": 689.378656509974,
+        "y": 1018.7701110812573,
+        "fontSize": 14
+      },
+      {
+        "text": "Coast",
+        "x": 690.5622420326247,
+        "y": 1032.375582573707,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Nigeria": {
+    "x": 802.1070286402814,
+    "y": 1063.6973458549264,
+    "fontSize": 14,
+    "originalText": "Nigeria",
+    "isSplit": false,
+    "ipcsX": 801.1999972074515,
+    "ipcsY": 1041.4410943922865,
+    "ipcsFontSize": 16
+  },
+  "Manitoba": {
+    "x": 39.5,
+    "y": 262.0999984741211,
+    "fontSize": 14,
+    "originalText": "Manitoba",
+    "isSplit": false
+  },
+  "Greenland": {
+    "x": 200.92082898949388,
+    "y": 50,
+    "fontSize": 14,
+    "originalText": "Greenland",
+    "isSplit": false
+  },
+  "Quebec": {
+    "x": 149.78329834276667,
+    "y": 329.83619505380295,
+    "fontSize": 14,
+    "originalText": "Quebec",
+    "isSplit": false,
+    "ipcsX": 150.78329834276667,
+    "ipcsY": 305.83619505380295,
+    "ipcsFontSize": 16
+  },
+  "Ontario": {
+    "x": 82,
+    "y": 355.03334045410156,
+    "fontSize": 14,
+    "originalText": "Ontario",
+    "isSplit": false,
+    "ipcsX": 81,
+    "ipcsY": 335.03334045410156,
+    "ipcsFontSize": 16
+  },
+  "Newfoundland Labrador": {
+    "x": 234.32148461856576,
+    "y": 259.40787184311034,
+    "fontSize": 14,
+    "originalText": "Newfoundland Labrador",
+    "isSplit": true,
+    "ipcsX": 230.32148461856576,
+    "ipcsY": 246.40787184311034,
+    "ipcsFontSize": 16,
+    "words": [
+      {
+        "text": "Newfoundland",
+        "x": 235.52148461856578,
+        "y": 269.40787184311034,
+        "fontSize": 14
+      },
+      {
+        "text": "Labrador",
+        "x": 234.7214846185658,
+        "y": 284.40787184311034,
+        "fontSize": 14
+      }
+    ]
+  },
+  "New Brunswick Nova Scotia": {
+    "x": 236.07646948540048,
+    "y": 360.667517506742,
+    "fontSize": 14,
+    "originalText": "New Brunswick Nova Scotia",
+    "isSplit": true,
+    "ipcsX": 236.07646948540048,
+    "ipcsY": 345.667517506742,
+    "ipcsFontSize": 16,
+    "words": [
+      {
+        "text": "New",
+        "x": 216.67646948540047,
+        "y": 362.667517506742,
+        "fontSize": 14
+      },
+      {
+        "text": "Brunswick",
+        "x": 271.2764694854005,
+        "y": 362.667517506742,
+        "fontSize": 14
+      },
+      {
+        "text": "Nova",
+        "x": 229.07646948540048,
+        "y": 375.667517506742,
+        "fontSize": 14
+      },
+      {
+        "text": "Scotia",
+        "x": 270.27646948540047,
+        "y": 375.667517506742,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Eastern United States": {
+    "x": 146.42266485316205,
+    "y": 534.3122640206575,
+    "fontSize": 14,
+    "originalText": "Eastern United States",
+    "isSplit": true,
+    "ipcsX": 104.42266485316205,
+    "ipcsY": 481.31226402065755,
+    "ipcsFontSize": 16,
+    "words": [
+      {
+        "text": "Eastern",
+        "x": 104.62266485316205,
+        "y": 502.3122640206575,
+        "fontSize": 14
+      },
+      {
+        "text": "United",
+        "x": 101.42266485316208,
+        "y": 516.3122640206575,
+        "fontSize": 14
+      },
+      {
+        "text": "States",
+        "x": 101.02266485316204,
+        "y": 531.3122640206575,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Central United States": {
+    "x": 88.20804746708595,
+    "y": 574.8428703629015,
+    "fontSize": 14,
+    "originalText": "Central United States",
+    "isSplit": true,
+    "ipcsX": 36.208047467085954,
+    "ipcsY": 465.8428703629015,
+    "ipcsFontSize": 16,
+    "words": [
+      {
+        "text": "Central",
+        "x": 33.40804746708595,
+        "y": 489.8428703629015,
+        "fontSize": 14
+      },
+      {
+        "text": "United",
+        "x": 32.20804746708595,
+        "y": 502.8428703629015,
+        "fontSize": 14
+      },
+      {
+        "text": "States",
+        "x": 30.80804746708594,
+        "y": 517.8428703629015,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Southeast Mexico": {
+    "x": 35.483886517744246,
+    "y": 655.9975226963891,
+    "fontSize": 14,
+    "originalText": "Southeast Mexico",
+    "isSplit": true,
+    "ipcsX": 45.483886517744246,
+    "ipcsY": 652.9975226963891,
+    "ipcsFontSize": 16,
+    "words": [
+      {
+        "text": "Southeast",
+        "x": 44.08388651774425,
+        "y": 672.9975226963891,
+        "fontSize": 14
+      },
+      {
+        "text": "Mexico",
+        "x": 47.5898842622216,
+        "y": 686.7325283351958,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Central America": {
+    "x": 47.43118730038458,
+    "y": 763.5553049859087,
+    "fontSize": 14,
+    "originalText": "Central America",
+    "isSplit": true,
+    "ipcsX": 54.61417489500988,
+    "ipcsY": 715.9053613739757,
+    "ipcsFontSize": 16,
+    "words": [
+      {
+        "text": "Central",
+        "x": 54.31711737918167,
+        "y": 733.5173568629301,
+        "fontSize": 14
+      },
+      {
+        "text": "America",
+        "x": 52.67022902755406,
+        "y": 747.2303331799422,
+        "fontSize": 14
+      }
+    ]
+  },
+  "West Indies": {
+    "x": 138.1378882566602,
+    "y": 658.6023602342062,
+    "fontSize": 14,
+    "originalText": "West Indies",
+    "isSplit": false,
+    "ipcsX": 130.1378882566602,
+    "ipcsY": 638.6023602342062,
+    "ipcsFontSize": 16
+  },
+  "Iceland": {
+    "x": 457.05559634882695,
+    "y": 103.05559634882688,
+    "fontSize": 14,
+    "originalText": "Iceland",
+    "isSplit": false,
+    "ipcsX": 453.58334863081006,
+    "ipcsY": 82.49999999999999,
+    "ipcsFontSize": 16
+  },
+  "United Kingdom": {
+    "x": 573.5,
+    "y": 284.00958760867934,
+    "fontSize": 14,
+    "originalText": "United Kingdom",
+    "isSplit": true,
+    "ipcsX": 583.9167431540504,
+    "ipcsY": 282.2041289371432,
+    "ipcsFontSize": 16,
+    "words": [
+      {
+        "text": "United",
+        "x": 584.6224771801681,
+        "y": 309.037431675523,
+        "fontSize": 14
+      },
+      {
+        "text": "Kingdom",
+        "x": 585.0053668866757,
+        "y": 326.3708261987634,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Eire": {
+    "x": 522.6831920121833,
+    "y": 217.33890895526022,
+    "fontSize": 14,
+    "originalText": "Eire",
+    "isSplit": false
+  },
+  "Scotland": {
+    "x": 584.7663800079057,
+    "y": 179.91452077506437,
+    "fontSize": 14,
+    "originalText": "Scotland",
+    "isSplit": false,
+    "ipcsX": 582.6830313770956,
+    "ipcsY": 157.2755757954274,
+    "ipcsFontSize": 16
+  },
+  "Holland Belgium": {
+    "x": 669.0116795300869,
+    "y": 396.8308175671061,
+    "fontSize": 14,
+    "originalText": "Holland Belgium",
+    "isSplit": true,
+    "ipcsX": 669.0116795300869,
+    "ipcsY": 381.8308175671061,
+    "ipcsFontSize": 16,
+    "words": [
+      {
+        "text": "Holland",
+        "x": 672.6003593748642,
+        "y": 402.2730633980492,
+        "fontSize": 14
+      },
+      {
+        "text": "Belgium",
+        "x": 671.2004503753717,
+        "y": 414.97163700358294,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Western Germany": {
+    "x": 764.6335632811968,
+    "y": 410.6660612553387,
+    "fontSize": 14,
+    "originalText": "Western Germany",
+    "isSplit": true,
+    "ipcsX": 759.1913174502537,
+    "ipcsY": 376.61820084703805,
+    "ipcsFontSize": 16,
+    "words": [
+      {
+        "text": "Western",
+        "x": 761.8729563232073,
+        "y": 396.1534057061573,
+        "fontSize": 14
+      },
+      {
+        "text": "Germany",
+        "x": 761.3800882955385,
+        "y": 410.6660612553387,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Germany": {
+    "x": 864.7371134578743,
+    "y": 379.5505958728585,
+    "fontSize": 14,
+    "originalText": "Germany",
+    "isSplit": false,
+    "ipcsX": 864.7371134578743,
+    "ipcsY": 358.2013090700916,
+    "ipcsFontSize": 16
+  },
+  "France": {
+    "x": 666.6211324363092,
+    "y": 506.6879031887934,
+    "fontSize": 14,
+    "originalText": "France",
+    "isSplit": false,
+    "ipcsX": 666.6211324363092,
+    "ipcsY": 484.4316517261535,
+    "ipcsFontSize": 16
+  },
+  "Normandy Bordeaux": {
+    "x": 571.3768143128837,
+    "y": 527.9694009971997,
+    "fontSize": 14,
+    "originalText": "Normandy Bordeaux",
+    "isSplit": true,
+    "ipcsX": 573.1908771785436,
+    "ipcsY": 478.50220654966046,
+    "ipcsFontSize": 16,
+    "words": [
+      {
+        "text": "Normandy",
+        "x": 569.8580716260831,
+        "y": 500.75845801230025,
+        "fontSize": 14
+      },
+      {
+        "text": "Bordeaux",
+        "x": 573.2307141638344,
+        "y": 514.3639295047501,
+        "fontSize": 14
+      }
+    ]
+  },
+  "France City of Vichy": {
+    "x": 658.9578367599963,
+    "y": 596.3559677085603,
+    "fontSize": 14,
+    "originalText": "France City of Vichy",
+    "isSplit": false,
+    "ipcsX": 660.7718996256563,
+    "ipcsY": 573.1926848130906,
+    "ipcsFontSize": 16
+  },
+  "Switzerland": {
+    "x": 748.5098786273286,
+    "y": 533.9410220190503,
+    "fontSize": 14,
+    "originalText": "Switzerland",
+    "isSplit": false
+  },
+  "Northern Italy": {
+    "x": 785.0418736337186,
+    "y": 589.3449356189109,
+    "fontSize": 14,
+    "originalText": "Northern Italy",
+    "isSplit": true,
+    "ipcsX": 775.9715593054187,
+    "ipcsY": 562.5535269921211,
+    "ipcsFontSize": 16,
+    "words": [
+      {
+        "text": "Northern",
+        "x": 776.1684394246585,
+        "y": 582.995715589101,
+        "fontSize": 14
+      },
+      {
+        "text": "Italy",
+        "x": 780.5465534548593,
+        "y": 598.4152499472107,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Yugoslavia": {
+    "x": 924.8625672756707,
+    "y": 572.7067823236118,
+    "fontSize": 14,
+    "originalText": "Yugoslavia",
+    "isSplit": false,
+    "ipcsX": 924.8625672756707,
+    "ipcsY": 557.7067823236118,
+    "ipcsFontSize": 16
+  },
+  "Southern Italy": {
+    "x": 852.5944490551483,
+    "y": 667.504519531267,
+    "fontSize": 14,
+    "originalText": "Southern Italy",
+    "isSplit": true,
+    "ipcsX": 842.6171032940185,
+    "ipcsY": 646.1552995014571,
+    "ipcsFontSize": 16,
+    "words": [
+      {
+        "text": "Southern",
+        "x": 858.2335177713678,
+        "y": 666.5974880984369,
+        "fontSize": 14
+      },
+      {
+        "text": "Italy",
+        "x": 858.9835060702488,
+        "y": 682.0170224565466,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Sicily": {
+    "x": 826.3360934164966,
+    "y": 747.7612098485765,
+    "fontSize": 14,
+    "originalText": "Sicily",
+    "isSplit": false,
+    "ipcsX": 824.5220305508366,
+    "ipcsY": 728.2260526844266,
+    "ipcsFontSize": 16
+  },
+  "Albania": {
+    "x": 955.5358240557341,
+    "y": 653.5905542197279,
+    "fontSize": 14,
+    "originalText": "Albania",
+    "isSplit": false,
+    "ipcsX": 955.5358240557341,
+    "ipcsY": 638.5905542197279,
+    "ipcsFontSize": 16
+  },
+  "Greece": {
+    "x": 996.5888106624873,
+    "y": 712.6352868236331,
+    "fontSize": 14,
+    "originalText": "Greece",
+    "isSplit": false,
+    "ipcsX": 996.5888106624873,
+    "ipcsY": 697.6352868236331,
+    "ipcsFontSize": 16
+  },
+  "Marmara": {
+    "x": 1081.3179314269078,
+    "y": 711.1699818763045,
+    "fontSize": 14,
+    "originalText": "Marmara",
+    "isSplit": false,
+    "ipcsX": 1081.3179314269078,
+    "ipcsY": 693.4488589608329,
+    "ipcsFontSize": 16
+  },
+  "Denmark": {
+    "x": 775.3031115982382,
+    "y": 270.20052657247095,
+    "fontSize": 14,
+    "originalText": "Denmark",
+    "isSplit": false,
+    "ipcsX": 775.3031115982382,
+    "ipcsY": 255.20052657247095,
+    "ipcsFontSize": 16
+  },
+  "Sweden": {
+    "x": 844.240093920775,
+    "y": 190.33599404943064,
+    "fontSize": 14,
+    "originalText": "Sweden",
+    "isSplit": false,
+    "ipcsX": 847.7123416387919,
+    "ipcsY": 167.69704906979365,
+    "ipcsFontSize": 16
+  },
+  "Norway": {
+    "x": 774.9512965083435,
+    "y": 180.58586816278677,
+    "fontSize": 14,
+    "originalText": "Norway",
+    "isSplit": false,
+    "ipcsX": 777.7290946827569,
+    "ipcsY": 158.6413727267531,
+    "ipcsFontSize": 16
+  },
+  "Finland": {
+    "x": 999.5444475738276,
+    "y": 94.65296808978754,
+    "fontSize": 14,
+    "originalText": "Finland",
+    "isSplit": false,
+    "ipcsX": 998.8499980302242,
+    "ipcsY": 71.3195735665472,
+    "ipcsFontSize": 16
+  },
+  "Greater Southern Germany": {
+    "x": 844.5582833644921,
+    "y": 504.20499275963067,
+    "fontSize": 14,
+    "originalText": "Greater Southern Germany",
+    "isSplit": true,
+    "ipcsX": 846.3723653081398,
+    "ipcsY": 451.1092719430294,
+    "ipcsFontSize": 16,
+    "words": [
+      {
+        "text": "Greater",
+        "x": 843.9074791667516,
+        "y": 471.5515177739724,
+        "fontSize": 14
+      },
+      {
+        "text": "Southern",
+        "x": 846.7075701672591,
+        "y": 483.3430504076824,
+        "fontSize": 14
+      },
+      {
+        "text": "Germany",
+        "x": 848.6006201959425,
+        "y": 501.4838698441591,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Slovakia Hungary": {
+    "x": 952.3119634673594,
+    "y": 476.38003586177314,
+    "fontSize": 14,
+    "originalText": "Slovakia Hungary",
+    "isSplit": false,
+    "ipcsX": 952.3119634673595,
+    "ipcsY": 455.03074905900627,
+    "ipcsFontSize": 16
+  },
+  "Poland": {
+    "x": 945.0638066296551,
+    "y": 357.1150137308978,
+    "fontSize": 14,
+    "originalText": "Poland",
+    "isSplit": false,
+    "ipcsX": 948.5360543476719,
+    "ipcsY": 332.39272012045063,
+    "ipcsFontSize": 16
+  },
+  "Bulgaria": {
+    "x": 1036.5444433537764,
+    "y": 618.1271771053891,
+    "fontSize": 14,
+    "originalText": "Bulgaria",
+    "isSplit": false,
+    "ipcsX": 1036.5444433537764,
+    "ipcsY": 603.1271771053891,
+    "ipcsFontSize": 16
+  },
+  "Aragon": {
+    "x": 603.9780999537325,
+    "y": 667.3041458916741,
+    "fontSize": 14,
+    "originalText": "Aragon",
+    "isSplit": false,
+    "ipcsX": 605.7921628193924,
+    "ipcsY": 647.7689887275242,
+    "ipcsFontSize": 16
+  },
+  "Castilla": {
+    "x": 565.9796869128639,
+    "y": 730.8243972406258,
+    "fontSize": 14,
+    "originalText": "Castilla",
+    "isSplit": false,
+    "ipcsX": 565.9796869128639,
+    "ipcsY": 709.4751772108159,
+    "ipcsFontSize": 16
+  },
+  "Gibraltar": {
+    "x": 554.2713203471145,
+    "y": 778.1443343153602,
+    "fontSize": 14,
+    "originalText": "Gibraltar",
+    "isSplit": false
+  },
+  "Galicia Navarra": {
+    "x": 513.045795513874,
+    "y": 653.8569352388673,
+    "fontSize": 14,
+    "originalText": "Galicia Navarra",
+    "isSplit": false
+  },
+  "Portugal": {
+    "x": 489.65963450011674,
+    "y": 746.8528771222165,
+    "fontSize": 14,
+    "originalText": "Portugal",
+    "isSplit": false,
+    "ipcsX": 489.65963450011674,
+    "ipcsY": 726.4106885252364,
+    "ipcsFontSize": 16
+  },
+  "Sardinia": {
+    "x": 760.2913667550363,
+    "y": 678.1706461065461,
+    "fontSize": 14,
+    "originalText": "Sardinia",
+    "isSplit": false
+  },
+  "Malta": {
+    "x": 832.0309717202695,
+    "y": 813.8447752616914,
+    "fontSize": 14,
+    "originalText": "Malta",
+    "isSplit": false,
+    "ipcsX": 832.0309717202695,
+    "ipcsY": 795.8447753510984,
+    "ipcsFontSize": 16
+  },
+  "Crete": {
+    "x": 993.3812129950854,
+    "y": 779.7238089331072,
+    "fontSize": 14,
+    "originalText": "Crete",
+    "isSplit": false
+  },
+  "Romania": {
+    "x": 1024.559759255808,
+    "y": 542.1163595749557,
+    "fontSize": 14,
+    "originalText": "Romania",
+    "isSplit": false,
+    "ipcsX": 1024.559759255808,
+    "ipcsY": 527.1163595749557,
+    "ipcsFontSize": 16
+  },
+  "Eastern Poland": {
+    "x": 1031.7043967028355,
+    "y": 372.7726456928193,
+    "fontSize": 14,
+    "originalText": "Eastern Poland",
+    "isSplit": false,
+    "ipcsX": 1029.6210480720256,
+    "ipcsY": 348.05035208237217,
+    "ipcsFontSize": 16
+  },
+  "Baltic States": {
+    "x": 1016.4325177874636,
+    "y": 280.5909812869862,
+    "fontSize": 14,
+    "originalText": "Baltic States",
+    "isSplit": false,
+    "ipcsX": 1016.4325177874634,
+    "ipcsY": 255.17423813293578,
+    "ipcsFontSize": 16
+  },
+  "Cyprus": {
+    "x": 1075.8860229629504,
+    "y": 780.0761173495127,
+    "fontSize": 14,
+    "originalText": "Cyprus",
+    "isSplit": false
+  },
+  "Azores": {
+    "x": 395.36422768242187,
+    "y": 779.2103392898584,
+    "fontSize": 14,
+    "originalText": "Azores",
+    "isSplit": false
+  },
+  "Venezuela": {
+    "x": 138.68629604198418,
+    "y": 808.746997879667,
+    "fontSize": 14,
+    "originalText": "Venezuela",
+    "isSplit": false,
+    "ipcsX": 135.68629604198418,
+    "ipcsY": 790.746997879667,
+    "ipcsFontSize": 16
+  },
+  "British Guiana": {
+    "x": 230.57564616216368,
+    "y": 828.320924070071,
+    "fontSize": 14,
+    "originalText": "British Guiana",
+    "isSplit": false
+  },
+  "Suriname": {
+    "x": 242.4473743090736,
+    "y": 846.6851734604618,
+    "fontSize": 14,
+    "originalText": "Suriname",
+    "isSplit": false
+  },
+  "French Guinea": {
+    "x": 285.9716124136376,
+    "y": 862.9913629032422,
+    "fontSize": 14,
+    "originalText": "French Guinea",
+    "isSplit": false
+  },
+  "Brazil": {
+    "x": 209.51885372226923,
+    "y": 945.7238199456106,
+    "fontSize": 14,
+    "originalText": "Brazil",
+    "isSplit": false,
+    "ipcsX": 208.51885372226923,
+    "ipcsY": 922.7238199456106,
+    "ipcsFontSize": 16
+  },
+  "Colombia": {
+    "x": 86.83402518026926,
+    "y": 839.1779476068126,
+    "fontSize": 14,
+    "originalText": "Colombia",
+    "isSplit": false
+  },
+  "Ecuador": {
+    "x": 44.77135985484685,
+    "y": 873.4203981142207,
+    "fontSize": 14,
+    "originalText": "Ecuador",
+    "isSplit": false
+  },
+  "Peru": {
+    "x": 73.19273390001771,
+    "y": 920.7834034049449,
+    "fontSize": 14,
+    "originalText": "Peru",
+    "isSplit": false
+  },
+  "Bolivia": {
+    "x": 135.03887875778713,
+    "y": 967.4703231551051,
+    "fontSize": 14,
+    "originalText": "Bolivia",
+    "isSplit": false
+  },
+  "Chile": {
+    "x": 52.98915071580648,
+    "y": 1128.4947854793286,
+    "fontSize": 14,
+    "originalText": "Chile",
+    "isSplit": false,
+    "ipcsX": 55.98915071580648,
+    "ipcsY": 1105.4947854793286,
+    "ipcsFontSize": 16
+  },
+  "Argentina": {
+    "x": 117.43705777090287,
+    "y": 1093.7262869758429,
+    "fontSize": 14,
+    "originalText": "Argentina",
+    "isSplit": false,
+    "ipcsX": 116.43705777090287,
+    "ipcsY": 1074.7262869758429,
+    "ipcsFontSize": 16
+  },
+  "Uruguay": {
+    "x": 170.1859841878961,
+    "y": 1074.7404858880445,
+    "fontSize": 14,
+    "originalText": "Uruguay",
+    "isSplit": false
+  },
+  "Paraguay": {
+    "x": 167.46561999051926,
+    "y": 1013.1724416710363,
+    "fontSize": 14,
+    "originalText": "Paraguay",
+    "isSplit": false
+  },
+  "Sahara Desert": {
+    "x": 736.288730925152,
+    "y": 928.3816019927699,
+    "fontSize": 14,
+    "originalText": "Sahara Desert",
+    "isSplit": false
+  },
+  "Algeria": {
+    "x": 687.2214199406801,
+    "y": 844.6461239322452,
+    "fontSize": 14,
+    "originalText": "Algeria",
+    "isSplit": false,
+    "ipcsX": 686.3143885078501,
+    "ipcsY": 825.1109667680954,
+    "ipcsFontSize": 16
+  },
+  "Tunisia": {
+    "x": 750.4721258304745,
+    "y": 843.4134446552606,
+    "fontSize": 14,
+    "originalText": "Tunisia",
+    "isSplit": false,
+    "ipcsX": 750.4721258304744,
+    "ipcsY": 822.9712560582809,
+    "ipcsFontSize": 16
+  },
+  "French Central Africa": {
+    "x": 789.335434782474,
+    "y": 991.7713365302727,
+    "fontSize": 14,
+    "originalText": "French Central Africa",
+    "isSplit": false,
+    "ipcsX": 789.335434782474,
+    "ipcsY": 976.7713365302727,
+    "ipcsFontSize": 16
+  },
+  "French Equatorial Africa": {
+    "x": 880.5797003875492,
+    "y": 1104.2503730300436,
+    "fontSize": 14,
+    "originalText": "French Equatorial Africa",
+    "isSplit": false,
+    "ipcsX": 886.021888984529,
+    "ipcsY": 1081.0870901345743,
+    "ipcsFontSize": 16
+  },
+  "Italian Libya": {
+    "x": 819.1138154609137,
+    "y": 887.506773770325,
+    "fontSize": 14,
+    "originalText": "Italian Libya",
+    "isSplit": false,
+    "ipcsX": 816.3927211624236,
+    "ipcsY": 867.9716166061753,
+    "ipcsFontSize": 16
+  },
+  "Italian Libya City of Tobruk": {
+    "x": 883.0834003812852,
+    "y": 924.9489372666333,
+    "fontSize": 14,
+    "originalText": "Italian Libya City of Tobruk",
+    "isSplit": true,
+    "words": [
+      {
+        "text": "Italian",
+        "x": 880.1443550673034,
+        "y": 905.9012771772035,
+        "fontSize": 14
+      },
+      {
+        "text": "Libya",
+        "x": 883.0435633959945,
+        "y": 920.4137801024832,
+        "fontSize": 14
+      },
+      {
+        "text": "City",
+        "x": 870.6216774261956,
+        "y": 934.0192515949332,
+        "fontSize": 14
+      },
+      {
+        "text": "of",
+        "x": 892.7654259635557,
+        "y": 934.9262830277631,
+        "fontSize": 14
+      },
+      {
+        "text": "Tobruk",
+        "x": 884.3068228892266,
+        "y": 949.4387859530428,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Egypt City of El Alamein": {
+    "x": 1010.1899804463452,
+    "y": 928.2646063588023,
+    "fontSize": 14,
+    "originalText": "Egypt City of El Alamein",
+    "isSplit": true,
+    "words": [
+      {
+        "text": "Egypt",
+        "x": 952.1587348342647,
+        "y": 923.7294491946525,
+        "fontSize": 14
+      },
+      {
+        "text": "City",
+        "x": 940.6438802972958,
+        "y": 940.056014985592,
+        "fontSize": 14
+      },
+      {
+        "text": "of",
+        "x": 962.7876288346558,
+        "y": 940.9630464184221,
+        "fontSize": 14
+      },
+      {
+        "text": "El",
+        "x": 927.551679999197,
+        "y": 957.2896122093618,
+        "fontSize": 14
+      },
+      {
+        "text": "Alamein",
+        "x": 965.923554267877,
+        "y": 957.2896122093616,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Egypt": {
+    "x": 1027.628256975642,
+    "y": 953.4048166590511,
+    "fontSize": 14,
+    "originalText": "Egypt",
+    "isSplit": false,
+    "ipcsX": 1022.186068378662,
+    "ipcsY": 932.9626280620712,
+    "ipcsFontSize": 16
+  },
+  "Anglo-Egyptian Sudan": {
+    "x": 1027.4308005708567,
+    "y": 1070.843852608303,
+    "fontSize": 14,
+    "originalText": "Anglo-Egyptian Sudan",
+    "isSplit": true,
+    "ipcsX": 995.6847004218073,
+    "ipcsY": 1042.2383811158534,
+    "ipcsFontSize": 16,
+    "words": [
+      {
+        "text": "Anglo-Egyptian",
+        "x": 997.6956434067067,
+        "y": 1063.5876011456633,
+        "fontSize": 14
+      },
+      {
+        "text": "Sudan",
+        "x": 995.5276572878585,
+        "y": 1079.914166936603,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Ethiopia": {
+    "x": 1098.8813242192705,
+    "y": 1067.6400076968876,
+    "fontSize": 14,
+    "originalText": "Ethiopia",
+    "isSplit": false,
+    "ipcsX": 1098.8813242192705,
+    "ipcsY": 1048.1048505327378,
+    "ipcsFontSize": 16
+  },
+  "British Somaliland": {
+    "x": 1292.8835290363654,
+    "y": 1059.0158670824196,
+    "fontSize": 14,
+    "originalText": "British Somaliland",
+    "isSplit": true,
+    "words": [
+      {
+        "text": "British",
+        "x": 1165.957731514497,
+        "y": 1069.9002442763792,
+        "fontSize": 14
+      },
+      {
+        "text": "Somaliland",
+        "x": 1175.3444369179083,
+        "y": 1083.505715768829,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Italian Somaliland": {
+    "x": 1188.4898982351422,
+    "y": 1112.9622393520158,
+    "fontSize": 14,
+    "originalText": "Italian Somaliland",
+    "isSplit": true,
+    "words": [
+      {
+        "text": "Italian",
+        "x": 1148.6391182649522,
+        "y": 1108.4270821878658,
+        "fontSize": 14
+      },
+      {
+        "text": "Somaliland",
+        "x": 1156.2117608027033,
+        "y": 1120.2184908146558,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Kenya": {
+    "x": 1063.0682736336437,
+    "y": 1127.057768430021,
+    "fontSize": 14,
+    "originalText": "Kenya",
+    "isSplit": false,
+    "ipcsX": 1064.374271378121,
+    "ipcsY": 1108.1397751965892,
+    "ipcsFontSize": 16
+  },
+  "Tanganyika": {
+    "x": 1048.0433886454482,
+    "y": 1179.8842128872807,
+    "fontSize": 14,
+    "originalText": "Tanganyika",
+    "isSplit": false,
+    "ipcsX": 1046.737390900971,
+    "ipcsY": 1160.3132207816102,
+    "ipcsFontSize": 16
+  },
+  "Mozambique": {
+    "x": 1052.4033578342476,
+    "y": 1238.4468890014928,
+    "fontSize": 14,
+    "originalText": "Mozambique",
+    "isSplit": false,
+    "ipcsX": 1047.8682006700976,
+    "ipcsY": 1218.911731837343,
+    "ipcsFontSize": 16
+  },
+  "Union of South Africa": {
+    "x": 1004.5075278493241,
+    "y": 1318.1977668919433,
+    "fontSize": 14,
+    "originalText": "Union of South Africa",
+    "isSplit": true,
+    "ipcsX": 954.1559563568366,
+    "ipcsY": 1298.9415153398963,
+    "ipcsFontSize": 16,
+    "words": [
+      {
+        "text": "Union",
+        "x": 942.3076052171147,
+        "y": 1317.662720346873,
+        "fontSize": 14
+      },
+      {
+        "text": "of",
+        "x": 970.2794795453995,
+        "y": 1317.6626981992151,
+        "fontSize": 14
+      },
+      {
+        "text": "South",
+        "x": 954.8293568377708,
+        "y": 1331.3611603766901,
+        "fontSize": 14
+      },
+      {
+        "text": "Africa",
+        "x": 952.880127105039,
+        "y": 1344.268202525721,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Rhodesia": {
+    "x": 965.9429246664243,
+    "y": 1260.3838719036783,
+    "fontSize": 14,
+    "originalText": "Rhodesia",
+    "isSplit": false,
+    "ipcsX": 968.6640189649142,
+    "ipcsY": 1239.0346518738681,
+    "ipcsFontSize": 16
+  },
+  "South West Africa": {
+    "x": 858.0956793452084,
+    "y": 1309.610678769729,
+    "fontSize": 14,
+    "originalText": "South West Africa",
+    "isSplit": true,
+    "ipcsX": 889.8417794942578,
+    "ipcsY": 1281.3544274859028,
+    "ipcsFontSize": 16,
+    "words": [
+      {
+        "text": "South",
+        "x": 886.3511623301608,
+        "y": 1301.261458799524,
+        "fontSize": 14
+      },
+      {
+        "text": "West",
+        "x": 886.6956782425226,
+        "y": 1314.8669302919736,
+        "fontSize": 14
+      },
+      {
+        "text": "Africa",
+        "x": 885.4534908972402,
+        "y": 1327.8669299045432,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Angola": {
+    "x": 869.1094197086834,
+    "y": 1253.2404109551203,
+    "fontSize": 14,
+    "originalText": "Angola",
+    "isSplit": false,
+    "ipcsX": 869.1094197086834,
+    "ipcsY": 1233.7052537909706,
+    "ipcsFontSize": 16
+  },
+  "Belgian Congo": {
+    "x": 917.269811356176,
+    "y": 1192.8394051741686,
+    "fontSize": 14,
+    "originalText": "Belgian Congo",
+    "isSplit": false,
+    "ipcsX": 919.083874221836,
+    "ipcsY": 1171.4901851443587,
+    "ipcsFontSize": 16
+  },
+  "French Madagascar": {
+    "x": 1170.4635415188006,
+    "y": 1281.223603880971,
+    "fontSize": 14,
+    "originalText": "French Madagascar",
+    "isSplit": true,
+    "ipcsX": 1167.7424472203106,
+    "ipcsY": 1257.1532895526711,
+    "ipcsFontSize": 16,
+    "words": [
+      {
+        "text": "French",
+        "x": 1164.17292456332,
+        "y": 1278.502509582481,
+        "fontSize": 14
+      },
+      {
+        "text": "Madagascar",
+        "x": 1159.3822842056013,
+        "y": 1292.1079810749306,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Trans-Jordan": {
+    "x": 1091.6755161783938,
+    "y": 875.2754452156437,
+    "fontSize": 14,
+    "originalText": "Trans-Jordan",
+    "isSplit": false,
+    "ipcsX": 1089.768484775366,
+    "ipcsY": 854.5543510065605,
+    "ipcsFontSize": 16
+  },
+  "Ceylon": {
+    "x": 1526.9967547566216,
+    "y": 993.4048764140698,
+    "fontSize": 14,
+    "originalText": "Ceylon",
+    "isSplit": false
+  },
+  "Sumatra": {
+    "x": 1724.401751226236,
+    "y": 1073.4991281051982,
+    "fontSize": 14,
+    "originalText": "Sumatra",
+    "isSplit": false,
+    "ipcsX": 1717.145499763596,
+    "ipcsY": 1053.963970941048,
+    "ipcsFontSize": 16
+  },
+  "Saudi Arabia": {
+    "x": 1210.894596924262,
+    "y": 964.0781362493747,
+    "fontSize": 14,
+    "originalText": "Saudi Arabia",
+    "isSplit": false,
+    "ipcsX": 1209.987565491432,
+    "ipcsY": 941.8218847867349,
+    "ipcsFontSize": 16
+  },
+  "Syria": {
+    "x": 1151.2682765635125,
+    "y": 796.6542043012937,
+    "fontSize": 14,
+    "originalText": "Syria",
+    "isSplit": false,
+    "ipcsX": 1151.2682765635125,
+    "ipcsY": 775.3049842714838,
+    "ipcsFontSize": 16
+  },
+  "Iraq": {
+    "x": 1200.0164728793927,
+    "y": 838.835111424103,
+    "fontSize": 14,
+    "originalText": "Iraq",
+    "isSplit": false,
+    "ipcsX": 1202.7375671778827,
+    "ipcsY": 816.5788599614633,
+    "ipcsFontSize": 16
+  },
+  "Iran": {
+    "x": 1289.2331949798727,
+    "y": 860.035403746346,
+    "fontSize": 14,
+    "originalText": "Iran",
+    "isSplit": false,
+    "ipcsX": 1289.233194979873,
+    "ipcsY": 837.7791522837063,
+    "ipcsFontSize": 16
+  },
+  "Northwest Iran": {
+    "x": 1300.8670548842435,
+    "y": 774.0715476919648,
+    "fontSize": 14,
+    "originalText": "Northwest Iran",
+    "isSplit": true,
+    "words": [
+      {
+        "text": "Northwest",
+        "x": 1291.6584635110332,
+        "y": 769.536390527815,
+        "fontSize": 14
+      },
+      {
+        "text": "Iran",
+        "x": 1292.4084518099144,
+        "y": 784.9559248859247,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Eastern Anatolia": {
+    "x": 1231.1773543320041,
+    "y": 712.2583208807476,
+    "fontSize": 14,
+    "originalText": "Eastern Anatolia",
+    "isSplit": true,
+    "ipcsX": 1231.1773543320041,
+    "ipcsY": 697.2583208807476,
+    "ipcsFontSize": 16,
+    "words": [
+      {
+        "text": "Eastern",
+        "x": 1230.5660341767816,
+        "y": 714.9794437962192,
+        "fontSize": 14
+      },
+      {
+        "text": "Anatolia",
+        "x": 1233.366125177289,
+        "y": 727.678017401753,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Central Anatolia": {
+    "x": 1152.8296203991679,
+    "y": 728.7934479017936,
+    "fontSize": 14,
+    "originalText": "Central Anatolia",
+    "isSplit": true,
+    "words": [
+      {
+        "text": "Central",
+        "x": 1149.497177328474,
+        "y": 697.0470138879592,
+        "fontSize": 14
+      },
+      {
+        "text": "Anatolia",
+        "x": 1152.2972683289813,
+        "y": 710.6526284653169,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Caucasus": {
+    "x": 1282.4583590656503,
+    "y": 636.2540823735205,
+    "fontSize": 14,
+    "originalText": "Caucasus",
+    "isSplit": false,
+    "ipcsX": 1281.0694599784433,
+    "ipcsY": 614.309586937487,
+    "ipcsFontSize": 16
+  },
+  "Kazakh SSR": {
+    "x": 1442.8234470728469,
+    "y": 569.4407224481058,
+    "fontSize": 14,
+    "originalText": "Kazakh SSR",
+    "isSplit": false,
+    "ipcsX": 1446.990144334467,
+    "ipcsY": 546.8017774684689,
+    "ipcsFontSize": 16
+  },
+  "Turkmen SSR": {
+    "x": 1421.3904502903176,
+    "y": 648.2436793203769,
+    "fontSize": 14,
+    "originalText": "Turkmen SSR",
+    "isSplit": false
+  },
+  "Afghanistan": {
+    "x": 1456.3428181344452,
+    "y": 741.390221902677,
+    "fontSize": 14,
+    "originalText": "Afghanistan",
+    "isSplit": false
+  },
+  "Eastern Iran": {
+    "x": 1382.3911307429676,
+    "y": 803.12033658458,
+    "fontSize": 14,
+    "originalText": "Eastern Iran",
+    "isSplit": true,
+    "words": [
+      {
+        "text": "Eastern",
+        "x": 1385.880979429377,
+        "y": 814.0047137785398,
+        "fontSize": 14
+      },
+      {
+        "text": "Iran",
+        "x": 1387.301282056558,
+        "y": 830.3312795694794,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Karelia": {
+    "x": 1061.2435008587304,
+    "y": 96.38157775371108,
+    "fontSize": 14,
+    "originalText": "Karelia",
+    "isSplit": false,
+    "ipcsX": 1059.1601522279202,
+    "ipcsY": 75.82598140488419,
+    "ipcsFontSize": 16
+  },
+  "Vyborg": {
+    "x": 1012.5456383586923,
+    "y": 161.64480724267258,
+    "fontSize": 14,
+    "originalText": "Vyborg",
+    "isSplit": false
+  },
+  "Russia City of Leningrad": {
+    "x": 1109.088274285993,
+    "y": 182.80715472168055,
+    "fontSize": 14,
+    "originalText": "Russia City of Leningrad",
+    "isSplit": true,
+    "ipcsX": 1104.2271274807695,
+    "ipcsY": 156.69596202402678,
+    "ipcsFontSize": 16,
+    "words": [
+      {
+        "text": "Russia",
+        "x": 1106.4054763643462,
+        "y": 178.64045746006036,
+        "fontSize": 14
+      },
+      {
+        "text": "City",
+        "x": 1095.6606137888698,
+        "y": 193.91834741933434,
+        "fontSize": 14
+      },
+      {
+        "text": "of",
+        "x": 1118.1161183528363,
+        "y": 193.91834741933434,
+        "fontSize": 14
+      },
+      {
+        "text": "Leningrad",
+        "x": 1112.9601548645676,
+        "y": 207.1128887477982,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Belarus": {
+    "x": 1117.3524686747655,
+    "y": 272.0642289088388,
+    "fontSize": 14,
+    "originalText": "Belarus",
+    "isSplit": false,
+    "ipcsX": 1115.9635695875586,
+    "ipcsY": 252.20308210361523,
+    "ipcsFontSize": 16
+  },
+  "Pripet Marshes": {
+    "x": 1129.496863773093,
+    "y": 377.0256046051149,
+    "fontSize": 14,
+    "originalText": "Pripet Marshes",
+    "isSplit": true,
+    "words": [
+      {
+        "text": "Pripet",
+        "x": 1128.5359923224512,
+        "y": 371.470008256288,
+        "fontSize": 14
+      },
+      {
+        "text": "Marshes",
+        "x": 1131.0855792905786,
+        "y": 386.05344867195856,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Western Ukraine": {
+    "x": 1117.8273842567976,
+    "y": 440.3036750835752,
+    "fontSize": 14,
+    "originalText": "Western Ukraine",
+    "isSplit": false,
+    "ipcsX": 1117.8273842567976,
+    "ipcsY": 419.7480787347482,
+    "ipcsFontSize": 16
+  },
+  "Bessarabia": {
+    "x": 1087.6330646493059,
+    "y": 525.3055723910381,
+    "fontSize": 14,
+    "originalText": "Bessarabia",
+    "isSplit": false,
+    "ipcsX": 1079.2996701260656,
+    "ipcsY": 506.13887512941784,
+    "ipcsFontSize": 16
+  },
+  "Ukraine": {
+    "x": 1163.4787567024366,
+    "y": 519.546066525601,
+    "fontSize": 14,
+    "originalText": "Ukraine",
+    "isSplit": false,
+    "ipcsX": 1162.0898576152294,
+    "ipcsY": 495.5182224587572,
+    "ipcsFontSize": 16
+  },
+  "Russia City of Rostov": {
+    "x": 1236.457577884323,
+    "y": 560.9806925385411,
+    "fontSize": 14,
+    "originalText": "Russia City of Rostov",
+    "isSplit": true,
+    "ipcsX": 1250.3465687563903,
+    "ipcsY": 509.8693162711664,
+    "ipcsFontSize": 16,
+    "words": [
+      {
+        "text": "Russia",
+        "x": 1250.5414772242964,
+        "y": 530.4249126199932,
+        "fontSize": 14
+      },
+      {
+        "text": "City",
+        "x": 1239.7966146488202,
+        "y": 545.0083530356638,
+        "fontSize": 14
+      },
+      {
+        "text": "of",
+        "x": 1260.86322012558,
+        "y": 545.008353035664,
+        "fontSize": 14
+      },
+      {
+        "text": "Rostov",
+        "x": 1247.2739538989313,
+        "y": 559.5917934513343,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Russia City of Stalingrad": {
+    "x": 1380.6392925128152,
+    "y": 528.2919669688351,
+    "fontSize": 14,
+    "originalText": "Russia City of Stalingrad",
+    "isSplit": true,
+    "ipcsX": 1349.3890630506642,
+    "ipcsY": 499.40297609676793,
+    "ipcsFontSize": 16,
+    "words": [
+      {
+        "text": "Russia",
+        "x": 1347.3674119342404,
+        "y": 519.9585724455948,
+        "fontSize": 14
+      },
+      {
+        "text": "City",
+        "x": 1334.5392007279545,
+        "y": 533.847563317662,
+        "fontSize": 14
+      },
+      {
+        "text": "of",
+        "x": 1356.3002557483178,
+        "y": 534.5420128612654,
+        "fontSize": 14
+      },
+      {
+        "text": "Stalingrad",
+        "x": 1343.5386500187915,
+        "y": 549.1254532769358,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Novosibirsk": {
+    "x": 1465.1658808203808,
+    "y": 251.19137052358866,
+    "fontSize": 14,
+    "originalText": "Novosibirsk",
+    "isSplit": false,
+    "ipcsX": 1464.4714312767774,
+    "ipcsY": 228.55242554395159,
+    "ipcsFontSize": 16
+  },
+  "Russia City of Samara": {
+    "x": 1450.323159608436,
+    "y": 394.5359053260864,
+    "fontSize": 14,
+    "originalText": "Russia City of Samara",
+    "isSplit": true,
+    "ipcsX": 1413.517333797458,
+    "ipcsY": 374.67475852086284,
+    "ipcsFontSize": 16,
+    "words": [
+      {
+        "text": "Russia",
+        "x": 1416.4900404397774,
+        "y": 395.9248044132931,
+        "fontSize": 14
+      },
+      {
+        "text": "City",
+        "x": 1409.2174255823181,
+        "y": 411.89714391617036,
+        "fontSize": 14
+      },
+      {
+        "text": "of",
+        "x": 1431.672930146285,
+        "y": 411.8971439161705,
+        "fontSize": 14
+      },
+      {
+        "text": "Samara",
+        "x": 1418.083663919636,
+        "y": 427.1750338754443,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Vologda": {
+    "x": 1320.831812011372,
+    "y": 175.16379151992354,
+    "fontSize": 14,
+    "originalText": "Vologda",
+    "isSplit": false,
+    "ipcsX": 1322.2207110985787,
+    "ipcsY": 151.8303969966832,
+    "ipcsFontSize": 16
+  },
+  "Russia City of Moscow": {
+    "x": 1306.6383692820923,
+    "y": 317.58596789866675,
+    "fontSize": 14,
+    "originalText": "Russia City of Moscow",
+    "isSplit": true,
+    "ipcsX": 1301.0827729332652,
+    "ipcsY": 264.3912430004819,
+    "ipcsFontSize": 16,
+    "words": [
+      {
+        "text": "Russia",
+        "x": 1301.9721309447746,
+        "y": 285.6412888929121,
+        "fontSize": 14
+      },
+      {
+        "text": "City",
+        "x": 1289.8383692820921,
+        "y": 298.835830221376,
+        "fontSize": 14
+      },
+      {
+        "text": "of",
+        "x": 1311.5994243024552,
+        "y": 298.83583022137606,
+        "fontSize": 14
+      },
+      {
+        "text": "Moscow",
+        "x": 1302.1768553374266,
+        "y": 312.72482109344315,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Russia City of Smolensk": {
+    "x": 1159.7211513913944,
+    "y": 320.6261076973126,
+    "fontSize": 14,
+    "originalText": "Russia City of Smolensk",
+    "isSplit": true,
+    "ipcsX": 1202.777023094803,
+    "ipcsY": 253.54239192706046,
+    "ipcsFontSize": 16,
+    "words": [
+      {
+        "text": "Russia",
+        "x": 1202.2108765423457,
+        "y": 272.7090891886807,
+        "fontSize": 14
+      },
+      {
+        "text": "City",
+        "x": 1193.54936259768,
+        "y": 289.37587823516134,
+        "fontSize": 14
+      },
+      {
+        "text": "of",
+        "x": 1214.61596807444,
+        "y": 289.3758782351613,
+        "fontSize": 14
+      },
+      {
+        "text": "Smolensk",
+        "x": 1204.5655550425674,
+        "y": 303.9593186508319,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Russia City of Archangel": {
+    "x": 1199.0334613809391,
+    "y": 130.70389134291327,
+    "fontSize": 14,
+    "originalText": "Russia City of Archangel",
+    "isSplit": true,
+    "ipcsX": 1211.5335531657993,
+    "ipcsY": 108.75939590687966,
+    "ipcsFontSize": 16,
+    "words": [
+      {
+        "text": "Russia",
+        "x": 1210.2396543313594,
+        "y": 130.70389134291327,
+        "fontSize": 14
+      },
+      {
+        "text": "City",
+        "x": 1198.8003422122804,
+        "y": 143.89843267137715,
+        "fontSize": 14
+      },
+      {
+        "text": "of",
+        "x": 1220.5613972326428,
+        "y": 144.59288221498053,
+        "fontSize": 14
+      },
+      {
+        "text": "Archangel",
+        "x": 1211.9331860263574,
+        "y": 156.39852445623765,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Nenetsia": {
+    "x": 1347.3581147440282,
+    "y": 69.22254513086214,
+    "fontSize": 14,
+    "originalText": "Nenetsia",
+    "isSplit": false
+  },
+  "Urals": {
+    "x": 1483.300669184203,
+    "y": 88.20652846864485,
+    "fontSize": 14,
+    "originalText": "Urals",
+    "isSplit": false,
+    "ipcsX": 1483.300669184203,
+    "ipcsY": 64.8731339454045,
+    "ipcsFontSize": 16
+  },
+  "Evenkiyskiy": {
+    "x": 1603.5892228282785,
+    "y": 69.92010266519945,
+    "fontSize": 14,
+    "originalText": "Evenkiyskiy",
+    "isSplit": false
+  },
+  "Yenisey": {
+    "x": 1709.0352074055272,
+    "y": 102.6184176242032,
+    "fontSize": 14,
+    "originalText": "Yenisey",
+    "isSplit": false
+  },
+  "Tunguska": {
+    "x": 1550.9669323319033,
+    "y": 229.39688286065223,
+    "fontSize": 14,
+    "originalText": "Tunguska",
+    "isSplit": false,
+    "ipcsX": 1550.2724827882998,
+    "ipcsY": 209.53573605542874,
+    "ipcsFontSize": 16
+  },
+  "Kansu": {
+    "x": 1604.3242315078194,
+    "y": 400.0130267807026,
+    "fontSize": 14,
+    "originalText": "Kansu",
+    "isSplit": false
+  },
+  "Russia City of Bryansk": {
+    "x": 1237.7353374918246,
+    "y": 419.51346071499916,
+    "fontSize": 14,
+    "originalText": "Russia City of Bryansk",
+    "isSplit": true,
+    "ipcsX": 1230.790842055791,
+    "ipcsY": 383.6799744068983,
+    "ipcsFontSize": 16,
+    "words": [
+      {
+        "text": "Russia",
+        "x": 1233.035796416127,
+        "y": 403.5411212121218,
+        "fontSize": 14
+      },
+      {
+        "text": "City",
+        "x": 1220.902034753444,
+        "y": 418.8190111713957,
+        "fontSize": 14
+      },
+      {
+        "text": "of",
+        "x": 1242.6630897738075,
+        "y": 419.5134607149991,
+        "fontSize": 14
+      },
+      {
+        "text": "Bryansk",
+        "x": 1233.9682730907625,
+        "y": 434.0969011306697,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Russia City of Tambov": {
+    "x": 1332.6053945772567,
+    "y": 418.74736905125013,
+    "fontSize": 14,
+    "originalText": "Russia City of Tambov",
+    "isSplit": true,
+    "ipcsX": 1345.7999359057205,
+    "ipcsY": 388.4694790919762,
+    "ipcsFontSize": 16,
+    "words": [
+      {
+        "text": "Russia",
+        "x": 1343.9114957428162,
+        "y": 409.02507544080305,
+        "fontSize": 14
+      },
+      {
+        "text": "City",
+        "x": 1332.472183623737,
+        "y": 423.6085158564735,
+        "fontSize": 14
+      },
+      {
+        "text": "of",
+        "x": 1354.9276881877036,
+        "y": 423.60851585647373,
+        "fontSize": 14
+      },
+      {
+        "text": "Tambov",
+        "x": 1342.7273210482615,
+        "y": 438.88640581574765,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Tian-Kunlun Shan Pass": {
+    "x": 1564.0555539692932,
+    "y": 442.03440061428853,
+    "fontSize": 14,
+    "originalText": "Tian-Kunlun Shan Pass",
+    "isSplit": true,
+    "words": [
+      {
+        "text": "Tian-Kunlun",
+        "x": 1522.0555539692932,
+        "y": 378.5422003161898,
+        "fontSize": 14
+      },
+      {
+        "text": "Shan",
+        "x": 1505.8086621489347,
+        "y": 403.9390804354293,
+        "fontSize": 14
+      },
+      {
+        "text": "Pass",
+        "x": 1500.0711533730955,
+        "y": 426.6148662561788,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Suiyuan": {
+    "x": 1715.4379595326513,
+    "y": 424.2170437997244,
+    "fontSize": 14,
+    "originalText": "Suiyuan",
+    "isSplit": false,
+    "ipcsX": 1717.2520223983113,
+    "ipcsY": 401.9607923370845,
+    "ipcsFontSize": 16
+  },
+  "Shensi": {
+    "x": 1679.683360811226,
+    "y": 521.1793671574987,
+    "fontSize": 14,
+    "originalText": "Shensi",
+    "isSplit": false,
+    "ipcsX": 1681.4974236768862,
+    "ipcsY": 499.83014712768886,
+    "ipcsFontSize": 16
+  },
+  "Tsinghai": {
+    "x": 1580.7845051423897,
+    "y": 506.29567587442216,
+    "fontSize": 14,
+    "originalText": "Tsinghai",
+    "isSplit": false
+  },
+  "Sikang": {
+    "x": 1565.1687482586317,
+    "y": 630.4769317987715,
+    "fontSize": 14,
+    "originalText": "Sikang",
+    "isSplit": false,
+    "ipcsX": 1566.9828111242916,
+    "ipcsY": 608.2206803361316,
+    "ipcsFontSize": 16
+  },
+  "Szechwan": {
+    "x": 1633.7322854019958,
+    "y": 663.0417652172781,
+    "fontSize": 14,
+    "originalText": "Szechwan",
+    "isSplit": false,
+    "ipcsX": 1638.2674425661457,
+    "ipcsY": 641.6925451874682,
+    "ipcsFontSize": 16
+  },
+  "Great Himalaya Range": {
+    "x": 1578.7438747887536,
+    "y": 674.3995055467537,
+    "fontSize": 14,
+    "originalText": "Great Himalaya Range",
+    "isSplit": true,
+    "words": [
+      {
+        "text": "Great",
+        "x": 1556.9289892895722,
+        "y": 727.5036128067136,
+        "fontSize": 14
+      },
+      {
+        "text": "Himalaya",
+        "x": 1580.7939206811839,
+        "y": 744.1704018531941,
+        "fontSize": 14
+      },
+      {
+        "text": "Range",
+        "x": 1615.1889457447298,
+        "y": 760.1427413560714,
+        "fontSize": 14
+      }
+    ]
+  },
+  "West India": {
+    "x": 1455.4898573855671,
+    "y": 850.9476913334759,
+    "fontSize": 14,
+    "originalText": "West India",
+    "isSplit": false,
+    "ipcsX": 1457.303920251227,
+    "ipcsY": 827.7844084380059,
+    "ipcsFontSize": 16
+  },
+  "India": {
+    "x": 1546.8861097272636,
+    "y": 859.2065429784602,
+    "fontSize": 14,
+    "originalText": "India",
+    "isSplit": false,
+    "ipcsX": 1548.7001725929235,
+    "ipcsY": 835.1362286501605,
+    "ipcsFontSize": 16
+  },
+  "Java": {
+    "x": 1863.571286825431,
+    "y": 1130.925291455893,
+    "fontSize": 14,
+    "originalText": "Java",
+    "isSplit": false,
+    "ipcsX": 1863.5712868254307,
+    "ipcsY": 1111.390134291743,
+    "ipcsFontSize": 16
+  },
+  "Borneo": {
+    "x": 1920.7381689085457,
+    "y": 1015.3321908300184,
+    "fontSize": 14,
+    "originalText": "Borneo",
+    "isSplit": false,
+    "ipcsX": 1918.9241060428856,
+    "ipcsY": 996.7040650986985,
+    "ipcsFontSize": 16
+  },
+  "Celebes": {
+    "x": 2047.0706350030036,
+    "y": 1009.1930981682962,
+    "fontSize": 14,
+    "originalText": "Celebes",
+    "isSplit": false,
+    "ipcsX": 2046.163603570174,
+    "ipcsY": 987.8438781384864,
+    "ipcsFontSize": 16
+  },
+  "Philippines": {
+    "x": 2075.6860487591425,
+    "y": 871.3711271087155,
+    "fontSize": 14,
+    "originalText": "Philippines",
+    "isSplit": false,
+    "ipcsX": 2071.150891594992,
+    "ipcsY": 848.2078442132456,
+    "ipcsFontSize": 16
+  },
+  "Dutch New Guinea": {
+    "x": 2192.286528809042,
+    "y": 1042.0573237551564,
+    "fontSize": 14,
+    "originalText": "Dutch New Guinea",
+    "isSplit": false,
+    "ipcsX": 2192.286528809042,
+    "ipcsY": 1021.6151351581766,
+    "ipcsFontSize": 16
+  },
+  "New Hebrides": {
+    "x": 2473.494387523814,
+    "y": 1150.3027305792345,
+    "fontSize": 14,
+    "originalText": "New Hebrides",
+    "isSplit": false
+  },
+  "Solomon Islands": {
+    "x": 2420.0235289544194,
+    "y": 1071.6252435275917,
+    "fontSize": 14,
+    "originalText": "Solomon Islands",
+    "isSplit": false
+  },
+  "Gilbert Islands": {
+    "x": 2524.6523983396146,
+    "y": 919.6724156056514,
+    "fontSize": 14,
+    "originalText": "Gilbert Islands",
+    "isSplit": false
+  },
+  "Line Islands": {
+    "x": 2818.539593044037,
+    "y": 858.8021682365322,
+    "fontSize": 14,
+    "originalText": "Line Islands",
+    "isSplit": false
+  },
+  "Johnston Island": {
+    "x": 2661.206754799281,
+    "y": 795.7870505129729,
+    "fontSize": 14,
+    "originalText": "Johnston Island",
+    "isSplit": false
+  },
+  "Marshall Islands": {
+    "x": 2487.178516538428,
+    "y": 809.4684781110157,
+    "fontSize": 14,
+    "originalText": "Marshall Islands",
+    "isSplit": false
+  },
+  "Caroline Islands": {
+    "x": 2372.3765857612166,
+    "y": 881.683373673485,
+    "fontSize": 14,
+    "originalText": "Caroline Islands",
+    "isSplit": false
+  },
+  "Palau": {
+    "x": 2205.482066761364,
+    "y": 919.2837297423814,
+    "fontSize": 14,
+    "originalText": "Palau",
+    "isSplit": false
+  },
+  "Marianas": {
+    "x": 2265.5483988795863,
+    "y": 693.4213838519848,
+    "fontSize": 14,
+    "originalText": "Marianas",
+    "isSplit": false
+  },
+  "Guam": {
+    "x": 2223.226832161825,
+    "y": 744.3321491375077,
+    "fontSize": 14,
+    "originalText": "Guam",
+    "isSplit": false
+  },
+  "Wake Island": {
+    "x": 2457.854979748542,
+    "y": 671.9160542033358,
+    "fontSize": 14,
+    "originalText": "Wake Island",
+    "isSplit": false
+  },
+  "Hawaiian Islands": {
+    "x": 2669.436242235488,
+    "y": 653.1194358402422,
+    "fontSize": 14,
+    "originalText": "Hawaiian Islands",
+    "isSplit": false,
+    "ipcsX": 2669.436242235488,
+    "ipcsY": 638.1194358402422,
+    "ipcsFontSize": 16
+  },
+  "Midway": {
+    "x": 2588.9533132033403,
+    "y": 560.0816299372959,
+    "fontSize": 14,
+    "originalText": "Midway",
+    "isSplit": false
+  },
+  "Aleutian Islands": {
+    "x": 2688.895786043576,
+    "y": 182.80455673928054,
+    "fontSize": 14,
+    "originalText": "Aleutian Islands",
+    "isSplit": false
+  },
+  "Hokkaido": {
+    "x": 2326.241838585983,
+    "y": 255.9779460458467,
+    "fontSize": 14,
+    "originalText": "Hokkaido",
+    "isSplit": false,
+    "ipcsX": 2326.2418385859833,
+    "ipcsY": 237.34982031452677,
+    "ipcsFontSize": 16
+  },
+  "Japan": {
+    "x": 2254.9364817374058,
+    "y": 435.6646193253349,
+    "fontSize": 14,
+    "originalText": "Japan",
+    "isSplit": false,
+    "ipcsX": 2259.4716389015553,
+    "ipcsY": 416.12946216118496,
+    "ipcsFontSize": 16
+  },
+  "Okinawa": {
+    "x": 2047.8527397267762,
+    "y": 566.6325104127967,
+    "fontSize": 14,
+    "originalText": "Okinawa",
+    "isSplit": false,
+    "ipcsX": 2049.666802592436,
+    "ipcsY": 548.0043846814768,
+    "ipcsFontSize": 16
+  },
+  "Taiwan": {
+    "x": 1972.0592263039862,
+    "y": 697.2427893407528,
+    "fontSize": 14,
+    "originalText": "Taiwan",
+    "isSplit": false,
+    "ipcsX": 1976.594383468136,
+    "ipcsY": 679.5216950422628,
+    "ipcsFontSize": 16
+  },
+  "Iwo Jima": {
+    "x": 2303.413446659343,
+    "y": 551.2117835382861,
+    "fontSize": 14,
+    "originalText": "Iwo Jima",
+    "isSplit": false,
+    "ipcsX": 2303.413446659343,
+    "ipcsY": 536.2117835382861,
+    "ipcsFontSize": 16
+  },
+  "Fiji": {
+    "x": 2747.8294334951247,
+    "y": 1075.1609988377938,
+    "fontSize": 14,
+    "originalText": "Fiji",
+    "isSplit": false
+  },
+  "Samoa": {
+    "x": 2907.6247621033262,
+    "y": 1118.1571591765041,
+    "fontSize": 14,
+    "originalText": "Samoa",
+    "isSplit": false
+  },
+  "New Britain": {
+    "x": 2357.7196921377313,
+    "y": 1021.7419740113239,
+    "fontSize": 14,
+    "originalText": "New Britain",
+    "isSplit": false
+  },
+  "New Zealand": {
+    "x": 2579.0336433201905,
+    "y": 1309.5985704583,
+    "fontSize": 14,
+    "originalText": "New Zealand",
+    "isSplit": false,
+    "ipcsX": 2579.033643320191,
+    "ipcsY": 1286.4352875628304,
+    "ipcsFontSize": 16
+  },
+  "Southern Alps": {
+    "x": 2541.9839151513456,
+    "y": 1353.0907478738677,
+    "fontSize": 14,
+    "originalText": "Southern Alps",
+    "isSplit": false
+  },
+  "Victoria": {
+    "x": 2291.7412439935624,
+    "y": 1309.7803889919767,
+    "fontSize": 14,
+    "originalText": "Victoria",
+    "isSplit": false
+  },
+  "South Australia": {
+    "x": 2190.490335240944,
+    "y": 1256.0871076650528,
+    "fontSize": 14,
+    "originalText": "South Australia",
+    "isSplit": false
+  },
+  "Hainan": {
+    "x": 1870.033689603214,
+    "y": 846.6976874598762,
+    "fontSize": 14,
+    "originalText": "Hainan",
+    "isSplit": false
+  },
+  "Western Australia": {
+    "x": 2091.182581893144,
+    "y": 1239.187076166755,
+    "fontSize": 14,
+    "originalText": "Western Australia",
+    "isSplit": true,
+    "ipcsX": 2088.4614875946536,
+    "ipcsY": 1222.373013301095,
+    "ipcsFontSize": 16,
+    "words": [
+      {
+        "text": "Western",
+        "x": 2087.277902072003,
+        "y": 1241.0011390324153,
+        "fontSize": 14
+      },
+      {
+        "text": "Australia",
+        "x": 2088.8364817440943,
+        "y": 1254.606610524865,
+        "fontSize": 14
+      }
+    ]
+  },
+  "New South Wales": {
+    "x": 2317.152724046081,
+    "y": 1268.291102493509,
+    "fontSize": 14,
+    "originalText": "New South Wales",
+    "isSplit": true,
+    "ipcsX": 2304.4542839864607,
+    "ipcsY": 1236.9645367025691,
+    "ipcsFontSize": 16,
+    "words": [
+      {
+        "text": "New",
+        "x": 2303.03398135928,
+        "y": 1257.4067252995492,
+        "fontSize": 14
+      },
+      {
+        "text": "South",
+        "x": 2290.947252553631,
+        "y": 1271.9192282248289,
+        "fontSize": 14
+      },
+      {
+        "text": "Wales",
+        "x": 2333.519126822311,
+        "y": 1271.9192282248289,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Queensland": {
+    "x": 2290.0003069021277,
+    "y": 1190.4418515977911,
+    "fontSize": 14,
+    "originalText": "Queensland",
+    "isSplit": false,
+    "ipcsX": 2290.907338334958,
+    "ipcsY": 1170.9066944336412,
+    "ipcsFontSize": 16
+  },
+  "Northern Territory": {
+    "x": 2185.9885155589177,
+    "y": 1175.1580008895294,
+    "fontSize": 14,
+    "originalText": "Northern Territory",
+    "isSplit": false,
+    "ipcsX": 2186.895546991748,
+    "ipcsY": 1153.8087808597197,
+    "ipcsFontSize": 16
+  },
+  "New Guinea": {
+    "x": 2284.582455954147,
+    "y": 1060.6523431386534,
+    "fontSize": 14,
+    "originalText": "New Guinea",
+    "isSplit": false
+  },
+  "Yakut SSR": {
+    "x": 1830.8343770234023,
+    "y": 88.21767206790005,
+    "fontSize": 14,
+    "originalText": "Yakut SSR",
+    "isSplit": false
+  },
+  "Buryatia": {
+    "x": 1923.1887042451642,
+    "y": 108.57582739765802,
+    "fontSize": 14,
+    "originalText": "Buryatia",
+    "isSplit": false
+  },
+  "Dornod": {
+    "x": 1881.188091254045,
+    "y": 241.53465671731345,
+    "fontSize": 14,
+    "originalText": "Dornod",
+    "isSplit": false
+  },
+  "Dornogobi": {
+    "x": 1898.6644973477842,
+    "y": 293.62424234645584,
+    "fontSize": 14,
+    "originalText": "Dornogobi",
+    "isSplit": false
+  },
+  "Gobi Desert": {
+    "x": 1795.2248823570994,
+    "y": 351.49480439862845,
+    "fontSize": 14,
+    "originalText": "Gobi Desert",
+    "isSplit": false
+  },
+  "Dzavhan": {
+    "x": 1765.440498800014,
+    "y": 275.20470530113624,
+    "fontSize": 14,
+    "originalText": "Dzavhan",
+    "isSplit": false,
+    "ipcsX": 1761.9682510819969,
+    "ipcsY": 253.26020986510264,
+    "ipcsFontSize": 16
+  },
+  "Olgiy": {
+    "x": 1654.55188152723,
+    "y": 284.5625086524445,
+    "fontSize": 14,
+    "originalText": "Olgiy",
+    "isSplit": false
+  },
+  "Chahar": {
+    "x": 1799.5880866688199,
+    "y": 440.10484472330455,
+    "fontSize": 14,
+    "originalText": "Chahar",
+    "isSplit": false,
+    "ipcsX": 1799.5880866688199,
+    "ipcsY": 416.9415618278347,
+    "ipcsFontSize": 16
+  },
+  "Jehol": {
+    "x": 1873.9794961649993,
+    "y": 410.9070887538602,
+    "fontSize": 14,
+    "originalText": "Jehol",
+    "isSplit": false,
+    "ipcsX": 1876.700590463489,
+    "ipcsY": 388.65083729122034,
+    "ipcsFontSize": 16
+  },
+  "Manchuria": {
+    "x": 2001.5260637928407,
+    "y": 280.68891287674705,
+    "fontSize": 14,
+    "originalText": "Manchuria",
+    "isSplit": false,
+    "ipcsX": 1998.8049694943509,
+    "ipcsY": 259.33969284693717,
+    "ipcsFontSize": 16
+  },
+  "Korea": {
+    "x": 2104.2252363824914,
+    "y": 394.74578879503025,
+    "fontSize": 14,
+    "originalText": "Korea",
+    "isSplit": false,
+    "ipcsX": 2087.8986705915518,
+    "ipcsY": 372.48953733239046,
+    "ipcsFontSize": 16
+  },
+  "Amur": {
+    "x": 2128.3489532677677,
+    "y": 199.0847502195784,
+    "fontSize": 14,
+    "originalText": "Amur",
+    "isSplit": false,
+    "ipcsX": 2130.4323018985774,
+    "ipcsY": 176.44580523994145,
+    "ipcsFontSize": 16
+  },
+  "Siberia": {
+    "x": 2246.3685761248626,
+    "y": 73.6675866860347,
+    "fontSize": 14,
+    "originalText": "Siberia",
+    "isSplit": false,
+    "ipcsX": 2245.6741265812598,
+    "ipcsY": 52.417540793604445,
+    "ipcsFontSize": 16
+  },
+  "Soviet Far East": {
+    "x": 2449.665252774103,
+    "y": 58.99677833572777,
+    "fontSize": 14,
+    "originalText": "Soviet Far East",
+    "isSplit": false
+  },
+  "Sakha": {
+    "x": 2039.2103826091432,
+    "y": 100.40950233578923,
+    "fontSize": 14,
+    "originalText": "Sakha",
+    "isSplit": false,
+    "ipcsX": 2039.2103826091434,
+    "ipcsY": 75.68720872534216,
+    "ipcsFontSize": 16
+  },
+  "Shantung": {
+    "x": 1920.8393518121504,
+    "y": 500.305483699481,
+    "fontSize": 14,
+    "originalText": "Shantung",
+    "isSplit": false,
+    "ipcsX": 1921.7463832449803,
+    "ipcsY": 479.8632951025011,
+    "ipcsFontSize": 16
+  },
+  "Burma": {
+    "x": 1641.4051456531975,
+    "y": 837.5523452589209,
+    "fontSize": 14,
+    "originalText": "Burma",
+    "isSplit": false,
+    "ipcsX": 1642.3121770860275,
+    "ipcsY": 815.2960937962812,
+    "ipcsFontSize": 16
+  },
+  "Shan State": {
+    "x": 1701.0839235701815,
+    "y": 871.0497845937307,
+    "fontSize": 14,
+    "originalText": "Shan State",
+    "isSplit": true,
+    "ipcsX": 1685.6643892120717,
+    "ipcsY": 856.0497845937306,
+    "ipcsFontSize": 16,
+    "words": [
+      {
+        "text": "Shan",
+        "x": 1683.1401750328212,
+        "y": 877.3990046235405,
+        "fontSize": 14
+      },
+      {
+        "text": "State",
+        "x": 1683.416729122642,
+        "y": 894.6326018473103,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Thailand": {
+    "x": 1741.322297324657,
+    "y": 903.0837300988395,
+    "fontSize": 14,
+    "originalText": "Thailand",
+    "isSplit": false,
+    "ipcsX": 1735.880108727677,
+    "ipcsY": 877.1993529048796,
+    "ipcsFontSize": 16
+  },
+  "French Indo China": {
+    "x": 1805.669702784277,
+    "y": 868.1990564167334,
+    "fontSize": 14,
+    "originalText": "French Indo China",
+    "isSplit": true,
+    "ipcsX": 1821.0892371423868,
+    "ipcsY": 875.874842237483,
+    "ipcsFontSize": 16,
+    "words": [
+      {
+        "text": "French",
+        "x": 1822.9619030823758,
+        "y": 897.2240622672928,
+        "fontSize": 14
+      },
+      {
+        "text": "Indo",
+        "x": 1805.6697027842768,
+        "y": 915.3646909238923,
+        "fontSize": 14
+      },
+      {
+        "text": "China",
+        "x": 1844.9486084857867,
+        "y": 916.2717223567223,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Yunnan": {
+    "x": 1707.337690384941,
+    "y": 728.3666812490147,
+    "fontSize": 14,
+    "originalText": "Yunnan",
+    "isSplit": false,
+    "ipcsX": 1705.5236275192813,
+    "ipcsY": 707.0174612192048,
+    "ipcsFontSize": 16
+  },
+  "Hunan": {
+    "x": 1783.9373752938236,
+    "y": 682.5002186592703,
+    "fontSize": 14,
+    "originalText": "Hunan",
+    "isSplit": false,
+    "ipcsX": 1785.7514381594835,
+    "ipcsY": 662.9650614951204,
+    "ipcsFontSize": 16
+  },
+  "Kweichow": {
+    "x": 1742.0359813353264,
+    "y": 621.7394368374838,
+    "fontSize": 14,
+    "originalText": "Kweichow",
+    "isSplit": false,
+    "ipcsX": 1741.1289499024963,
+    "ipcsY": 599.4831853748439,
+    "ipcsFontSize": 16
+  },
+  "Hopeh": {
+    "x": 1771.3196969915966,
+    "y": 527.1656768955497,
+    "fontSize": 14,
+    "originalText": "Hopeh",
+    "isSplit": false,
+    "ipcsX": 1771.3196969915966,
+    "ipcsY": 506.7234882985699,
+    "ipcsFontSize": 16
+  },
+  "Anhwei": {
+    "x": 1849.998089844571,
+    "y": 544.4059417574731,
+    "fontSize": 14,
+    "originalText": "Anhwei",
+    "isSplit": false,
+    "ipcsX": 1849.998089844571,
+    "ipcsY": 520.3356274291733,
+    "ipcsFontSize": 16
+  },
+  "Kiangsu": {
+    "x": 1923.78378052145,
+    "y": 596.9059511614726,
+    "fontSize": 14,
+    "originalText": "Kiangsu",
+    "isSplit": false,
+    "ipcsX": 1923.78378052145,
+    "ipcsY": 575.5567311316626,
+    "ipcsFontSize": 16
+  },
+  "Kiangsi": {
+    "x": 1912.6989592588798,
+    "y": 675.6598967402325,
+    "fontSize": 14,
+    "originalText": "Kiangsi",
+    "isSplit": false,
+    "ipcsX": 1912.6989592588798,
+    "ipcsY": 656.1247395760826,
+    "ipcsFontSize": 16
+  },
+  "Kwangtung": {
+    "x": 1884.5447706515458,
+    "y": 748.9512532474301,
+    "fontSize": 14,
+    "originalText": "Kwangtung",
+    "isSplit": false,
+    "ipcsX": 1882.730707785886,
+    "ipcsY": 729.4160960832801,
+    "ipcsFontSize": 16
+  },
+  "Kwangsi": {
+    "x": 1812.1050970818542,
+    "y": 757.9033475669348,
+    "fontSize": 14,
+    "originalText": "Kwangsi",
+    "isSplit": false,
+    "ipcsX": 1810.2910342161942,
+    "ipcsY": 740.1822532684449,
+    "ipcsFontSize": 16
+  },
+  "Malaya": {
+    "x": 1757.6774693662692,
+    "y": 1021.8658624881342,
+    "fontSize": 14,
+    "originalText": "Malaya",
+    "isSplit": false,
+    "ipcsX": 1752.2352807692894,
+    "ipcsY": 1004.1447681896443,
+    "ipcsFontSize": 16
+  },
+  "Alaska": {
+    "x": 2761.1215091438617,
+    "y": 79.25019977958009,
+    "fontSize": 14,
+    "originalText": "Alaska",
+    "isSplit": false,
+    "ipcsX": 2763.121509084257,
+    "ipcsY": 56.250200017998694,
+    "ipcsFontSize": 16
+  },
+  "Western Canada": {
+    "x": 2914.7010948308,
+    "y": 142.00333655186338,
+    "fontSize": 14,
+    "originalText": "Western Canada",
+    "isSplit": true,
+    "words": [
+      {
+        "text": "Western",
+        "x": 2959.301092625428,
+        "y": 132.0033368498866,
+        "fontSize": 14
+      },
+      {
+        "text": "Canada",
+        "x": 2961.10109432416,
+        "y": 150.0033363134448,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Western United States": {
+    "x": 2934.7250408640166,
+    "y": 283.54192807407134,
+    "fontSize": 14,
+    "originalText": "Western United States",
+    "isSplit": true,
+    "ipcsX": 2941.7250406554003,
+    "ipcsY": 244.54192878932702,
+    "ipcsFontSize": 16,
+    "words": [
+      {
+        "text": "Western",
+        "x": 2943.925038837459,
+        "y": 265.5419286105131,
+        "fontSize": 14
+      },
+      {
+        "text": "United",
+        "x": 2918.7250413408537,
+        "y": 281.541928133676,
+        "fontSize": 14
+      },
+      {
+        "text": "States",
+        "x": 2965.3250415792722,
+        "y": 281.541928133676,
+        "fontSize": 14
+      }
+    ]
+  },
+  "Mexico": {
+    "x": 2971.553248388589,
+    "y": 397.6672499786196,
+    "fontSize": 14,
+    "originalText": "Mexico",
+    "isSplit": false,
+    "ipcsX": 2963.5532486270076,
+    "ipcsY": 371.66725030644517,
+    "ipcsFontSize": 16
+  }
+}

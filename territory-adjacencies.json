@@ -1,0 +1,3837 @@
+{
+  "1": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "10",
+      "8",
+      "9",
+      "Alaska",
+      "Western Canada"
+    ]
+  },
+  "2": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "3",
+      "8",
+      "Alaska"
+    ]
+  },
+  "3": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "2",
+      "4",
+      "8",
+      "Soviet Far East"
+    ]
+  },
+  "4": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "3",
+      "5",
+      "7",
+      "8",
+      "Soviet Far East"
+    ]
+  },
+  "5": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "4",
+      "6",
+      "6A",
+      "7",
+      "Amur",
+      "Siberia",
+      "Soviet Far East"
+    ]
+  },
+  "6": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "16",
+      "17",
+      "18",
+      "19",
+      "5",
+      "6A",
+      "Japan",
+      "Korea"
+    ]
+  },
+  "7": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "15",
+      "16",
+      "4",
+      "5",
+      "6A",
+      "8"
+    ]
+  },
+  "8": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "1",
+      "14",
+      "15",
+      "2",
+      "3",
+      "4",
+      "7",
+      "9",
+      "Alaska",
+      "Aleutian Islands"
+    ]
+  },
+  "9": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "1",
+      "10",
+      "12",
+      "13",
+      "14",
+      "8"
+    ]
+  },
+  "10": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "1",
+      "11",
+      "12",
+      "9",
+      "Mexico",
+      "Western United States"
+    ]
+  },
+  "11": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "10",
+      "12",
+      "27",
+      "28",
+      "64"
+    ]
+  },
+  "12": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "10",
+      "11",
+      "13",
+      "26",
+      "27",
+      "9"
+    ]
+  },
+  "13": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "12",
+      "14",
+      "25",
+      "26",
+      "9"
+    ]
+  },
+  "14": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "13",
+      "15",
+      "25",
+      "8",
+      "9"
+    ]
+  },
+  "15": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "14",
+      "16",
+      "25",
+      "7",
+      "8"
+    ]
+  },
+  "16": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "15",
+      "17",
+      "24",
+      "25",
+      "6",
+      "6A",
+      "7"
+    ]
+  },
+  "17": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "16",
+      "18",
+      "22",
+      "23",
+      "24",
+      "6",
+      "Iwo Jima"
+    ]
+  },
+  "18": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "17",
+      "19",
+      "21",
+      "22",
+      "6"
+    ]
+  },
+  "19": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "18",
+      "20",
+      "21",
+      "6",
+      "Jehol",
+      "Kiangsu",
+      "Manchuria",
+      "Okinawa",
+      "Shantung"
+    ]
+  },
+  "20": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "19",
+      "21",
+      "35",
+      "36",
+      "Kiangsi",
+      "Kwangtung",
+      "Taiwan"
+    ]
+  },
+  "21": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "18",
+      "19",
+      "20",
+      "22",
+      "34",
+      "35",
+      "Guam"
+    ]
+  },
+  "22": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "17",
+      "18",
+      "21",
+      "23",
+      "33",
+      "34",
+      "Marianas"
+    ]
+  },
+  "23": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "17",
+      "22",
+      "24",
+      "31",
+      "32",
+      "33"
+    ]
+  },
+  "24": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "16",
+      "17",
+      "23",
+      "25",
+      "31"
+    ]
+  },
+  "25": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "13",
+      "14",
+      "15",
+      "16",
+      "24",
+      "26",
+      "31",
+      "Midway"
+    ]
+  },
+  "26": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "12",
+      "13",
+      "25",
+      "27",
+      "30",
+      "31",
+      "Hawaiian Islands"
+    ]
+  },
+  "27": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "11",
+      "12",
+      "26",
+      "28",
+      "29",
+      "30"
+    ]
+  },
+  "28": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "11",
+      "27",
+      "29",
+      "51",
+      "64"
+    ]
+  },
+  "29": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "27",
+      "28",
+      "30",
+      "50",
+      "51",
+      "Line Islands"
+    ]
+  },
+  "30": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "26",
+      "27",
+      "29",
+      "31",
+      "32",
+      "48",
+      "49",
+      "50",
+      "Johnston Island"
+    ]
+  },
+  "31": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "23",
+      "24",
+      "25",
+      "26",
+      "30",
+      "32",
+      "Wake Island"
+    ]
+  },
+  "32": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "23",
+      "30",
+      "31",
+      "33",
+      "48",
+      "Marshall Islands"
+    ]
+  },
+  "33": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "22",
+      "23",
+      "32",
+      "34",
+      "46",
+      "47",
+      "48",
+      "Caroline Islands"
+    ]
+  },
+  "34": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "21",
+      "22",
+      "33",
+      "35",
+      "45",
+      "46",
+      "Palau"
+    ]
+  },
+  "35": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "20",
+      "21",
+      "34",
+      "36",
+      "43",
+      "44",
+      "45",
+      "Philippines"
+    ]
+  },
+  "36": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "20",
+      "35",
+      "37",
+      "43",
+      "French Indo China",
+      "Hainan",
+      "Kwangsi"
+    ]
+  },
+  "37": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "36",
+      "38",
+      "41",
+      "42",
+      "43",
+      "Malaya",
+      "Shan State",
+      "Thailand"
+    ]
+  },
+  "38": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "37",
+      "39",
+      "41",
+      "Burma",
+      "India",
+      "Shan State"
+    ]
+  },
+  "39": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "38",
+      "40",
+      "41",
+      "78",
+      "79",
+      "Ceylon",
+      "India"
+    ]
+  },
+  "40": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "39",
+      "41",
+      "58",
+      "78"
+    ]
+  },
+  "41": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "37",
+      "38",
+      "39",
+      "40",
+      "42",
+      "57",
+      "58",
+      "Sumatra"
+    ]
+  },
+  "42": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "37",
+      "41",
+      "43",
+      "44",
+      "45",
+      "55",
+      "56",
+      "57",
+      "Java"
+    ]
+  },
+  "43": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "35",
+      "36",
+      "37",
+      "42",
+      "44",
+      "Borneo"
+    ]
+  },
+  "44": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "35",
+      "42",
+      "43",
+      "45",
+      "Celebes"
+    ]
+  },
+  "45": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "34",
+      "35",
+      "42",
+      "44",
+      "46",
+      "55",
+      "Dutch New Guinea"
+    ]
+  },
+  "46": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "33",
+      "34",
+      "45",
+      "47",
+      "49",
+      "54",
+      "55",
+      "New Guinea"
+    ]
+  },
+  "47": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "33",
+      "46",
+      "48",
+      "49",
+      "New Britain"
+    ]
+  },
+  "48": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "30",
+      "32",
+      "33",
+      "47",
+      "49",
+      "Gilbert Islands"
+    ]
+  },
+  "49": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "30",
+      "46",
+      "47",
+      "48",
+      "50",
+      "53",
+      "54",
+      "Solomon Islands"
+    ]
+  },
+  "50": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "29",
+      "30",
+      "49",
+      "51",
+      "52",
+      "53",
+      "63",
+      "Fiji"
+    ]
+  },
+  "51": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "28",
+      "29",
+      "50",
+      "52",
+      "64",
+      "65",
+      "66",
+      "Samoa"
+    ]
+  },
+  "52": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "50",
+      "51",
+      "63",
+      "66"
+    ]
+  },
+  "53": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "49",
+      "50",
+      "54",
+      "63",
+      "New Hebrides"
+    ]
+  },
+  "54": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "46",
+      "49",
+      "53",
+      "55",
+      "62",
+      "63",
+      "Queensland"
+    ]
+  },
+  "55": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "42",
+      "45",
+      "46",
+      "54",
+      "56",
+      "Northern Territory"
+    ]
+  },
+  "56": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "42",
+      "55",
+      "57",
+      "60",
+      "61",
+      "Western Australia"
+    ]
+  },
+  "57": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "41",
+      "42",
+      "56",
+      "58",
+      "60"
+    ]
+  },
+  "58": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "40",
+      "41",
+      "57",
+      "59",
+      "60",
+      "74",
+      "75",
+      "78"
+    ]
+  },
+  "59": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "58",
+      "60",
+      "74"
+    ]
+  },
+  "60": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "56",
+      "57",
+      "58",
+      "59"
+    ]
+  },
+  "61": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "56",
+      "62",
+      "South Australia"
+    ]
+  },
+  "62": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "54",
+      "61",
+      "63",
+      "New South Wales",
+      "Victoria"
+    ]
+  },
+  "63": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "50",
+      "52",
+      "53",
+      "54",
+      "62",
+      "New Zealand"
+    ]
+  },
+  "64": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "11",
+      "28",
+      "51",
+      "65",
+      "89",
+      "Central America",
+      "Colombia",
+      "Ecuador",
+      "Peru",
+      "Southeast Mexico"
+    ]
+  },
+  "65": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "51",
+      "64",
+      "66",
+      "Chile",
+      "Peru"
+    ]
+  },
+  "66": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "51",
+      "52",
+      "65",
+      "67",
+      "85",
+      "Argentina",
+      "Chile"
+    ]
+  },
+  "67": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "66",
+      "68",
+      "84",
+      "85"
+    ]
+  },
+  "68": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "67",
+      "69",
+      "83",
+      "84"
+    ]
+  },
+  "69": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "68",
+      "70",
+      "82",
+      "83"
+    ]
+  },
+  "70": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "69",
+      "71",
+      "82",
+      "Angola",
+      "Belgian Congo",
+      "South West Africa"
+    ]
+  },
+  "71": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "70",
+      "72",
+      "Mozambique",
+      "Union of South Africa"
+    ]
+  },
+  "72": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "71",
+      "73",
+      "75",
+      "76",
+      "77",
+      "French Madagascar",
+      "Kenya",
+      "Mozambique",
+      "Tanganyika"
+    ]
+  },
+  "73": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "72",
+      "74",
+      "75"
+    ]
+  },
+  "74": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "58",
+      "59",
+      "73",
+      "75"
+    ]
+  },
+  "75": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "58",
+      "72",
+      "73",
+      "74",
+      "77",
+      "78"
+    ]
+  },
+  "76": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "72",
+      "77",
+      "80",
+      "81",
+      "British Somaliland",
+      "Ethiopia",
+      "Italian Somaliland",
+      "Saudi Arabia"
+    ]
+  },
+  "77": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "72",
+      "75",
+      "76",
+      "78",
+      "79",
+      "80"
+    ]
+  },
+  "78": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "39",
+      "40",
+      "58",
+      "75",
+      "77",
+      "79"
+    ]
+  },
+  "79": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "39",
+      "77",
+      "78",
+      "80",
+      "West India"
+    ]
+  },
+  "80": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "76",
+      "77",
+      "79",
+      "Eastern Iran",
+      "Iran",
+      "Iraq",
+      "Saudi Arabia"
+    ]
+  },
+  "81": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "76",
+      "98",
+      "Anglo-Egyptian Sudan",
+      "Egypt",
+      "Saudi Arabia",
+      "Trans-Jordan"
+    ]
+  },
+  "82": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "69",
+      "70",
+      "83",
+      "French Equatorial Africa",
+      "French West Africa",
+      "Gold Coast",
+      "Nigeria"
+    ]
+  },
+  "83": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "68",
+      "69",
+      "82",
+      "84",
+      "87",
+      "French West Africa",
+      "Liberia"
+    ]
+  },
+  "84": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "67",
+      "68",
+      "83",
+      "85",
+      "86",
+      "87"
+    ]
+  },
+  "85": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "66",
+      "67",
+      "84",
+      "86",
+      "Argentina",
+      "Brazil",
+      "Uruguay"
+    ]
+  },
+  "86": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "84",
+      "85",
+      "87",
+      "88",
+      "Brazil"
+    ]
+  },
+  "87": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "83",
+      "84",
+      "86",
+      "88",
+      "91",
+      "French West Africa",
+      "Portuguese Guinea",
+      "Rio de Oro",
+      "Sierra Leone"
+    ]
+  },
+  "88": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "86",
+      "87",
+      "89",
+      "90",
+      "91",
+      "British Guiana",
+      "French Guinea",
+      "Suriname"
+    ]
+  },
+  "89": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "101",
+      "102",
+      "64",
+      "88",
+      "90",
+      "Central America",
+      "Southeast Mexico",
+      "Venezuela",
+      "West Indies"
+    ]
+  },
+  "90": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "102",
+      "103",
+      "88",
+      "89",
+      "91"
+    ]
+  },
+  "91": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "103",
+      "104",
+      "87",
+      "88",
+      "90",
+      "92",
+      "Azores",
+      "Castilla",
+      "Gibraltar",
+      "Morocco City of Casablanca",
+      "Portugal"
+    ]
+  },
+  "92": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "91",
+      "93",
+      "94",
+      "Algeria",
+      "Castilla",
+      "Gibraltar",
+      "Morocco",
+      "Spanish Morocco"
+    ]
+  },
+  "93": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "92",
+      "94",
+      "95",
+      "Aragon",
+      "France City of Vichy"
+    ]
+  },
+  "94": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "92",
+      "93",
+      "95",
+      "96",
+      "Algeria",
+      "Tunisia"
+    ]
+  },
+  "95": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "93",
+      "94",
+      "96",
+      "97",
+      "Northern Italy",
+      "Sardinia",
+      "Sicily",
+      "Southern Italy"
+    ]
+  },
+  "96": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "94",
+      "95",
+      "97",
+      "98",
+      "99",
+      "Italian Libya",
+      "Italian Libya City of Tobruk",
+      "Malta"
+    ]
+  },
+  "97": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "95",
+      "96",
+      "99",
+      "Albania",
+      "Greece",
+      "Northern Italy",
+      "Southern Italy",
+      "Yugoslavia"
+    ]
+  },
+  "98": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "81",
+      "96",
+      "99",
+      "Egypt",
+      "Egypt City of El Alamein",
+      "Syria",
+      "Trans-Jordan"
+    ]
+  },
+  "99": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "100",
+      "96",
+      "97",
+      "98",
+      "Central Anatolia",
+      "Crete",
+      "Cyprus",
+      "Greece",
+      "Marmara",
+      "Syria"
+    ]
+  },
+  "100": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "99",
+      "Bessarabia",
+      "Bulgaria",
+      "Caucasus",
+      "Central Anatolia",
+      "Eastern Anatolia",
+      "Greece",
+      "Marmara",
+      "Romania",
+      "Russia City of Rostov",
+      "Ukraine"
+    ]
+  },
+  "101": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "102",
+      "106",
+      "89",
+      "Central United States",
+      "Eastern United States"
+    ]
+  },
+  "102": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "101",
+      "103",
+      "106",
+      "107",
+      "89",
+      "90"
+    ]
+  },
+  "103": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "102",
+      "104",
+      "107",
+      "108",
+      "90",
+      "91"
+    ]
+  },
+  "104": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "103",
+      "105",
+      "108",
+      "109",
+      "110",
+      "91",
+      "Galicia Navarra",
+      "Portugal"
+    ]
+  },
+  "105": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "104",
+      "110",
+      "Galicia Navarra",
+      "Normandy Bordeaux"
+    ]
+  },
+  "106": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "101",
+      "102",
+      "107",
+      "116",
+      "117",
+      "New Brunswick Nova Scotia",
+      "Newfoundland Labrador",
+      "Quebec"
+    ]
+  },
+  "107": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "102",
+      "103",
+      "106",
+      "108",
+      "117"
+    ]
+  },
+  "108": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "103",
+      "104",
+      "107",
+      "109",
+      "117",
+      "118"
+    ]
+  },
+  "109": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "104",
+      "108",
+      "110",
+      "118",
+      "119",
+      "Eire",
+      "Scotland",
+      "United Kingdom"
+    ]
+  },
+  "110": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "104",
+      "105",
+      "109",
+      "111",
+      "112",
+      "Holland Belgium",
+      "Normandy Bordeaux",
+      "United Kingdom"
+    ]
+  },
+  "111": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "110",
+      "112",
+      "119",
+      "124",
+      "125",
+      "Scotland"
+    ]
+  },
+  "112": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "110",
+      "111",
+      "113",
+      "125",
+      "Denmark",
+      "Norway",
+      "Western Germany"
+    ]
+  },
+  "113": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "112",
+      "114",
+      "Denmark",
+      "Germany",
+      "Norway",
+      "Sweden",
+      "Western Germany"
+    ]
+  },
+  "114": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "113",
+      "115",
+      "Germany",
+      "Poland",
+      "Sweden"
+    ]
+  },
+  "115": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "114",
+      "Baltic States",
+      "Finland",
+      "Russia City of Leningrad",
+      "Sweden",
+      "Vyborg"
+    ]
+  },
+  "116": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "106",
+      "117",
+      "121",
+      "122",
+      "Newfoundland Labrador"
+    ]
+  },
+  "117": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "106",
+      "107",
+      "108",
+      "116",
+      "118",
+      "122",
+      "123"
+    ]
+  },
+  "118": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "108",
+      "109",
+      "117",
+      "119",
+      "123"
+    ]
+  },
+  "119": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "109",
+      "111",
+      "118",
+      "123",
+      "124",
+      "Eire",
+      "Scotland",
+      "United Kingdom"
+    ]
+  },
+  "120": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "121",
+      "Manitoba",
+      "Ontario",
+      "Quebec"
+    ]
+  },
+  "121": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "116",
+      "120",
+      "122",
+      "Greenland",
+      "Manitoba",
+      "Quebec"
+    ]
+  },
+  "122": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "116",
+      "117",
+      "121",
+      "123"
+    ]
+  },
+  "123": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "117",
+      "118",
+      "119",
+      "122",
+      "124",
+      "Iceland"
+    ]
+  },
+  "124": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "111",
+      "119",
+      "123",
+      "125"
+    ]
+  },
+  "125": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "111",
+      "112",
+      "124",
+      "126",
+      "Norway"
+    ]
+  },
+  "126": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "125",
+      "127",
+      "Norway"
+    ]
+  },
+  "127": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "126",
+      "Finland",
+      "Karelia",
+      "Nenetsia",
+      "Russia City of Archangel",
+      "Russia City of Leningrad"
+    ]
+  },
+  "128": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "Caucasus",
+      "Eastern Iran",
+      "Iran",
+      "Kazakh SSR",
+      "Northwest Iran",
+      "Turkmen SSR"
+    ]
+  },
+  "6A": {
+    "power": "Unknown",
+    "ipcs": "0",
+    "adjacent_to": [
+      "16",
+      "5",
+      "6",
+      "7",
+      "Hokkaido",
+      "Japan"
+    ]
+  },
+  "Spanish Morocco": {
+    "power": "Neutral",
+    "ipcs": "0",
+    "adjacent_to": [
+      "92",
+      "Morocco",
+      "Morocco City of Casablanca"
+    ]
+  },
+  "Morocco": {
+    "power": "France",
+    "ipcs": "1",
+    "adjacent_to": [
+      "92",
+      "Algeria",
+      "Morocco City of Casablanca",
+      "Sahara Desert",
+      "Spanish Morocco"
+    ]
+  },
+  "Morocco City of Casablanca": {
+    "power": "France",
+    "ipcs": "0",
+    "adjacent_to": [
+      "91",
+      "French West Africa",
+      "Morocco",
+      "Rio de Oro",
+      "Sahara Desert",
+      "Spanish Morocco"
+    ]
+  },
+  "Rio de Oro": {
+    "power": "Neutral",
+    "ipcs": "0",
+    "adjacent_to": [
+      "87",
+      "French West Africa",
+      "Morocco City of Casablanca",
+      "Portuguese Guinea"
+    ]
+  },
+  "French West Africa": {
+    "power": "France",
+    "ipcs": "1",
+    "adjacent_to": [
+      "82",
+      "83",
+      "87",
+      "French Central Africa",
+      "Gold Coast",
+      "Liberia",
+      "Morocco City of Casablanca",
+      "Nigeria",
+      "Portuguese Guinea",
+      "Rio de Oro",
+      "Sahara Desert",
+      "Sierra Leone"
+    ]
+  },
+  "Portuguese Guinea": {
+    "power": "Neutral",
+    "ipcs": "0",
+    "adjacent_to": [
+      "87",
+      "French West Africa",
+      "Rio de Oro"
+    ]
+  },
+  "Sierra Leone": {
+    "power": "UK",
+    "ipcs": "1",
+    "adjacent_to": [
+      "87",
+      "French West Africa",
+      "Liberia"
+    ]
+  },
+  "Liberia": {
+    "power": "Neutral",
+    "ipcs": "0",
+    "adjacent_to": [
+      "83",
+      "French West Africa",
+      "Sierra Leone"
+    ]
+  },
+  "Gold Coast": {
+    "power": "UK",
+    "ipcs": "1",
+    "adjacent_to": [
+      "82",
+      "French West Africa"
+    ]
+  },
+  "Nigeria": {
+    "power": "UK",
+    "ipcs": "1",
+    "adjacent_to": [
+      "82",
+      "French Central Africa",
+      "French Equatorial Africa",
+      "French West Africa",
+      "Lake"
+    ]
+  },
+  "Lake": {
+    "power": "Impassable",
+    "ipcs": "0",
+    "adjacent_to": [
+      "Anglo-Egyptian Sudan",
+      "Belgian Congo",
+      "Buryatia",
+      "Central United States",
+      "Eastern United States",
+      "French Central Africa",
+      "French Equatorial Africa",
+      "Kenya",
+      "Manitoba",
+      "Nigeria",
+      "Ontario",
+      "Rhodesia",
+      "Tanganyika",
+      "Yakut SSR"
+    ]
+  },
+  "Manitoba": {
+    "power": "Commonwealth",
+    "ipcs": "0",
+    "adjacent_to": [
+      "120",
+      "121",
+      "Lake",
+      "Ontario",
+      "Western Canada"
+    ]
+  },
+  "Greenland": {
+    "power": "US",
+    "ipcs": "0",
+    "adjacent_to": [
+      "121"
+    ]
+  },
+  "Quebec": {
+    "power": "Commonwealth",
+    "ipcs": "2",
+    "adjacent_to": [
+      "106",
+      "120",
+      "121",
+      "Eastern United States",
+      "New Brunswick Nova Scotia",
+      "Newfoundland Labrador",
+      "Ontario"
+    ]
+  },
+  "Ontario": {
+    "power": "Commonwealth",
+    "ipcs": "2",
+    "adjacent_to": [
+      "120",
+      "Eastern United States",
+      "Lake",
+      "Manitoba",
+      "Quebec"
+    ]
+  },
+  "Newfoundland Labrador": {
+    "power": "UK",
+    "ipcs": "1",
+    "adjacent_to": [
+      "106",
+      "116",
+      "Quebec"
+    ]
+  },
+  "New Brunswick Nova Scotia": {
+    "power": "Commonwealth",
+    "ipcs": "1",
+    "adjacent_to": [
+      "106",
+      "Eastern United States",
+      "Quebec"
+    ]
+  },
+  "Eastern United States": {
+    "power": "US",
+    "ipcs": "20",
+    "adjacent_to": [
+      "101",
+      "Central United States",
+      "Lake",
+      "New Brunswick Nova Scotia",
+      "Ontario",
+      "Quebec"
+    ]
+  },
+  "Central United States": {
+    "power": "US",
+    "ipcs": "12",
+    "adjacent_to": [
+      "101",
+      "Eastern United States",
+      "Lake",
+      "Southeast Mexico",
+      "Western United States"
+    ]
+  },
+  "Southeast Mexico": {
+    "power": "US",
+    "ipcs": "1",
+    "adjacent_to": [
+      "64",
+      "89",
+      "Central America",
+      "Central United States",
+      "Mexico"
+    ]
+  },
+  "Central America": {
+    "power": "US",
+    "ipcs": "1",
+    "adjacent_to": [
+      "64",
+      "89",
+      "Colombia",
+      "Southeast Mexico",
+      "Venezuela"
+    ]
+  },
+  "West Indies": {
+    "power": "US",
+    "ipcs": "1",
+    "adjacent_to": [
+      "89"
+    ]
+  },
+  "Iceland": {
+    "power": "UK",
+    "ipcs": "1",
+    "adjacent_to": [
+      "123"
+    ]
+  },
+  "United Kingdom": {
+    "power": "UK",
+    "ipcs": "6",
+    "adjacent_to": [
+      "109",
+      "110",
+      "119",
+      "Eire",
+      "Scotland"
+    ]
+  },
+  "Eire": {
+    "power": "Neutral",
+    "ipcs": "0",
+    "adjacent_to": [
+      "109",
+      "119",
+      "United Kingdom"
+    ]
+  },
+  "Scotland": {
+    "power": "UK",
+    "ipcs": "1",
+    "adjacent_to": [
+      "109",
+      "111",
+      "119",
+      "United Kingdom"
+    ]
+  },
+  "Holland Belgium": {
+    "power": "Germany",
+    "ipcs": "3",
+    "adjacent_to": [
+      "110",
+      "France",
+      "Normandy Bordeaux",
+      "Western Germany"
+    ]
+  },
+  "Western Germany": {
+    "power": "Germany",
+    "ipcs": "5",
+    "adjacent_to": [
+      "112",
+      "113",
+      "Denmark",
+      "France",
+      "Germany",
+      "Greater Southern Germany",
+      "Holland Belgium",
+      "Northern Italy",
+      "Switzerland"
+    ]
+  },
+  "Germany": {
+    "power": "Germany",
+    "ipcs": "5",
+    "adjacent_to": [
+      "113",
+      "114",
+      "Greater Southern Germany",
+      "Poland",
+      "Slovakia Hungary",
+      "Western Germany"
+    ]
+  },
+  "France": {
+    "power": "France",
+    "ipcs": "4",
+    "adjacent_to": [
+      "France City of Vichy",
+      "Holland Belgium",
+      "Normandy Bordeaux",
+      "Northern Italy",
+      "Switzerland",
+      "Western Germany"
+    ]
+  },
+  "Normandy Bordeaux": {
+    "power": "France",
+    "ipcs": "2",
+    "adjacent_to": [
+      "105",
+      "110",
+      "Aragon",
+      "France",
+      "France City of Vichy",
+      "Galicia Navarra",
+      "Holland Belgium"
+    ]
+  },
+  "France City of Vichy": {
+    "power": "France",
+    "ipcs": "3",
+    "adjacent_to": [
+      "93",
+      "Aragon",
+      "France",
+      "Normandy Bordeaux",
+      "Northern Italy"
+    ]
+  },
+  "Switzerland": {
+    "power": "Neutral",
+    "ipcs": "0",
+    "adjacent_to": [
+      "France",
+      "Northern Italy",
+      "Western Germany"
+    ]
+  },
+  "Northern Italy": {
+    "power": "Italy",
+    "ipcs": "4",
+    "adjacent_to": [
+      "95",
+      "97",
+      "France",
+      "France City of Vichy",
+      "Greater Southern Germany",
+      "Southern Italy",
+      "Switzerland",
+      "Western Germany",
+      "Yugoslavia"
+    ]
+  },
+  "Yugoslavia": {
+    "power": "Neutral",
+    "ipcs": "2",
+    "adjacent_to": [
+      "97",
+      "Albania",
+      "Bulgaria",
+      "Greater Southern Germany",
+      "Northern Italy",
+      "Romania",
+      "Slovakia Hungary"
+    ]
+  },
+  "Southern Italy": {
+    "power": "Italy",
+    "ipcs": "3",
+    "adjacent_to": [
+      "95",
+      "97",
+      "Northern Italy",
+      "Sicily"
+    ]
+  },
+  "Sicily": {
+    "power": "Italy",
+    "ipcs": "1",
+    "adjacent_to": [
+      "95",
+      "Southern Italy"
+    ]
+  },
+  "Albania": {
+    "power": "Italy",
+    "ipcs": "1",
+    "adjacent_to": [
+      "97",
+      "Bulgaria",
+      "Greece",
+      "Yugoslavia"
+    ]
+  },
+  "Greece": {
+    "power": "Neutral",
+    "ipcs": "2",
+    "adjacent_to": [
+      "100",
+      "97",
+      "99",
+      "Albania",
+      "Bulgaria",
+      "Marmara"
+    ]
+  },
+  "Marmara": {
+    "power": "Neutral",
+    "ipcs": "1",
+    "adjacent_to": [
+      "100",
+      "99",
+      "Central Anatolia",
+      "Greece"
+    ]
+  },
+  "Denmark": {
+    "power": "Germany",
+    "ipcs": "2",
+    "adjacent_to": [
+      "112",
+      "113",
+      "Sweden",
+      "Western Germany"
+    ]
+  },
+  "Sweden": {
+    "power": "Neutral",
+    "ipcs": "3",
+    "adjacent_to": [
+      "113",
+      "114",
+      "115",
+      "Denmark",
+      "Finland",
+      "Norway"
+    ]
+  },
+  "Norway": {
+    "power": "Germany",
+    "ipcs": "3",
+    "adjacent_to": [
+      "112",
+      "113",
+      "125",
+      "126",
+      "Finland",
+      "Sweden"
+    ]
+  },
+  "Finland": {
+    "power": "Neutral",
+    "ipcs": "2",
+    "adjacent_to": [
+      "115",
+      "127",
+      "Karelia",
+      "Norway",
+      "Sweden",
+      "Vyborg"
+    ]
+  },
+  "Greater Southern Germany": {
+    "power": "Germany",
+    "ipcs": "4",
+    "adjacent_to": [
+      "Germany",
+      "Northern Italy",
+      "Slovakia Hungary",
+      "Western Germany",
+      "Yugoslavia"
+    ]
+  },
+  "Slovakia Hungary": {
+    "power": "Germany",
+    "ipcs": "3",
+    "adjacent_to": [
+      "Eastern Poland",
+      "Germany",
+      "Greater Southern Germany",
+      "Poland",
+      "Romania",
+      "Yugoslavia"
+    ]
+  },
+  "Poland": {
+    "power": "Germany",
+    "ipcs": "2",
+    "adjacent_to": [
+      "114",
+      "Baltic States",
+      "Eastern Poland",
+      "Germany",
+      "Slovakia Hungary"
+    ]
+  },
+  "Bulgaria": {
+    "power": "Neutral",
+    "ipcs": "1",
+    "adjacent_to": [
+      "100",
+      "Albania",
+      "Greece",
+      "Romania",
+      "Yugoslavia"
+    ]
+  },
+  "Aragon": {
+    "power": "Neutral",
+    "ipcs": "1",
+    "adjacent_to": [
+      "93",
+      "Castilla",
+      "France City of Vichy",
+      "Galicia Navarra",
+      "Normandy Bordeaux"
+    ]
+  },
+  "Castilla": {
+    "power": "Neutral",
+    "ipcs": "1",
+    "adjacent_to": [
+      "91",
+      "92",
+      "Aragon",
+      "Galicia Navarra",
+      "Gibraltar",
+      "Portugal"
+    ]
+  },
+  "Gibraltar": {
+    "power": "UK",
+    "ipcs": "0",
+    "adjacent_to": [
+      "91",
+      "92",
+      "Castilla"
+    ]
+  },
+  "Galicia Navarra": {
+    "power": "Neutral",
+    "ipcs": "0",
+    "adjacent_to": [
+      "104",
+      "105",
+      "Aragon",
+      "Castilla",
+      "Normandy Bordeaux",
+      "Portugal"
+    ]
+  },
+  "Portugal": {
+    "power": "Neutral",
+    "ipcs": "1",
+    "adjacent_to": [
+      "104",
+      "91",
+      "Castilla",
+      "Galicia Navarra"
+    ]
+  },
+  "Sardinia": {
+    "power": "Italy",
+    "ipcs": "0",
+    "adjacent_to": [
+      "95"
+    ]
+  },
+  "Malta": {
+    "power": "UK",
+    "ipcs": "1",
+    "adjacent_to": [
+      "96"
+    ]
+  },
+  "Crete": {
+    "power": "Neutral",
+    "ipcs": "0",
+    "adjacent_to": [
+      "99"
+    ]
+  },
+  "Romania": {
+    "power": "Germany",
+    "ipcs": "3",
+    "adjacent_to": [
+      "100",
+      "Bessarabia",
+      "Bulgaria",
+      "Eastern Poland",
+      "Slovakia Hungary",
+      "Yugoslavia"
+    ]
+  },
+  "Eastern Poland": {
+    "power": "USSR",
+    "ipcs": "1",
+    "adjacent_to": [
+      "Baltic States",
+      "Belarus",
+      "Bessarabia",
+      "Poland",
+      "Pripet Marshes",
+      "Romania",
+      "Slovakia Hungary",
+      "Western Ukraine"
+    ]
+  },
+  "Baltic States": {
+    "power": "USSR",
+    "ipcs": "1",
+    "adjacent_to": [
+      "115",
+      "Belarus",
+      "Eastern Poland",
+      "Poland",
+      "Russia City of Leningrad"
+    ]
+  },
+  "Cyprus": {
+    "power": "UK",
+    "ipcs": "0",
+    "adjacent_to": [
+      "99"
+    ]
+  },
+  "Azores": {
+    "power": "Neutral",
+    "ipcs": "0",
+    "adjacent_to": [
+      "91"
+    ]
+  },
+  "Venezuela": {
+    "power": "Neutral",
+    "ipcs": "2",
+    "adjacent_to": [
+      "89",
+      "Brazil",
+      "British Guiana",
+      "Central America",
+      "Colombia"
+    ]
+  },
+  "British Guiana": {
+    "power": "UK",
+    "ipcs": "0",
+    "adjacent_to": [
+      "88",
+      "Brazil",
+      "Suriname",
+      "Venezuela"
+    ]
+  },
+  "Suriname": {
+    "power": "Neutral",
+    "ipcs": "0",
+    "adjacent_to": [
+      "88",
+      "Brazil",
+      "British Guiana",
+      "French Guinea"
+    ]
+  },
+  "French Guinea": {
+    "power": "France",
+    "ipcs": "0",
+    "adjacent_to": [
+      "88",
+      "Brazil",
+      "Suriname"
+    ]
+  },
+  "Brazil": {
+    "power": "Neutral",
+    "ipcs": "2",
+    "adjacent_to": [
+      "85",
+      "86",
+      "Argentina",
+      "Bolivia",
+      "British Guiana",
+      "Colombia",
+      "French Guinea",
+      "Paraguay",
+      "Peru",
+      "Suriname",
+      "Uruguay",
+      "Venezuela"
+    ]
+  },
+  "Colombia": {
+    "power": "Neutral",
+    "ipcs": "0",
+    "adjacent_to": [
+      "64",
+      "Brazil",
+      "Central America",
+      "Ecuador",
+      "Peru",
+      "Venezuela"
+    ]
+  },
+  "Ecuador": {
+    "power": "Neutral",
+    "ipcs": "0",
+    "adjacent_to": [
+      "64",
+      "Colombia",
+      "Peru"
+    ]
+  },
+  "Peru": {
+    "power": "Neutral",
+    "ipcs": "0",
+    "adjacent_to": [
+      "64",
+      "65",
+      "Bolivia",
+      "Brazil",
+      "Chile",
+      "Colombia",
+      "Ecuador"
+    ]
+  },
+  "Bolivia": {
+    "power": "Neutral",
+    "ipcs": "0",
+    "adjacent_to": [
+      "Argentina",
+      "Brazil",
+      "Chile",
+      "Paraguay",
+      "Peru"
+    ]
+  },
+  "Chile": {
+    "power": "Neutral",
+    "ipcs": "2",
+    "adjacent_to": [
+      "65",
+      "66",
+      "Argentina",
+      "Bolivia",
+      "Peru"
+    ]
+  },
+  "Argentina": {
+    "power": "Neutral",
+    "ipcs": "2",
+    "adjacent_to": [
+      "66",
+      "85",
+      "Bolivia",
+      "Brazil",
+      "Chile",
+      "Paraguay",
+      "Uruguay"
+    ]
+  },
+  "Uruguay": {
+    "power": "Neutral",
+    "ipcs": "0",
+    "adjacent_to": [
+      "85",
+      "Argentina",
+      "Brazil"
+    ]
+  },
+  "Paraguay": {
+    "power": "Neutral",
+    "ipcs": "0",
+    "adjacent_to": [
+      "Argentina",
+      "Bolivia",
+      "Brazil"
+    ]
+  },
+  "Sahara Desert": {
+    "power": "Impassable",
+    "ipcs": "0",
+    "adjacent_to": [
+      "Algeria",
+      "Anglo-Egyptian Sudan",
+      "Egypt",
+      "Egypt City of El Alamein",
+      "French Central Africa",
+      "French Equatorial Africa",
+      "French West Africa",
+      "Italian Libya",
+      "Italian Libya City of Tobruk",
+      "Morocco",
+      "Morocco City of Casablanca",
+      "Tunisia"
+    ]
+  },
+  "Algeria": {
+    "power": "France",
+    "ipcs": "1",
+    "adjacent_to": [
+      "92",
+      "94",
+      "Morocco",
+      "Sahara Desert",
+      "Tunisia"
+    ]
+  },
+  "Tunisia": {
+    "power": "France",
+    "ipcs": "1",
+    "adjacent_to": [
+      "94",
+      "Algeria",
+      "Italian Libya",
+      "Sahara Desert"
+    ]
+  },
+  "French Central Africa": {
+    "power": "France",
+    "ipcs": "1",
+    "adjacent_to": [
+      "French Equatorial Africa",
+      "French West Africa",
+      "Lake",
+      "Nigeria",
+      "Sahara Desert"
+    ]
+  },
+  "French Equatorial Africa": {
+    "power": "France",
+    "ipcs": "1",
+    "adjacent_to": [
+      "82",
+      "Anglo-Egyptian Sudan",
+      "Belgian Congo",
+      "French Central Africa",
+      "Lake",
+      "Nigeria",
+      "Sahara Desert"
+    ]
+  },
+  "Italian Libya": {
+    "power": "Italy",
+    "ipcs": "1",
+    "adjacent_to": [
+      "96",
+      "Italian Libya City of Tobruk",
+      "Sahara Desert",
+      "Tunisia"
+    ]
+  },
+  "Italian Libya City of Tobruk": {
+    "power": "Italy",
+    "ipcs": "0",
+    "adjacent_to": [
+      "96",
+      "Egypt City of El Alamein",
+      "Italian Libya",
+      "Sahara Desert"
+    ]
+  },
+  "Egypt City of El Alamein": {
+    "power": "UK",
+    "ipcs": "0",
+    "adjacent_to": [
+      "98",
+      "Egypt",
+      "Italian Libya City of Tobruk",
+      "Sahara Desert"
+    ]
+  },
+  "Egypt": {
+    "power": "UK",
+    "ipcs": "2",
+    "adjacent_to": [
+      "81",
+      "98",
+      "Anglo-Egyptian Sudan",
+      "Egypt City of El Alamein",
+      "Sahara Desert",
+      "Trans-Jordan"
+    ]
+  },
+  "Anglo-Egyptian Sudan": {
+    "power": "UK",
+    "ipcs": "1",
+    "adjacent_to": [
+      "81",
+      "Egypt",
+      "Ethiopia",
+      "French Equatorial Africa",
+      "Kenya",
+      "Lake",
+      "Sahara Desert",
+      "Tanganyika"
+    ]
+  },
+  "Ethiopia": {
+    "power": "Italy",
+    "ipcs": "1",
+    "adjacent_to": [
+      "76",
+      "Anglo-Egyptian Sudan",
+      "British Somaliland",
+      "Italian Somaliland",
+      "Kenya"
+    ]
+  },
+  "British Somaliland": {
+    "power": "UK",
+    "ipcs": "0",
+    "adjacent_to": [
+      "76",
+      "Ethiopia",
+      "Italian Somaliland"
+    ]
+  },
+  "Italian Somaliland": {
+    "power": "Italy",
+    "ipcs": "0",
+    "adjacent_to": [
+      "76",
+      "British Somaliland",
+      "Ethiopia",
+      "Kenya"
+    ]
+  },
+  "Kenya": {
+    "power": "UK",
+    "ipcs": "1",
+    "adjacent_to": [
+      "72",
+      "Anglo-Egyptian Sudan",
+      "Ethiopia",
+      "Italian Somaliland",
+      "Lake",
+      "Tanganyika"
+    ]
+  },
+  "Tanganyika": {
+    "power": "UK",
+    "ipcs": "1",
+    "adjacent_to": [
+      "72",
+      "Anglo-Egyptian Sudan",
+      "Kenya",
+      "Lake",
+      "Mozambique",
+      "Rhodesia"
+    ]
+  },
+  "Mozambique": {
+    "power": "Neutral",
+    "ipcs": "1",
+    "adjacent_to": [
+      "71",
+      "72",
+      "Rhodesia",
+      "Tanganyika",
+      "Union of South Africa"
+    ]
+  },
+  "Union of South Africa": {
+    "power": "Commonwealth",
+    "ipcs": "2",
+    "adjacent_to": [
+      "71",
+      "Mozambique",
+      "Rhodesia",
+      "South West Africa"
+    ]
+  },
+  "Rhodesia": {
+    "power": "UK",
+    "ipcs": "1",
+    "adjacent_to": [
+      "Angola",
+      "Belgian Congo",
+      "Lake",
+      "Mozambique",
+      "South West Africa",
+      "Tanganyika",
+      "Union of South Africa"
+    ]
+  },
+  "South West Africa": {
+    "power": "Commonwealth",
+    "ipcs": "1",
+    "adjacent_to": [
+      "70",
+      "Angola",
+      "Rhodesia",
+      "Union of South Africa"
+    ]
+  },
+  "Angola": {
+    "power": "Neutral",
+    "ipcs": "1",
+    "adjacent_to": [
+      "70",
+      "Belgian Congo",
+      "Rhodesia",
+      "South West Africa"
+    ]
+  },
+  "Belgian Congo": {
+    "power": "UK",
+    "ipcs": "2",
+    "adjacent_to": [
+      "70",
+      "Angola",
+      "French Equatorial Africa",
+      "Lake",
+      "Rhodesia"
+    ]
+  },
+  "French Madagascar": {
+    "power": "France",
+    "ipcs": "1",
+    "adjacent_to": [
+      "72"
+    ]
+  },
+  "Trans-Jordan": {
+    "power": "UK",
+    "ipcs": "1",
+    "adjacent_to": [
+      "81",
+      "98",
+      "Egypt",
+      "Iraq",
+      "Saudi Arabia",
+      "Syria"
+    ]
+  },
+  "Ceylon": {
+    "power": "UK",
+    "ipcs": "0",
+    "adjacent_to": [
+      "39"
+    ]
+  },
+  "Sumatra": {
+    "power": "Neutral",
+    "ipcs": "2",
+    "adjacent_to": [
+      "41"
+    ]
+  },
+  "Saudi Arabia": {
+    "power": "Neutral",
+    "ipcs": "2",
+    "adjacent_to": [
+      "76",
+      "80",
+      "81",
+      "Iraq",
+      "Trans-Jordan"
+    ]
+  },
+  "Syria": {
+    "power": "France",
+    "ipcs": "1",
+    "adjacent_to": [
+      "98",
+      "99",
+      "Central Anatolia",
+      "Eastern Anatolia",
+      "Iraq",
+      "Trans-Jordan"
+    ]
+  },
+  "Iraq": {
+    "power": "Neutral",
+    "ipcs": "2",
+    "adjacent_to": [
+      "80",
+      "Eastern Anatolia",
+      "Iran",
+      "Northwest Iran",
+      "Saudi Arabia",
+      "Syria",
+      "Trans-Jordan"
+    ]
+  },
+  "Iran": {
+    "power": "Neutral",
+    "ipcs": "2",
+    "adjacent_to": [
+      "128",
+      "80",
+      "Eastern Iran",
+      "Iraq",
+      "Northwest Iran"
+    ]
+  },
+  "Northwest Iran": {
+    "power": "Neutral",
+    "ipcs": "0",
+    "adjacent_to": [
+      "128",
+      "Caucasus",
+      "Eastern Anatolia",
+      "Iran",
+      "Iraq"
+    ]
+  },
+  "Eastern Anatolia": {
+    "power": "Neutral",
+    "ipcs": "1",
+    "adjacent_to": [
+      "100",
+      "Caucasus",
+      "Central Anatolia",
+      "Iraq",
+      "Northwest Iran",
+      "Syria"
+    ]
+  },
+  "Central Anatolia": {
+    "power": "Neutral",
+    "ipcs": "0",
+    "adjacent_to": [
+      "100",
+      "99",
+      "Eastern Anatolia",
+      "Marmara",
+      "Syria"
+    ]
+  },
+  "Caucasus": {
+    "power": "USSR",
+    "ipcs": "2",
+    "adjacent_to": [
+      "100",
+      "128",
+      "Eastern Anatolia",
+      "Kazakh SSR",
+      "Northwest Iran",
+      "Russia City of Rostov",
+      "Russia City of Stalingrad"
+    ]
+  },
+  "Kazakh SSR": {
+    "power": "USSR",
+    "ipcs": "1",
+    "adjacent_to": [
+      "128",
+      "Afghanistan",
+      "Caucasus",
+      "Great Himalaya Range",
+      "Novosibirsk",
+      "Russia City of Samara",
+      "Russia City of Stalingrad",
+      "Tian-Kunlun Shan Pass",
+      "Turkmen SSR"
+    ]
+  },
+  "Turkmen SSR": {
+    "power": "USSR",
+    "ipcs": "0",
+    "adjacent_to": [
+      "128",
+      "Afghanistan",
+      "Eastern Iran",
+      "Kazakh SSR"
+    ]
+  },
+  "Afghanistan": {
+    "power": "Neutral",
+    "ipcs": "0",
+    "adjacent_to": [
+      "Eastern Iran",
+      "Great Himalaya Range",
+      "Kazakh SSR",
+      "Turkmen SSR",
+      "West India"
+    ]
+  },
+  "Eastern Iran": {
+    "power": "Neutral",
+    "ipcs": "0",
+    "adjacent_to": [
+      "128",
+      "80",
+      "Afghanistan",
+      "Iran",
+      "Turkmen SSR",
+      "West India"
+    ]
+  },
+  "Karelia": {
+    "power": "USSR",
+    "ipcs": "1",
+    "adjacent_to": [
+      "127",
+      "Finland",
+      "Russia City of Leningrad",
+      "Vyborg"
+    ]
+  },
+  "Vyborg": {
+    "power": "USSR",
+    "ipcs": "0",
+    "adjacent_to": [
+      "115",
+      "Finland",
+      "Karelia",
+      "Russia City of Leningrad"
+    ]
+  },
+  "Russia City of Leningrad": {
+    "power": "USSR",
+    "ipcs": "2",
+    "adjacent_to": [
+      "115",
+      "127",
+      "Baltic States",
+      "Belarus",
+      "Karelia",
+      "Russia City of Archangel",
+      "Vyborg"
+    ]
+  },
+  "Belarus": {
+    "power": "USSR",
+    "ipcs": "1",
+    "adjacent_to": [
+      "Baltic States",
+      "Eastern Poland",
+      "Pripet Marshes",
+      "Russia City of Archangel",
+      "Russia City of Bryansk",
+      "Russia City of Leningrad",
+      "Russia City of Smolensk"
+    ]
+  },
+  "Pripet Marshes": {
+    "power": "Impassable",
+    "ipcs": "0",
+    "adjacent_to": [
+      "Belarus",
+      "Eastern Poland",
+      "Russia City of Bryansk",
+      "Western Ukraine"
+    ]
+  },
+  "Western Ukraine": {
+    "power": "USSR",
+    "ipcs": "2",
+    "adjacent_to": [
+      "Bessarabia",
+      "Eastern Poland",
+      "Pripet Marshes",
+      "Russia City of Bryansk",
+      "Ukraine"
+    ]
+  },
+  "Bessarabia": {
+    "power": "USSR",
+    "ipcs": "1",
+    "adjacent_to": [
+      "100",
+      "Eastern Poland",
+      "Romania",
+      "Ukraine",
+      "Western Ukraine"
+    ]
+  },
+  "Ukraine": {
+    "power": "USSR",
+    "ipcs": "3",
+    "adjacent_to": [
+      "100",
+      "Bessarabia",
+      "Russia City of Bryansk",
+      "Russia City of Rostov",
+      "Western Ukraine"
+    ]
+  },
+  "Russia City of Rostov": {
+    "power": "USSR",
+    "ipcs": "2",
+    "adjacent_to": [
+      "100",
+      "Caucasus",
+      "Russia City of Bryansk",
+      "Russia City of Stalingrad",
+      "Russia City of Tambov",
+      "Ukraine"
+    ]
+  },
+  "Russia City of Stalingrad": {
+    "power": "USSR",
+    "ipcs": "2",
+    "adjacent_to": [
+      "Caucasus",
+      "Kazakh SSR",
+      "Russia City of Rostov",
+      "Russia City of Samara",
+      "Russia City of Tambov"
+    ]
+  },
+  "Novosibirsk": {
+    "power": "USSR",
+    "ipcs": "1",
+    "adjacent_to": [
+      "Kazakh SSR",
+      "Russia City of Samara",
+      "Tian-Kunlun Shan Pass",
+      "Tunguska",
+      "Urals",
+      "Vologda"
+    ]
+  },
+  "Russia City of Samara": {
+    "power": "USSR",
+    "ipcs": "1",
+    "adjacent_to": [
+      "Kazakh SSR",
+      "Novosibirsk",
+      "Russia City of Moscow",
+      "Russia City of Stalingrad",
+      "Russia City of Tambov",
+      "Vologda"
+    ]
+  },
+  "Vologda": {
+    "power": "USSR",
+    "ipcs": "1",
+    "adjacent_to": [
+      "Nenetsia",
+      "Novosibirsk",
+      "Russia City of Archangel",
+      "Russia City of Moscow",
+      "Russia City of Samara",
+      "Russia City of Smolensk",
+      "Urals"
+    ]
+  },
+  "Russia City of Moscow": {
+    "power": "USSR",
+    "ipcs": "4",
+    "adjacent_to": [
+      "Russia City of Bryansk",
+      "Russia City of Samara",
+      "Russia City of Smolensk",
+      "Russia City of Tambov",
+      "Vologda"
+    ]
+  },
+  "Russia City of Smolensk": {
+    "power": "USSR",
+    "ipcs": "1",
+    "adjacent_to": [
+      "Belarus",
+      "Russia City of Archangel",
+      "Russia City of Bryansk",
+      "Russia City of Moscow",
+      "Vologda"
+    ]
+  },
+  "Russia City of Archangel": {
+    "power": "USSR",
+    "ipcs": "1",
+    "adjacent_to": [
+      "127",
+      "Belarus",
+      "Nenetsia",
+      "Russia City of Leningrad",
+      "Russia City of Smolensk",
+      "Vologda"
+    ]
+  },
+  "Nenetsia": {
+    "power": "USSR",
+    "ipcs": "0",
+    "adjacent_to": [
+      "127",
+      "Russia City of Archangel",
+      "Urals",
+      "Vologda"
+    ]
+  },
+  "Urals": {
+    "power": "USSR",
+    "ipcs": "2",
+    "adjacent_to": [
+      "Evenkiyskiy",
+      "Nenetsia",
+      "Novosibirsk",
+      "Tunguska",
+      "Vologda"
+    ]
+  },
+  "Evenkiyskiy": {
+    "power": "USSR",
+    "ipcs": "0",
+    "adjacent_to": [
+      "Tunguska",
+      "Urals",
+      "Yenisey"
+    ]
+  },
+  "Yenisey": {
+    "power": "USSR",
+    "ipcs": "0",
+    "adjacent_to": [
+      "Dzavhan",
+      "Evenkiyskiy",
+      "Olgiy",
+      "Tunguska",
+      "Yakut SSR"
+    ]
+  },
+  "Tunguska": {
+    "power": "USSR",
+    "ipcs": "1",
+    "adjacent_to": [
+      "Evenkiyskiy",
+      "Kansu",
+      "Novosibirsk",
+      "Olgiy",
+      "Tian-Kunlun Shan Pass",
+      "Urals",
+      "Yenisey"
+    ]
+  },
+  "Kansu": {
+    "power": "China",
+    "ipcs": "0",
+    "adjacent_to": [
+      "Gobi Desert",
+      "Olgiy",
+      "Shensi",
+      "Suiyuan",
+      "Tian-Kunlun Shan Pass",
+      "Tsinghai",
+      "Tunguska"
+    ]
+  },
+  "Russia City of Bryansk": {
+    "power": "USSR",
+    "ipcs": "1",
+    "adjacent_to": [
+      "Belarus",
+      "Pripet Marshes",
+      "Russia City of Moscow",
+      "Russia City of Rostov",
+      "Russia City of Smolensk",
+      "Russia City of Tambov",
+      "Ukraine",
+      "Western Ukraine"
+    ]
+  },
+  "Russia City of Tambov": {
+    "power": "USSR",
+    "ipcs": "1",
+    "adjacent_to": [
+      "Russia City of Bryansk",
+      "Russia City of Moscow",
+      "Russia City of Rostov",
+      "Russia City of Samara",
+      "Russia City of Stalingrad"
+    ]
+  },
+  "Tian-Kunlun Shan Pass": {
+    "power": "Impassable",
+    "ipcs": "0",
+    "adjacent_to": [
+      "Great Himalaya Range",
+      "Kansu",
+      "Kazakh SSR",
+      "Novosibirsk",
+      "Tsinghai",
+      "Tunguska"
+    ]
+  },
+  "Suiyuan": {
+    "power": "China",
+    "ipcs": "1",
+    "adjacent_to": [
+      "Chahar",
+      "Gobi Desert",
+      "Hopeh",
+      "Kansu",
+      "Shensi"
+    ]
+  },
+  "Shensi": {
+    "power": "China",
+    "ipcs": "1",
+    "adjacent_to": [
+      "Hopeh",
+      "Kansu",
+      "Kweichow",
+      "Sikang",
+      "Suiyuan",
+      "Szechwan",
+      "Tsinghai"
+    ]
+  },
+  "Tsinghai": {
+    "power": "China",
+    "ipcs": "0",
+    "adjacent_to": [
+      "Great Himalaya Range",
+      "Kansu",
+      "Shensi",
+      "Sikang",
+      "Tian-Kunlun Shan Pass"
+    ]
+  },
+  "Sikang": {
+    "power": "China",
+    "ipcs": "1",
+    "adjacent_to": [
+      "Great Himalaya Range",
+      "Shensi",
+      "Szechwan",
+      "Tsinghai"
+    ]
+  },
+  "Szechwan": {
+    "power": "China",
+    "ipcs": "2",
+    "adjacent_to": [
+      "Great Himalaya Range",
+      "Kweichow",
+      "Shensi",
+      "Sikang",
+      "Yunnan"
+    ]
+  },
+  "Great Himalaya Range": {
+    "power": "Impassable",
+    "ipcs": "0",
+    "adjacent_to": [
+      "Afghanistan",
+      "Burma",
+      "India",
+      "Kazakh SSR",
+      "Sikang",
+      "Szechwan",
+      "Tian-Kunlun Shan Pass",
+      "Tsinghai",
+      "West India",
+      "Yunnan"
+    ]
+  },
+  "West India": {
+    "power": "UK",
+    "ipcs": "2",
+    "adjacent_to": [
+      "79",
+      "Afghanistan",
+      "Eastern Iran",
+      "Great Himalaya Range",
+      "India"
+    ]
+  },
+  "India": {
+    "power": "UK",
+    "ipcs": "5",
+    "adjacent_to": [
+      "38",
+      "39",
+      "Burma",
+      "Great Himalaya Range",
+      "West India"
+    ]
+  },
+  "Java": {
+    "power": "Neutral",
+    "ipcs": "2",
+    "adjacent_to": [
+      "42"
+    ]
+  },
+  "Borneo": {
+    "power": "UK",
+    "ipcs": "2",
+    "adjacent_to": [
+      "43"
+    ]
+  },
+  "Celebes": {
+    "power": "Neutral",
+    "ipcs": "2",
+    "adjacent_to": [
+      "44"
+    ]
+  },
+  "Philippines": {
+    "power": "US",
+    "ipcs": "2",
+    "adjacent_to": [
+      "35"
+    ]
+  },
+  "Dutch New Guinea": {
+    "power": "Neutral",
+    "ipcs": "1",
+    "adjacent_to": [
+      "45",
+      "New Guinea"
+    ]
+  },
+  "New Hebrides": {
+    "power": "France",
+    "ipcs": "0",
+    "adjacent_to": [
+      "53"
+    ]
+  },
+  "Solomon Islands": {
+    "power": "Commonwealth",
+    "ipcs": "0",
+    "adjacent_to": [
+      "49"
+    ]
+  },
+  "Gilbert Islands": {
+    "power": "UK",
+    "ipcs": "0",
+    "adjacent_to": [
+      "48"
+    ]
+  },
+  "Line Islands": {
+    "power": "US",
+    "ipcs": "0",
+    "adjacent_to": [
+      "29"
+    ]
+  },
+  "Johnston Island": {
+    "power": "US",
+    "ipcs": "0",
+    "adjacent_to": [
+      "30"
+    ]
+  },
+  "Marshall Islands": {
+    "power": "Japan",
+    "ipcs": "0",
+    "adjacent_to": [
+      "32"
+    ]
+  },
+  "Caroline Islands": {
+    "power": "Japan",
+    "ipcs": "0",
+    "adjacent_to": [
+      "33"
+    ]
+  },
+  "Palau": {
+    "power": "Japan",
+    "ipcs": "0",
+    "adjacent_to": [
+      "34"
+    ]
+  },
+  "Marianas": {
+    "power": "Japan",
+    "ipcs": "0",
+    "adjacent_to": [
+      "22"
+    ]
+  },
+  "Guam": {
+    "power": "US",
+    "ipcs": "0",
+    "adjacent_to": [
+      "21"
+    ]
+  },
+  "Wake Island": {
+    "power": "US",
+    "ipcs": "0",
+    "adjacent_to": [
+      "31"
+    ]
+  },
+  "Hawaiian Islands": {
+    "power": "US",
+    "ipcs": "1",
+    "adjacent_to": [
+      "26"
+    ]
+  },
+  "Midway": {
+    "power": "US",
+    "ipcs": "0",
+    "adjacent_to": [
+      "25"
+    ]
+  },
+  "Aleutian Islands": {
+    "power": "US",
+    "ipcs": "0",
+    "adjacent_to": [
+      "8",
+      "Alaska"
+    ]
+  },
+  "Hokkaido": {
+    "power": "Japan",
+    "ipcs": "1",
+    "adjacent_to": [
+      "6A",
+      "Japan"
+    ]
+  },
+  "Japan": {
+    "power": "Japan",
+    "ipcs": "7",
+    "adjacent_to": [
+      "6",
+      "6A",
+      "Hokkaido"
+    ]
+  },
+  "Okinawa": {
+    "power": "Japan",
+    "ipcs": "1",
+    "adjacent_to": [
+      "19"
+    ]
+  },
+  "Taiwan": {
+    "power": "Japan",
+    "ipcs": "1",
+    "adjacent_to": [
+      "20"
+    ]
+  },
+  "Iwo Jima": {
+    "power": "Japan",
+    "ipcs": "1",
+    "adjacent_to": [
+      "17"
+    ]
+  },
+  "Fiji": {
+    "power": "UK",
+    "ipcs": "0",
+    "adjacent_to": [
+      "50"
+    ]
+  },
+  "Samoa": {
+    "power": "Commonwealth",
+    "ipcs": "0",
+    "adjacent_to": [
+      "51"
+    ]
+  },
+  "New Britain": {
+    "power": "Commonwealth",
+    "ipcs": "0",
+    "adjacent_to": [
+      "47"
+    ]
+  },
+  "New Zealand": {
+    "power": "Commonwealth",
+    "ipcs": "1",
+    "adjacent_to": [
+      "63"
+    ]
+  },
+  "Southern Alps": {
+    "power": "Impassable",
+    "ipcs": "0",
+    "adjacent_to": []
+  },
+  "Victoria": {
+    "power": "Commonwealth",
+    "ipcs": "0",
+    "adjacent_to": [
+      "62",
+      "New South Wales",
+      "South Australia"
+    ]
+  },
+  "South Australia": {
+    "power": "Commonwealth",
+    "ipcs": "0",
+    "adjacent_to": [
+      "61",
+      "New South Wales",
+      "Northern Territory",
+      "Queensland",
+      "Victoria",
+      "Western Australia"
+    ]
+  },
+  "Hainan": {
+    "power": "Japan",
+    "ipcs": "0",
+    "adjacent_to": [
+      "36"
+    ]
+  },
+  "Western Australia": {
+    "power": "Commonwealth",
+    "ipcs": "1",
+    "adjacent_to": [
+      "56",
+      "Northern Territory",
+      "South Australia"
+    ]
+  },
+  "New South Wales": {
+    "power": "Commonwealth",
+    "ipcs": "3",
+    "adjacent_to": [
+      "62",
+      "Queensland",
+      "South Australia",
+      "Victoria"
+    ]
+  },
+  "Queensland": {
+    "power": "Commonwealth",
+    "ipcs": "2",
+    "adjacent_to": [
+      "54",
+      "New South Wales",
+      "Northern Territory",
+      "South Australia"
+    ]
+  },
+  "Northern Territory": {
+    "power": "Commonwealth",
+    "ipcs": "1",
+    "adjacent_to": [
+      "55",
+      "Queensland",
+      "South Australia",
+      "Western Australia"
+    ]
+  },
+  "New Guinea": {
+    "power": "Commonwealth",
+    "ipcs": "0",
+    "adjacent_to": [
+      "46",
+      "Dutch New Guinea"
+    ]
+  },
+  "Yakut SSR": {
+    "power": "USSR",
+    "ipcs": "0",
+    "adjacent_to": [
+      "Buryatia",
+      "Dornod",
+      "Dzavhan",
+      "Lake",
+      "Yenisey"
+    ]
+  },
+  "Buryatia": {
+    "power": "USSR",
+    "ipcs": "0",
+    "adjacent_to": [
+      "Amur",
+      "Dornod",
+      "Lake",
+      "Sakha",
+      "Yakut SSR"
+    ]
+  },
+  "Dornod": {
+    "power": "Neutral",
+    "ipcs": "0",
+    "adjacent_to": [
+      "Amur",
+      "Buryatia",
+      "Dornogobi",
+      "Dzavhan",
+      "Yakut SSR"
+    ]
+  },
+  "Dornogobi": {
+    "power": "Neutral",
+    "ipcs": "0",
+    "adjacent_to": [
+      "Amur",
+      "Dornod",
+      "Dzavhan",
+      "Gobi Desert",
+      "Jehol",
+      "Manchuria"
+    ]
+  },
+  "Gobi Desert": {
+    "power": "Impassable",
+    "ipcs": "0",
+    "adjacent_to": [
+      "Chahar",
+      "Dornogobi",
+      "Dzavhan",
+      "Jehol",
+      "Kansu",
+      "Olgiy",
+      "Suiyuan"
+    ]
+  },
+  "Dzavhan": {
+    "power": "Neutral",
+    "ipcs": "1",
+    "adjacent_to": [
+      "Dornod",
+      "Dornogobi",
+      "Gobi Desert",
+      "Olgiy",
+      "Yakut SSR",
+      "Yenisey"
+    ]
+  },
+  "Olgiy": {
+    "power": "Neutral",
+    "ipcs": "0",
+    "adjacent_to": [
+      "Dzavhan",
+      "Gobi Desert",
+      "Kansu",
+      "Tunguska",
+      "Yenisey"
+    ]
+  },
+  "Chahar": {
+    "power": "China",
+    "ipcs": "1",
+    "adjacent_to": [
+      "Anhwei",
+      "Gobi Desert",
+      "Hopeh",
+      "Jehol",
+      "Suiyuan"
+    ]
+  },
+  "Jehol": {
+    "power": "China",
+    "ipcs": "1",
+    "adjacent_to": [
+      "19",
+      "Anhwei",
+      "Chahar",
+      "Dornogobi",
+      "Gobi Desert",
+      "Manchuria",
+      "Shantung"
+    ]
+  },
+  "Manchuria": {
+    "power": "China",
+    "ipcs": "3",
+    "adjacent_to": [
+      "19",
+      "Amur",
+      "Dornogobi",
+      "Jehol",
+      "Korea"
+    ]
+  },
+  "Korea": {
+    "power": "Japan",
+    "ipcs": "3",
+    "adjacent_to": [
+      "6",
+      "Amur",
+      "Manchuria"
+    ]
+  },
+  "Amur": {
+    "power": "USSR",
+    "ipcs": "1",
+    "adjacent_to": [
+      "5",
+      "Buryatia",
+      "Dornod",
+      "Dornogobi",
+      "Korea",
+      "Manchuria",
+      "Sakha",
+      "Siberia"
+    ]
+  },
+  "Siberia": {
+    "power": "USSR",
+    "ipcs": "2",
+    "adjacent_to": [
+      "5",
+      "Amur",
+      "Sakha",
+      "Soviet Far East"
+    ]
+  },
+  "Soviet Far East": {
+    "power": "USSR",
+    "ipcs": "0",
+    "adjacent_to": [
+      "3",
+      "4",
+      "5",
+      "Siberia"
+    ]
+  },
+  "Sakha": {
+    "power": "USSR",
+    "ipcs": "1",
+    "adjacent_to": [
+      "Amur",
+      "Buryatia",
+      "Siberia"
+    ]
+  },
+  "Shantung": {
+    "power": "China",
+    "ipcs": "2",
+    "adjacent_to": [
+      "19",
+      "Anhwei",
+      "Jehol",
+      "Kiangsu"
+    ]
+  },
+  "Burma": {
+    "power": "UK",
+    "ipcs": "1",
+    "adjacent_to": [
+      "38",
+      "Great Himalaya Range",
+      "India",
+      "Shan State",
+      "Yunnan"
+    ]
+  },
+  "Shan State": {
+    "power": "UK",
+    "ipcs": "1",
+    "adjacent_to": [
+      "37",
+      "38",
+      "Burma",
+      "French Indo China",
+      "Malaya",
+      "Thailand",
+      "Yunnan"
+    ]
+  },
+  "Thailand": {
+    "power": "Neutral",
+    "ipcs": "1",
+    "adjacent_to": [
+      "37",
+      "French Indo China",
+      "Shan State"
+    ]
+  },
+  "French Indo China": {
+    "power": "France",
+    "ipcs": "2",
+    "adjacent_to": [
+      "36",
+      "Kwangsi",
+      "Shan State",
+      "Thailand",
+      "Yunnan"
+    ]
+  },
+  "Yunnan": {
+    "power": "China",
+    "ipcs": "1",
+    "adjacent_to": [
+      "Burma",
+      "French Indo China",
+      "Great Himalaya Range",
+      "Hunan",
+      "Kwangsi",
+      "Kweichow",
+      "Shan State",
+      "Szechwan"
+    ]
+  },
+  "Hunan": {
+    "power": "China",
+    "ipcs": "1",
+    "adjacent_to": [
+      "Anhwei",
+      "Kiangsi",
+      "Kwangsi",
+      "Kweichow",
+      "Yunnan"
+    ]
+  },
+  "Kweichow": {
+    "power": "China",
+    "ipcs": "2",
+    "adjacent_to": [
+      "Anhwei",
+      "Hopeh",
+      "Hunan",
+      "Shensi",
+      "Szechwan",
+      "Yunnan"
+    ]
+  },
+  "Hopeh": {
+    "power": "China",
+    "ipcs": "1",
+    "adjacent_to": [
+      "Anhwei",
+      "Chahar",
+      "Kweichow",
+      "Shensi",
+      "Suiyuan"
+    ]
+  },
+  "Anhwei": {
+    "power": "China",
+    "ipcs": "1",
+    "adjacent_to": [
+      "Chahar",
+      "Hopeh",
+      "Hunan",
+      "Jehol",
+      "Kiangsi",
+      "Kiangsu",
+      "Kweichow",
+      "Shantung"
+    ]
+  },
+  "Kiangsu": {
+    "power": "China",
+    "ipcs": "3",
+    "adjacent_to": [
+      "19",
+      "Anhwei",
+      "Kiangsi",
+      "Shantung"
+    ]
+  },
+  "Kiangsi": {
+    "power": "China",
+    "ipcs": "1",
+    "adjacent_to": [
+      "20",
+      "Anhwei",
+      "Hunan",
+      "Kiangsu",
+      "Kwangsi",
+      "Kwangtung"
+    ]
+  },
+  "Kwangtung": {
+    "power": "UK",
+    "ipcs": "3",
+    "adjacent_to": [
+      "20",
+      "Kiangsi",
+      "Kwangsi"
+    ]
+  },
+  "Kwangsi": {
+    "power": "China",
+    "ipcs": "1",
+    "adjacent_to": [
+      "36",
+      "French Indo China",
+      "Hunan",
+      "Kiangsi",
+      "Kwangtung",
+      "Yunnan"
+    ]
+  },
+  "Malaya": {
+    "power": "UK",
+    "ipcs": "2",
+    "adjacent_to": [
+      "37",
+      "Shan State"
+    ]
+  },
+  "Alaska": {
+    "power": "US",
+    "ipcs": "2",
+    "adjacent_to": [
+      "1",
+      "2",
+      "8",
+      "Aleutian Islands",
+      "Western Canada"
+    ]
+  },
+  "Western Canada": {
+    "power": "Commonwealth",
+    "ipcs": "0",
+    "adjacent_to": [
+      "1",
+      "Alaska",
+      "Manitoba",
+      "Western United States"
+    ]
+  },
+  "Western United States": {
+    "power": "US",
+    "ipcs": "10",
+    "adjacent_to": [
+      "10",
+      "Central United States",
+      "Mexico",
+      "Western Canada"
+    ]
+  },
+  "Mexico": {
+    "power": "US",
+    "ipcs": "2",
+    "adjacent_to": [
+      "10",
+      "Southeast Mexico",
+      "Western United States"
+    ]
+  }
+}
