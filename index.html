@@ -1541,7 +1541,7 @@
                 const oilCoords = data.find(item => item.Oil)?.Oil;
                 if (oilCoords) {
                     oilCoords.forEach(coord => {
-                        createImage(svg, 'Units/oil.png', coord.x, coord.y, 50);
+                        createImage(svg, 'units1/oil.png', coord.x, coord.y, 50);
                     });
                 }
 
@@ -1549,7 +1549,7 @@
                 const resourceCoords = data.find(item => item.Resources)?.Resources;
                 if (resourceCoords) {
                     resourceCoords.forEach(coord => {
-                        createImage(svg, 'Units/resources.png', coord.x, coord.y, 50);
+                        createImage(svg, 'units1/resources.png', coord.x, coord.y, 50);
                     });
                 }
             } catch (error) {
