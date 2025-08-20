@@ -196,6 +196,170 @@
         "Tunisia"
       ]
     },
+    "Venezuela": {
+      "territories": [
+        "Venezuela"
+      ]
+    },
+    "Colombia": {
+      "territories": [
+        "Colombia"
+      ]
+    },
+    "Ecuador": {
+      "territories": [
+        "Ecuador"
+      ]
+    },
+    "Peru": {
+      "territories": [
+        "Peru"
+      ]
+    },
+    "Bolivia": {
+      "territories": [
+        "Bolivia"
+      ]
+    },
+    "Paraguay": {
+      "territories": [
+        "Paraguay"
+      ]
+    },
+    "Uruguay": {
+      "territories": [
+        "Uruguay"
+      ]
+    },
+    "Chile": {
+      "territories": [
+        "Chile"
+      ]
+    },
+    "Netherlands": {
+      "territories": [
+        "Suriname",
+        "Sumatra",
+        "Java",
+        "Celebes",
+        "Dutch New Guinea"
+      ]
+    },
+    "Portugal": {
+      "territories": [
+        "Portugal",
+        "Azores",
+        "Portuguese Guinea",
+        "Angola",
+        "Mozambique"
+      ]
+    },
+    "Liberia": {
+      "territories": [
+        "Liberia"
+      ]
+    },
+    "Switzerland": {
+      "territories": [
+        "Switzerland"
+      ]
+    },
+    "Sweden": {
+      "territories": [
+        "Sweden"
+      ]
+    },
+    "Turkey": {
+      "territories": [
+        "Marmara",
+        "Central Anatolia",
+        "Eastern Anatolia"
+      ]
+    },
+    "Saudi Arabia": {
+      "territories": [
+        "Saudi Arabia"
+      ]
+    },
+    "Mongolia": {
+      "territories": [
+        "Olgiy",
+        "Dzavhan",
+        "Dornod",
+        "Dornogobi"
+      ]
+    },
+    "Afghanistan": {
+      "territories": [
+        "Afghanistan"
+      ]
+    },
+    "Brazil": {
+      "territories": [
+        "Brazil"
+      ]
+    },
+    "Spain": {
+      "territories": [
+        "Galicia Navarra",
+        "Castilla",
+        "Aragon",
+        "Spanish Morocco",
+        "Rio de Oro"
+      ]
+    },
+    "Bulgaria": {
+      "territories": [
+        "Bulgaria"
+      ]
+    },
+    "Iraq": {
+      "territories": [
+        "Iraq"
+      ]
+    },
+    "Iran": {
+      "territories": [
+        "Iran",
+        "Northwest Iran",
+        "Eastern Iran"
+      ]
+    },
+    "Thailand": {
+      "territories": [
+        "Thailand"
+      ]
+    },
+    "Finland": {
+      "territories": [
+        "Finland"
+      ]
+    },
+    "Argentina": {
+      "territories": [
+        "Argentina"
+      ]
+    },
+    "Eire": {
+      "territories": [
+        "Eire"
+      ]
+    },
+    "Yugoslavia": {
+      "territories": [
+        "Yugoslavia"
+      ]
+    },
+    "Greece": {
+      "territories": [
+        "Greece"
+      ]
+    },
+    "Crete": {
+      "territories": [
+        "Crete"
+      ]
+    },
     "Neutral": {
       "territories": [
         "Afghanistan",

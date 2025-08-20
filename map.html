@@ -526,11 +526,11 @@
         }
 
         .vc-bar.axis {
-            background-color: #8B0000; /* Dark Red for Axis */
+            background-color: #000000;
         }
 
         .vc-bar.allies {
-            background-color: #00008B; /* Dark Blue for Allies */
+            background-color: #ffffff;
         }
 
         .vc-count {
@@ -1000,6 +1000,8 @@
         // Each item: { element: SVGElement, originalTerritory: string, placedIn: string, unitType: string, power: string, count: number, x: number, y: number }
         let placedUnitsData = [];
 
+        let territoriesByCountry = {};
+
         // --- New Global Variables for Sticky Bar ---
         const gameStartDate = new Date('1940-05-10T00:00:00'); // May 10, 1940
         let gameStartTime = Date.now(); // Record when the game (page) started
@@ -1117,20 +1119,54 @@
             `;
         }
 
-        // --- Initial calls to update functions (place these at the very end of your script or after DOMContentLoaded) ---
-        document.addEventListener('DOMContentLoaded', () => {
-            updateRoundInfo();
-            updateGameTimer();
-            updatePowerOrder(currentTurnPowerIndex); // Example: US (index 2) is current turn
-            updatePhaseDisplay(currentPhaseIndex); // Example: Technology Research (index 0)
-            updateVictoryCitiesDisplay(10, 9); // Example: 10 Axis, 9 Allies
-            
-            // Update timer every second
-            setInterval(updateGameTimer, 1000); 
+        /**
+         * Calculates and updates the IPC display bar based on territories held by each power.
+         * It will only display IPCs for major powers.
+         */
+        function updateIpcDisplayBar() {
+            const ipcDisplayBar = document.getElementById('ipcDisplayBar');
+            if (!ipcDisplayBar) return;
 
-            // You would call other update functions as the game state changes
-            // e.g., updateRoundInfo() when round changes, updatePowerOrder() when turn changes, etc.
-        });
+            // Define the list of major powers to display in the IPC bar
+            const majorPowers = ['US', 'UK', 'USSR', 'Germany', 'Italy', 'Japan', 'China', 'Commonwealth', 'France'];
+
+            // Clear the bar before adding new elements
+            ipcDisplayBar.innerHTML = '';
+
+            // Loop through the list of major powers
+            majorPowers.forEach(power => {
+                // Ensure the power exists in the territoriesByCountry object
+                if (territoriesByCountry.hasOwnProperty(power)) {
+                    const territories = territoriesByCountry[power] || [];
+                    let totalIpcs = 0;
+                    
+                    territories.forEach(territoryName => {
+                        const territory = territoryData[territoryName];
+                        if (territory && territory.ipc) {
+                            totalIpcs += territory.ipc;
+                        }
+                    });
+
+                    // Create the IPC square element
+                    const ipcSquare = document.createElement('div');
+                    ipcSquare.classList.add('ipc-square');
+                    ipcSquare.style.width = '75px'; 
+                    ipcSquare.style.height = '65px'; 
+                    ipcSquare.style.backgroundImage = `url('flags/${power}.png')`;
+                    ipcSquare.style.backgroundSize = '80% 80%';
+                    ipcSquare.style.backgroundPosition = 'center 15%';
+                    ipcSquare.style.backgroundRepeat = 'no-repeat';
+
+                    // Create the IPC number overlay
+                    const ipcNumberDiv = document.createElement('div');
+                    ipcNumberDiv.classList.add('ipc-number');
+                    ipcNumberDiv.textContent = totalIpcs;
+                    ipcSquare.appendChild(ipcNumberDiv);
+
+                    ipcDisplayBar.appendChild(ipcSquare);
+                }
+            });
+        }
 
         /**
          * Fetches neutral powers data and draws a draggable, circular flag at the center of each territory.
@@ -2638,6 +2674,39 @@
             const unitProfileData = await unitProfileResponse.json();
 
             try {
+                // Fetch the territories-by-power.json file
+                const territoriesResponse = await fetch('territories-by-power.json');
+                if (!territoriesResponse.ok) {
+                    throw new Error(`HTTP error! status: ${territoriesResponse.status} for territories-by-power.json`);
+                }
+                const territoriesData = await territoriesResponse.json();
+
+                // Select data only for the "setup 1940" scenario
+                const setup1940Data = territoriesData['setup 1940'];
+
+                if (setup1940Data) {
+                    // These are the top-level keys from the JSON file to exclude
+                    const excludedKeys = new Set(['Impassable', 'Neutral']);
+
+                    // Iterate over each country/power in the 1940 setup
+                    for (const country in setup1940Data) {
+                        // If the country is not in the exclusion list, add it to our new variable
+                        if (!excludedKeys.has(country)) {
+                            territoriesByCountry[country] = setup1940Data[country].territories;
+                        }
+                    }
+
+                    // You can log to the console to verify the result
+                    console.log("Processed Territories by Country (1940 setup):", territoriesByCountry);
+
+                } else {
+                    console.error("'setup 1940' not found in territories-by-power.json");
+                }
+            } catch (error) {
+                console.error("Error processing territories-by-power.json:", error);
+            }
+
+            try {
                 // Fetch labels.json
                 const labelsResponse = await fetch('labels.json');
                 if (!labelsResponse.ok) {
@@ -3394,18 +3463,22 @@
                 }
                 const territoryIpcs = getTerritoryIpcsFromSvg(currentSvgElement);
 
-                // 3. Calculate total IPCs for each power, excluding "Neutral" and "Impassable"
+                // 3. Calculate total IPCs for each playable power
                 const totalIpcsByPower = {};
-                for (const powerName in currentSetupTerritories) {
-                    // Skip Neutral and Impassable powers
-                    if (powerName === "Neutral" || powerName === "Impassable") {
+                // Define the exact list of powers to be included in the IPC calculation
+                const playablePowers = ['China', 'Commonwealth', 'France', 'Germany', 'Italy', 'Japan', 'UK', 'US', 'USSR'];
+
+                for (const powerName of playablePowers) {
+                    // Ensure this power exists in the data before processing
+                    if (!currentSetupTerritories[powerName]) {
                         continue;
                     }
+
                     const territoriesOwned = currentSetupTerritories[powerName].territories;
                     let totalIpcs = 0;
                     territoriesOwned.forEach(territory => {
                         // Normalize the territory name from JSON: replace spaces with underscores
-                        const normalizedTerritory = territory.replace(/ /g, '_'); // Replace all spaces with underscores
+                        const normalizedTerritory = territory.replace(/ /g, '_');
 
                         if (territoryIpcs[normalizedTerritory] !== undefined) {
                             totalIpcs += territoryIpcs[normalizedTerritory];
