@@ -864,19 +864,31 @@
 
         /* Style for the unit split slider popup */
         .unit-split-slider-container {
-            position: absolute;
+            position: fixed; /* Changed to fixed to align correctly with viewport client coordinates */
             background-color: rgba(45, 35, 25, 0.95);
             border: 2px solid #8C7B6A;
             border-radius: 8px;
             padding: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-            z-index: 2000;
+            z-index: 3201; /* Raised above next-phase button (3000) and top-bar (3001) */
             color: #E0D8B0;
             font-family: 'Georgia', serif;
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 10px;
+        }
+
+        /* Fullscreen modal backdrop overlay to block background clicks */
+        .unit-split-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.4); /* Translucent dark overlay */
+            z-index: 3200; /* Sit on top of everything, including top bar and combat button */
+            pointer-events: auto; /* Intercepts all clicks */
         }
 
         .unit-split-slider-container label {
@@ -1861,9 +1873,13 @@
         }
 
         .combat-units-area {
-            flex: 1; display: flex; gap: 15px; flex-wrap: wrap; 
-            align-content: center; /* Centers units vertically */
-            overflow: visible; /* Removes scrollbar */
+            flex: 1; 
+            display: flex; 
+            gap: 15px; 
+            flex-wrap: nowrap; /* Prevent vertical wrapping */
+            align-items: center; /* Centers units vertically */
+            overflow-x: auto; /* Enable horizontal scrolling when elements overflow */
+            overflow-y: hidden; /* Prevent vertical overflow */
         }
 
         
@@ -2133,9 +2149,25 @@
 
 
         /* --- Combat UI Enhancements --- */
-        /* Hide scrollbars for the boxes */
-        .combat-units-area::-webkit-scrollbar { display: none; }
-        .combat-units-area { scrollbar-width: none; }
+        /* Aesthetic, thin horizontal scrollbar for overflowing unit rows */
+        .combat-units-area::-webkit-scrollbar {
+            height: 4px; /* Slim profile */
+        }
+        .combat-units-area::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.25);
+            border-radius: 2px;
+        }
+        .combat-units-area::-webkit-scrollbar-thumb {
+            background: #8C7B6A; /* Muted vintage brown thumb */
+            border-radius: 2px;
+        }
+        .combat-units-area::-webkit-scrollbar-thumb:hover {
+            background: #ffd700; /* Subtle gold hover highlight */
+        }
+        .combat-units-area {
+            scrollbar-width: thin;
+            scrollbar-color: #8C7B6A rgba(0, 0, 0, 0.25);
+        }
 
         /* Align Attacker units starting from the left (die on the right) */
         #combat-attacker-board .combat-row { flex-direction: row; }
@@ -2534,6 +2566,14 @@
         /* Elevates the stacking layer of the combat row when a speech bubble is active */
         .combat-row:has(.sub-speech-bubble) {
             z-index: 100 !important;
+        }
+
+        /* Disable clicks and highlights on all arrows and labels when pathing is active */
+        body.active-pathing .movement-arrow-group,
+        body.active-pathing .movement-arrow-path,
+        body.active-pathing .movement-arrow-hitbox,
+        body.active-pathing .arrow-label-group {
+            pointer-events: none !important;
         }
     </style>
     <script type="importmap">
@@ -4403,6 +4443,12 @@
                 if (confirmed) {
                     if (selectedUnit) handleUnitClick(selectedUnit);
                     window.activePathingState = null;
+                    document.body.classList.remove('active-pathing');
+
+                    // Remove all planning-phase loading arrows visually and clear their arrays
+                    document.querySelectorAll('.loading-arrow-group').forEach(el => el.remove());
+                    drawnArrows = drawnArrows.filter(a => !a.isLoad);
+                    window.loadedUnitsLinks = [];
 
                     // 1. Create a Temporary Variable organizing combat data by movedFrom
                     const tempMovedFrom = {};
@@ -4432,7 +4478,7 @@
                         // Calculate how many units of this ID moved away from this specific space
                         let movedCount = 0;
                         if (tempMovedFrom[originalMapSpace]) {
-                            const matchingMoves = tempMovedFrom[originalMapSpace].filter(u => u.id === unitId);
+                            const matchingMoves = tempMovedFrom[originalMapSpace].filter(u => u.id === unitId || u.templateId === unitId);
                             movedCount = matchingMoves.reduce((sum, u) => sum + u.count, 0);
                         }
 
@@ -4447,8 +4493,7 @@
                                 element: baseUnit.element, // Keep reference to update later
                                 power: baseUnit.power,
                                 count: remainingCount,
-                                originalTerritory: baseUnit.originalTerritory,
-                                placedIn: originalMapSpace,
+                                originalTerritory: originalMapSpace,
                                 currentlyPlacedIn: originalMapSpace, // matching metadata
                                 attackTarget: originalMapSpace,
                                 hasMoved: false,
@@ -4472,20 +4517,28 @@
                             if (!universalBoardState[originalMapSpace]) universalBoardState[originalMapSpace] = [];
                             universalBoardState[originalMapSpace].push(unitObj);
 
-                            // Update the Map DOM to reflect subtraction
-                            baseUnit.element.setAttribute('data-count', remainingCount);
-                            const countText = baseUnit.element.querySelector('.unit-count-text');
-                            const countCircle = baseUnit.element.querySelector('.unit-count-circle');
-                            if (remainingCount > 1) {
-                                if (countText) countText.textContent = remainingCount;
-                            } else if (remainingCount === 1) {
-                                if (countText) countText.remove();
-                                if (countCircle) countCircle.remove();
-                            }
+                            // Update the Map DOM to reflect subtraction across all clones
+                            const targetId = baseUnit.element.getAttribute('id');
+                            svgWrapper.querySelectorAll(`[id="${targetId}"]`).forEach(el => {
+                                el.setAttribute('data-count', remainingCount);
+                                const countText = el.querySelector('.unit-count-text');
+                                const countCircle = el.querySelector('.unit-count-circle');
+                                if (remainingCount > 1) {
+                                    if (countText) countText.textContent = remainingCount;
+                                } else if (remainingCount === 1) {
+                                    if (countText) countText.remove();
+                                    if (countCircle) countCircle.remove();
+                                }
+                            });
                         } else {
-                            // If remaining is 0, completely hide it on the map visually
-                            baseUnit.element.setAttribute('data-count', 0);
-                            baseUnit.element.style.display = 'none';
+                            // Hide the element across all clones instead of deleting it, so survivors can be restored
+                            const mapMarker = baseUnit.element.querySelector('.map-damage-marker');
+                            if (mapMarker) mapMarker.remove();
+                            
+                            svgWrapper.querySelectorAll(`[id="${unitId}"]`).forEach(el => {
+                                el.style.display = 'none';
+                                el.setAttribute('data-count', '0');
+                            });
                         }
                     });
 
@@ -5559,9 +5612,13 @@
 
             console.log("placeUnits called. Received infrastructureCoordinates:", infrastructureCoordinates);
 
-            // Clear existing units and reset global data array
+            // Clear existing units on this specific SVG clone
             svgElement.querySelectorAll('.unit-stack-group').forEach(el => el.remove());
-            placedUnitsData = [];
+            
+            // Only reset the global tracker when populating the active middle workspace
+            if (svgElement === currentSvgElement) {
+                placedUnitsData = [];
+            }
 
             const MAX_PLACEMENT_ATTEMPTS = 5000;
             const PLACEMENT_STEP = 5;
@@ -6009,18 +6066,20 @@
                         unitGroupElement.setAttribute('data-damage', '0');
                     }
 
-                    // Store this unit's data in the global array
-                    placedUnitsData.push({
-                        element: unitGroupElement,
-                        originalTerritory: territory,
-                        placedIn: foundPlacement.targetName, // Store the initial placed-in territory
-                        unitType: unitType,
-                        power: controllingPowerName,
-                        count: initialCount, // Store the actual count
-                        x: foundPlacement.x,
-                        y: foundPlacement.y
-                    });
-
+                    // Only record elements in the primary active tracking array
+                    if (svgElement === currentSvgElement) {
+                        placedUnitsData.push({
+                            element: unitGroupElement,
+                            originalTerritory: territory,
+                            placedIn: foundPlacement.targetName, // Store the initial placed-in territory
+                            unitType: unitType,
+                            power: controllingPowerName,
+                            count: initialCount, // Store the actual count
+                            x: foundPlacement.x,
+                            y: foundPlacement.y
+                        });
+                    }
+                    
                     let imageX = (groupWidth - unitImageSize) / 2;
                     let imageY = 0; // Image starts at the top of the group's local coordinates
 
@@ -7096,8 +7155,19 @@
                 // If we have a border crossing, use that as the "prevPoint" for the waypoint calculation
                 const prevRefPoint = borderMidPoint || points[points.length - 1];
                 
-                // Call existing uniqueness logic
-                const wayPoint = findBestWayPoint(currSpace, prevRefPoint, nextTarget);
+                let wayPoint = null;
+                // If this is the final target space (the end of the path)
+                if (!nextSpace) {
+                    const existingArrow = drawnArrows.find(a => String(a.targetTerritory) === String(currSpace) && !a.isLoad);
+                    if (existingArrow && existingArrow.endPos) {
+                        wayPoint = { x: existingArrow.endPos.x, y: existingArrow.endPos.y };
+                    }
+                }
+
+                // If no existing ending point is found, calculate a new one
+                if (!wayPoint) {
+                    wayPoint = findBestWayPoint(currSpace, prevRefPoint, nextTarget);
+                }
                 
                 if (wayPoint) {
                     points.push(wayPoint);
@@ -7197,11 +7267,20 @@
          * @returns {Promise<number|null>} A promise that resolves with the selected number of units, or null if canceled.
          */
         function showUnitSplitSlider(maxUnits, event) {
-            // Remove any existing slider first
+            // Remove any existing slider and overlay first
             const existingSlider = document.querySelector('.unit-split-slider-container');
             if (existingSlider) {
                 existingSlider.remove();
             }
+            const existingOverlay = document.querySelector('.unit-split-overlay');
+            if (existingOverlay) {
+                existingOverlay.remove();
+            }
+
+            // Create and append the background blocker overlay
+            const overlay = document.createElement('div');
+            overlay.className = 'unit-split-overlay';
+            document.body.appendChild(overlay);
 
             const container = document.createElement('div');
             container.className = 'unit-split-slider-container';
@@ -7231,14 +7310,12 @@
                 okBtn.addEventListener('click', () => {
                     const value = parseInt(slider.value, 10);
                     container.remove();
+                    overlay.remove(); // Clean up overlay
                     if (unitSplitPromiseResolver) {
                         unitSplitPromiseResolver(value); // Resolve the promise with the value
                         unitSplitPromiseResolver = null; // Clear it
                     }
                 });
-
-                // Optional: handle closing if user clicks away (resolves with null)
-                // For simplicity, we'll stick to the OK button for now.
             });
         }
         
@@ -7526,7 +7603,10 @@
                         if (!isSeaZone(adjName)) continue;
                         if (!distanceMap.has(adjName)) {
                             distanceMap.set(adjName, distance + 1);
-                            queue.push({ territoryName: adjName, distance: distance + 1 });
+                            // Submarines ignore surface blockers; other sea units are blocked by them
+                            if (unitType === 'SUB' || getEnemyBlockerCount(adjName) === 0) {
+                                queue.push({ territoryName: adjName, distance: distance + 1 });
+                            }
                         }
                     }
                 }
@@ -7665,17 +7745,19 @@
                             if (adj === target) {
                                 stack.push({ name: adj, path: [...curr.path, adj], dist: curr.dist + 1 });
                             } else {
-                                let isEnemy = isSeaZone(adj) ? seaZoneHasEnemyUnits(adj) : isEnemyTerritory(adj, unitPower);
+                                // Use blocker counts for sea zones (submarines and transports do not block)
+                                let isEnemy = isSeaZone(adj) ? (getEnemyBlockerCount(adj) > 0) : isEnemyTerritory(adj, unitPower);
                                 let isValidIntermediate = false;
 
                                 if (getTerritoryPower(adj) === 'Impassable') isValidIntermediate = false;
                                 else if (isLandUnit && !isSeaZone(adj) && !isEnemy) isValidIntermediate = true;
                                 else if (isSeaUnit && isSeaZone(adj)) {
-                                    // NEW PINNING LOGIC: Can only pass through if there are no blockers or if blockers are pinned
-                                    if (!isEnemy) isValidIntermediate = true;
+                                    // Submarines ignore surface blockers entirely
+                                    if (unitType === 'SUB') isValidIntermediate = true;
+                                    else if (!isEnemy) isValidIntermediate = true;
                                     else if (isSZPinned(adj)) isValidIntermediate = true;
                                 }
-                                else if (isAirUnit) isValidIntermediate = true; 
+                                else if (isAirUnit) isValidIntermediate = true;
                                 
                                 if (isValidIntermediate) {
                                     stack.push({ name: adj, path: [...curr.path, adj], dist: curr.dist + 1 });
@@ -7748,6 +7830,7 @@
                                 currentPath: [startTerritory],
                                 remainingMoves: movementPoints
                             };
+                            document.body.classList.add('active-pathing');
 
                             highlightedTerritories.forEach(highlight => {
                                 if (highlight.element.getAttribute('data-name') !== territoryName && highlight.overlay) {
@@ -7802,8 +7885,8 @@
                                     e.stopPropagation(); e.preventDefault(); return;
                                 }
 
-                                // NEW SEA ZONE BLOCKING CHECK
-                                if (isSeaUnit && isSeaZone(clickedName) && clickedName !== window.activePathingState.target) {
+                                // SEA ZONE BLOCKING CHECK
+                                if (isSeaUnit && unitType !== 'SUB' && isSeaZone(clickedName) && clickedName !== window.activePathingState.target) {
                                     const blockers = getEnemyBlockerCount(clickedName);
                                     if (blockers > 0 && !isSZPinned(clickedName)) {
                                         showCustomModal("Sea Zone Blocked", `Enemy combat ships in SZ ${clickedName} prevent movement through this zone. You must first assign at least ${blockers} ship(s) to attack this zone to 'pin' the defenders.`);
@@ -7930,6 +8013,7 @@
                 }
 
                 window.activePathingState = null; 
+                document.body.classList.remove('active-pathing');
                 hidePathingUI();
 
                 document.querySelectorAll('.manual-path-step').forEach(el => el.remove());
@@ -7981,13 +8065,15 @@
                 const newArrowGroup = arrowGroup.cloneNode(true);
                 arrowGroup.replaceWith(newArrowGroup);
                 
-                newArrowGroup.addEventListener('click', (ev) => {
+                newArrowGroup.addEventListener('click', async (ev) => {
                     ev.stopPropagation();
                     if (currentPhaseIndex === 3) {
                         showCustomModal("Action Denied", "Cannot remove arrows during Conduct Combat phase.");
                         return;
                     }
-                    if (confirm('Do you want to remove this movement arrow?')) {
+                    
+                    const confirmed = await showCustomModal("Remove Movement", "Do you want to remove this movement arrow?", true);
+                    if (confirmed) {
                         // Revert placedIn to original territory when arrow is removed
                         const startU = drawnArrows.find(a => a.arrowElement === newArrowGroup)?.startUnit || selectedUnit;
                         if (startU) {
@@ -8109,8 +8195,6 @@
                                         const shipArrow = activeBombardmentArrows[j];
                                         const qtyToRemove = Math.min(shipArrow.units, excess);
                                         
-                                        // If the arrow group contains more units than the excess, we just reduce it
-                                        // But for simplicity in movement rules, we'll remove the whole ship arrow
                                         const arrowEl = shipArrow.arrowElement;
                                         
                                         // Cleanup Registry
@@ -8174,10 +8258,7 @@
 
                 if (isTransportType && totalUnitsInStack > 1 && loadedCargoForThisIcon.length > 0) {
                     // Custom logic for routing grouped transports/planes with specific cargo
-                    const movedIndicesGlobal = [];
-                    drawnArrows.filter(a => a.startUnit === selectedUnit && !a.isLoad && a.specificTransportIndices).forEach(a => {
-                        movedIndicesGlobal.push(...a.specificTransportIndices);
-                    });
+                    const movedIndicesGlobal = Array.from(getMovedIndices(selectedUnit));
 
                     unitsToMove = await new Promise((resolve) => {
                         const overlay = document.createElement('div');
@@ -8426,10 +8507,44 @@
             }
         }
 
+        // Helper to calculate which specific transport indexes in a stack have already moved/attacked
+        function getMovedIndices(el) {
+            const movedIndices = new Set();
+            const arrows = drawnArrows.filter(a => a.startUnit === el && !a.isLoad);
+            const totalCount = parseInt(el.getAttribute('data-count'), 10) || 1;
+            
+            // 1. Lock indices committed via routed transport moves (carrying cargo)
+            arrows.forEach(a => {
+                if (a.specificTransportIndices) {
+                    a.specificTransportIndices.forEach(idx => movedIndices.add(idx));
+                }
+            });
+
+            // 2. Lock indices committed via direct combat moves (empty attacks)
+            arrows.forEach(a => {
+                if (!a.specificTransportIndices) {
+                    let unitsToAllocate = a.units;
+                    for (let i = totalCount - 1; i >= 0 && unitsToAllocate > 0; i--) {
+                        if (!movedIndices.has(i)) {
+                            movedIndices.add(i);
+                            unitsToAllocate--;
+                        }
+                    }
+                }
+            });
+            return movedIndices;
+        }
+
         async function attemptLoadUnit(landUnitEl, transportEl) {
             const landType = landUnitEl.getAttribute('data-unit-type');
             const tptType = transportEl.getAttribute('data-unit-type');
             const tptCount = parseInt(transportEl.getAttribute('data-count'), 10) || 1;
+            
+            const movedIndices = getMovedIndices(transportEl);
+            if (movedIndices.size >= tptCount) {
+                showCustomModal("Action Denied", "All transports in this stack have already moved and are unavailable.");
+                return;
+            }
             
             let loadedOntoThis = window.loadedUnitsLinks.filter(l => l.transportEl === transportEl);
             
@@ -8440,7 +8555,6 @@
             if (availableUnits <= 0) { showCustomModal("Unit Locked", "No available units in this stack to load."); return; }
 
             // Initialize capacity array for individual transports in the stack
-            // Store it on the element so it persists across multiple loading actions
             if (!transportEl.unitCapacities) {
                 transportEl.unitCapacities = Array.from({length: tptCount}, () => ({ count: 0, hasNonInf: false }));
             }
@@ -8449,6 +8563,10 @@
             let loadedCapacitiesFromModal = []; // Store capacities before modal destroys itself
 
             if (tptCount === 1) {
+                if (movedIndices.has(0)) {
+                    showCustomModal("Action Denied", "This transport has already moved and is unavailable.");
+                    return;
+                }
                 // Original Logic for single transport
                 let currentLoadedCount = transportEl.unitCapacities[0].count;
                 if (tptType === 'SBR') {
@@ -8485,11 +8603,12 @@
                     const box = document.createElement('div');
                     box.style.cssText = 'background:#1e222b; border:2px solid #66ccff; border-radius:8px; padding:20px; width:400px; color:#E0D8B0; font-family:"Georgia", serif;';
                     
-                    let html = `<h3 style="margin-top:0; color:#66ccff; text-align:center;">Load ${tptCount} ${tptType === 'SBR' ? 'Transport Planes' : 'Transports'}</h3>`;
+                    let html = `<h3 style="margin-top:0; color:#66ccff; text-align:center;">Load ${tptCount - movedIndices.size} ${tptType === 'SBR' ? 'Transport Planes' : 'Transports'}</h3>`;
                     html += `<div style="text-align:center; margin-bottom: 15px; font-size:12px;">Available to load: <span id="avail-qty" style="color:#FFD700; font-weight:bold;">${availableUnits}</span> ${landType}</div>`;
                     
                     html += `<div style="max-height:300px; overflow-y:auto; margin-bottom:15px; padding-right:10px;">`;
                     for(let i = 0; i < tptCount; i++) {
+                        if (movedIndices.has(i)) continue; // Skip already assigned/moved units and do not display them
                         const cap = transportEl.unitCapacities[i];
                         let maxForThis = 2 - cap.count;
                         if (tptType === 'SBR' && landType !== 'INF') maxForThis = 0;
@@ -8601,13 +8720,22 @@
             window.loadedUnitsLinks.push(linkObj);
 
             // Click dashed arrow to Undo
-            loadArrowGroup.addEventListener('click', (ev) => {
+            loadArrowGroup.addEventListener('click', async (ev) => {
                 ev.stopPropagation();
                 if (currentPhaseIndex === 3) {
                     showCustomModal("Action Denied", "Cannot remove arrows during Conduct Combat phase.");
                     return;
                 }
-                if (confirm('Undo loading this unit?')) {
+
+                // Check if the transport has an active movement/attack arrow assigned
+                const isTransportAssignedToAttack = drawnArrows.some(a => a.startUnit === transportEl && !a.isLoad);
+                if (isTransportAssignedToAttack) {
+                    // Do nothing and exit if the transport is assigned to attack
+                    return;
+                }
+
+                const confirmed = await showCustomModal("Undo Loading", "Do you want to unload this unit and undo the load action?", true);
+                if (confirmed) {
                     
                     // REVERT CAPACITIES ON TRANSPORT
                     linkObj.capacitiesAdded.forEach(cap => {
@@ -8689,6 +8817,7 @@
                         window.activePathingListener = null;
                     }
                     window.activePathingState = null;
+                    document.body.classList.remove('active-pathing');
                     hidePathingUI();
 
                     document.querySelectorAll('.manual-path-step').forEach(el => el.remove());
@@ -8796,20 +8925,46 @@
             let marker = unitEl.querySelector('.map-damage-marker');
 
             if (canTakePersistentDamage && damage > 0) {
+                const img = unitEl.querySelector('image.unit-token');
+                const unitImageSize = img ? parseFloat(img.getAttribute('width')) : getUnitSize(unitType);
+                const imageX = img ? parseFloat(img.getAttribute('x')) : 0;
+                const imageY = img ? parseFloat(img.getAttribute('y')) : 0;
+
+                let cx = 25;
+                let cy = 5;
+                if (['BTS', 'ACC'].includes(unitType)) {
+                    cx = imageX + unitImageSize / 2;
+                    cy = imageY + unitImageSize / 2;
+                }
+
                 if (!marker) {
                     const svgNS = "http://www.w3.org/2000/svg";
                     marker = document.createElementNS(svgNS, "g");
                     marker.setAttribute("class", "map-damage-marker");
                     const circle = document.createElementNS(svgNS, "circle");
-                    circle.setAttribute("cx", "25"); circle.setAttribute("cy", "5"); circle.setAttribute("r", "7");
-                    circle.setAttribute("fill", "#e60000"); circle.setAttribute("stroke", "#ffd700"); circle.setAttribute("stroke-width", "1");
+                    circle.setAttribute("r", "7");
+                    circle.setAttribute("fill", "#e60000"); 
+                    circle.setAttribute("stroke", "#ffd700"); 
+                    circle.setAttribute("stroke-width", "1");
                     const text = document.createElementNS(svgNS, "text");
-                    text.setAttribute("x", "25"); text.setAttribute("y", "5"); text.setAttribute("text-anchor", "middle");
-                    text.setAttribute("dominant-baseline", "central"); text.setAttribute("fill", "white");
-                    text.setAttribute("font-size", "9px"); text.setAttribute("font-weight", "bold");
-                    marker.appendChild(circle); marker.appendChild(text); unitEl.appendChild(marker);
+                    text.setAttribute("text-anchor", "middle");
+                    text.setAttribute("dominant-baseline", "central"); 
+                    text.setAttribute("fill", "white");
+                    text.setAttribute("font-size", "9px"); 
+                    text.setAttribute("font-weight", "bold");
+                    marker.appendChild(circle); 
+                    marker.appendChild(text); 
+                    unitEl.appendChild(marker);
                 }
-                marker.querySelector('text').textContent = damage;
+                
+                const circleEl = marker.querySelector('circle');
+                const textEl = marker.querySelector('text');
+                circleEl.setAttribute("cx", cx);
+                circleEl.setAttribute("cy", cy);
+                textEl.setAttribute("x", cx);
+                textEl.setAttribute("y", cy);
+                
+                textEl.textContent = damage;
             } else if (marker) {
                 marker.remove();
             }
@@ -10995,6 +11150,20 @@
         const container = document.createElement('div');
         container.className = 'combat-unit-container';
 
+        const lookupId = unitObj.templateId || unitObj.id;
+        const realElement = document.getElementById(lookupId);
+
+        // Safe type-checking to prevent any NaN or "undefined" string pollution
+        let existingDamage = 0;
+        if (unitObj.damage !== undefined && unitObj.damage !== null && !isNaN(parseInt(unitObj.damage))) {
+            existingDamage = parseInt(unitObj.damage, 10);
+        } else if (realElement) {
+            const domDmg = realElement.getAttribute('data-damage');
+            if (domDmg && domDmg !== "undefined") {
+                existingDamage = parseInt(domDmg, 10) || 0;
+            }
+        }
+
         const wrapper = document.createElement('div');
         wrapper.className = 'combat-unit-wrapper';
         wrapper.style.width = "60px";
@@ -11004,17 +11173,12 @@
         wrapper.dataset.power = unitObj.power;
         wrapper.dataset.assignedHits = 0;
         wrapper.dataset.count = unitObj.count;
-        
-        const lookupId = unitObj.templateId || unitObj.id;
-        const realElement = document.getElementById(lookupId);
+        wrapper.dataset.damage = existingDamage;
 
         // DEBUG LOG: Visual creation
         if (['BTS', 'ACC'].includes(unitObj.unitType)) {
             console.log(`[Visual Render] ${unitObj.unitType} (Side: ${side}). Object Damage: ${unitObj.damage}, DOM Damage: ${realElement?.getAttribute('data-damage')}`);
         }
-
-        // Use unitObj.damage (logical) as priority
-        const existingDamage = unitObj.damage !== undefined ? unitObj.damage : parseInt(realElement?.getAttribute('data-damage') || 0);
         
         if (realElement) {
             const cloneNode = realElement.cloneNode(true);
@@ -11152,6 +11316,21 @@
         container.appendChild(wrapper); container.appendChild(controls);
 
         const assignHit = async (delta) => {
+            if (activeCombatState && activeCombatState.assigningTbrTargets && side === 'defender') {
+                const attackerHasDtr = activeCombatState.Attackers.some(u => u.unitType === 'DTR');
+                const isRestricted = ['INF', 'FTR', 'TBR', 'SBR', 'TPT'].includes(unitObj.unitType) || 
+                                     (unitObj.unitType === 'SUB' && !attackerHasDtr);
+                                     
+                if (isRestricted) return; // Prevent target-select hits on restricted units
+            }
+            
+            // Block defending submarine surprise strike hits from targeting air units
+            if (activeCombatState && activeCombatState.assigningDefenderSurpriseHits) {
+                if (['FTR', 'TBR', 'SBR'].includes(unitObj.unitType)) {
+                    return; 
+                }
+            }
+
             if (activeCombatState.phase === 'AAA' && unitObj.unitType === 'SBR' && delta > 0) {
                 const cargoNames = unitObj.loadedCargo.map(c => c.unitType).join(" & ") || "No Cargo";
                 const confirm = await showCustomModal("Destroy Transport Plane?", 
@@ -11164,7 +11343,8 @@
             
             const isCapitalShip = ['BTS', 'ACC'].includes(unitObj.unitType);
             const alreadyDeadCount = (unitObj.pendingCountAdjustment || 0);
-            const maxHitsAllowed = activeCombatState.assigningSubTargets 
+            // Allow unlimited target selects for both Submarines and Tactical Bombers
+            const maxHitsAllowed = (activeCombatState.assigningSubTargets || activeCombatState.assigningTbrTargets) 
                 ? Infinity 
                 : (isCapitalShip ? (unitObj.count * 2) - existingDamage - (alreadyDeadCount * 2) : unitObj.count - alreadyDeadCount);
             
@@ -11247,8 +11427,9 @@
             wrapper.dataset.assignedHits = currentRoundHits;
             valSpan.textContent = currentRoundHits;
 
-            if (activeCombatState.assigningSubTargets) {
-                // VISUAL FOR SUBMARINE SELECTION (Target Emoji Design)
+            // Display target emoji for both Submarine and Tactical Bomber target selection phases
+            if (activeCombatState.assigningSubTargets || activeCombatState.assigningTbrTargets) {
+                // VISUAL FOR SUBMARINE & TBR SELECTION (Target Emoji Design)
                 let tsMarker = wrapper.querySelector('.target-select-marker');
                 if (currentRoundHits > 0) {
                     if (!tsMarker) {
@@ -11276,6 +11457,38 @@
             updateUnassignedHitsDisplay();
         };
 
+        // TBR Target Select restrictions: Disable selecting Infantry, Air, and Transports
+        if (activeCombatState && activeCombatState.assigningTbrTargets && side === 'defender') {
+            // Check if the attacking side has at least one Destroyer (DTR) to detect submarines
+            const attackerHasDtr = activeCombatState.Attackers.some(u => u.unitType === 'DTR');
+            const isRestricted = ['INF', 'FTR', 'TBR', 'SBR', 'TPT'].includes(unitObj.unitType) || 
+                                 (unitObj.unitType === 'SUB' && !attackerHasDtr);
+                                 
+            if (isRestricted) {
+                wrapper.style.opacity = "0.25";
+                wrapper.style.filter = "grayscale(90%)";
+                plusBtn.disabled = true;
+                plusBtn.style.pointerEvents = 'none';
+                plusBtn.style.opacity = "0.2";
+                minusBtn.disabled = true;
+                minusBtn.style.pointerEvents = 'none';
+                minusBtn.style.opacity = "0.2";
+            }
+        }
+
+        // Defending submarine surprise strike restrictions: Disable selecting air units
+        if (activeCombatState && activeCombatState.assigningDefenderSurpriseHits && side === 'attacker') {
+            if (['FTR', 'TBR', 'SBR'].includes(unitObj.unitType)) {
+                wrapper.style.opacity = "0.25";
+                wrapper.style.filter = "grayscale(90%)";
+                plusBtn.disabled = true;
+                plusBtn.style.pointerEvents = 'none';
+                plusBtn.style.opacity = "0.2";
+                minusBtn.disabled = true;
+                minusBtn.style.pointerEvents = 'none';
+                minusBtn.style.opacity = "0.2";
+            }
+        }
 
         minusBtn.onclick = (e) => { e.stopPropagation(); assignHit(-1); };
         plusBtn.onclick = (e) => { e.stopPropagation(); assignHit(1); };
@@ -11357,7 +11570,7 @@
     }
 
     // 3D DOM Dice Roller using Poisson drop distribution
-    function rollCombatDice(diceData, side, isSubRoll = false) {
+    function rollCombatDice(diceData, side, isSubRoll = false, isAARoll = false) {
         return new Promise(resolve => {
             let layer = document.getElementById('dice-simulation-layer');
             if (!layer) {
@@ -11375,11 +11588,18 @@
             
             // === Check if only submarines are currently participating in the roll ===
             const pool = (side === 'attacker') ? activeCombatState.Attackers : activeCombatState.Defenders;
-            const rollingUnits = pool.filter(u => !isTransportUnit(u) && !u.hasFiredSurpriseStrike);
+            const rollingUnits = pool ? pool.filter(u => !isTransportUnit(u) && !u.hasFiredSurpriseStrike) : [];
             const onlySubsRolling = rollingUnits.length > 0 && rollingUnits.every(u => u.unitType === 'SUB');
             
             const isSubmarineRoll = isSubRoll || onlySubsRolling;
-            const rollLabel = isSubmarineRoll ? `${activePower} SUBMARINES ROLLING...` : `${activePower} ROLLING...`;
+            
+            // Update the roll label depending on combat sub-phase
+            let rollLabel = `${activePower} ROLLING...`;
+            if (isAARoll) {
+                rollLabel = `${activePower} ANTIAIRCRAFT ROLLING...`;
+            } else if (isSubmarineRoll) {
+                rollLabel = `${activePower} SUBMARINES ROLLING...`;
+            }
             // ==============================================================================
 
             // Rolling Indicator
@@ -11571,6 +11791,16 @@
         renderCombatFlag('combat-attacker-canvas', `flags/${attackerPower}.png`);
         renderCombatFlag('combat-defender-canvas', `flags/${defenderPower}.png`);
 
+        // Track the count of initial land units brought on TPT or SBR transports for BBR retreat limits
+        const initialTransported = {};
+        combatInfo.Attackers.forEach(u => {
+            if ((u.unitType === 'TPT' || (u.unitType === 'SBR' && u.loadedCargo && u.loadedCargo.length > 0)) && u.loadedCargo) {
+                u.loadedCargo.forEach(cargo => {
+                    initialTransported[cargo.unitType] = (initialTransported[cargo.unitType] || 0) + cargo.count;
+                });
+            }
+        });
+
         // Initialize State Machine
         activeCombatState = {
             territory: targetTerr,
@@ -11585,7 +11815,8 @@
             assigningHits: false,
             unassignedHits: 0,
             targetSide: null,
-            submergedSubs: [] // Tracks submerged submarines safely away from the active battle
+            submergedSubs: [], // Tracks submerged submarines safely away from the active battle
+            initialTransported: initialTransported
         };
 
         // Permanently tag units acting as transports for the duration of this specific battle
@@ -11614,7 +11845,7 @@
         let hasDefAA = activeCombatState.Defenders.some(u => u.unitType.includes('AAA') || FACILITY_UNIT_TYPES.includes(u.unitType) || u.unitType === 'BTS');
 
         if (!hasAtkAir || !hasDefAA) {
-            // Even if skipping AAA, we must unload cargo and "fly away" the transport SBRs
+            // Even if skipping AAA, we must unload cargo
             let survivingCargo = [];
             activeCombatState.Attackers.forEach(u => {
                 if (u.unitType === 'SBR' && u.isActingAsTransport) {
@@ -11622,22 +11853,40 @@
                     u.loadedCargo = []; 
                 }
             });
-            // Filter out the SBRs that were acting as transports
-            activeCombatState.Attackers = activeCombatState.Attackers.filter(u => !(u.unitType === 'SBR' && u.isActingAsTransport));
-            // Add the cargo units as independent combatants
+            // Add the cargo units as independent land combatants, but keep the SBR transports in activeCombatState.Attackers
             activeCombatState.Attackers.push(...survivingCargo);
 
             activeCombatState.phase = 'AMPHIBIOUS';
         }
 
-        renderCombatBoard(); // This will now correctly hide SBRs if phase is AMPHIBIOUS or TPTs if land battle
-        checkSubmarineSurprise();
+        renderCombatBoard(); // Correctly hide SBRs if phase is AMPHIBIOUS or TPTs if land battle
+        
+        // Execute AAA phase first if valid, otherwise check submarine surprise / target select
+        if (activeCombatState.phase === 'AAA') {
+            executeCombatPhase();
+        } else {
+            checkSubmarineSurprise();
+        }
     }
 
     function checkSubmarineSurprise() {
-        // Evaluate eligibility for surprise rounds on both sides
-        activeCombatState.attackerSurpriseEligible = activeCombatState.Attackers.some(u => u.unitType === 'SUB') && !activeCombatState.Defenders.some(u => u.unitType === 'DTR');
-        activeCombatState.defenderSurpriseEligible = activeCombatState.Defenders.some(u => u.unitType === 'SUB') && !activeCombatState.Attackers.some(u => u.unitType === 'DTR');
+        // Check if any Destroyers (DTR) were present anywhere in the initial setups
+        const initialDefendersHaveDtr = activeCombatState.initialDefenders.some(u => u.unitType === 'DTR');
+        const initialAttackersHaveDtr = activeCombatState.initialAttackers.some(u => u.unitType === 'DTR');
+
+        // SUB specials (surprise, target select, submerge) are disabled for the entire combat if a DTR was present initially
+        activeCombatState.attackerSurpriseEligible = activeCombatState.Attackers.some(u => u.unitType === 'SUB') && !initialDefendersHaveDtr;
+        activeCombatState.defenderSurpriseEligible = activeCombatState.Defenders.some(u => u.unitType === 'SUB') && !initialAttackersHaveDtr;
+        
+        // Check if any AA units, complexes, or battleships were present in the initial defender setup
+        const initialDefendersHaveAA = activeCombatState.initialDefenders.some(u => 
+            u.unitType.includes('AAA') || 
+            FACILITY_UNIT_TYPES.includes(u.unitType) || 
+            u.unitType === 'BTS'
+        );
+        
+        // TBR target select is disabled for the entire combat if any AA was present initially
+        activeCombatState.tbrTargetSelectEligible = activeCombatState.Attackers.some(u => u.unitType === 'TBR') && !initialDefendersHaveAA;
 
         runNextSurpriseStep();
     }
@@ -11649,6 +11898,9 @@
         } else if (activeCombatState.defenderSurpriseEligible) {
             activeCombatState.defenderSurpriseEligible = false; // Consume step
             showSubmarineSurprisePopup('defender');
+        } else if (activeCombatState.tbrTargetSelectEligible) {
+            activeCombatState.tbrTargetSelectEligible = false; // Consume step
+            showTbrTargetSelectPopup();
         } else {
             executeCombatPhase();
         }
@@ -11691,13 +11943,15 @@
                     activeCombatState.unassignedHits = hits;
                     activeCombatState.assigningHits = true;
                     activeCombatState.targetSide = 'attacker';
+                    activeCombatState.assigningDefenderSurpriseHits = true; // Set active flag
 
                     renderCombatBoard();
                     updateUnassignedHitsDisplay();
                     
                     addConfirmButton(() => {
                         forceImmediateRemoval('attacker');
-                        applyAssignedDamage('attacker');
+                        activeCombatState.assigningDefenderSurpriseHits = false; // Reset flag first
+                        applyAssignedDamage('attacker'); // Re-renders the board with normal grayscale/opacity
                         runNextSurpriseStep();
                     });
                 } else {
@@ -11790,22 +12044,35 @@
             };
 
             updateDisplay();
-            container.appendChild(bubble);
+            
+            // Append directly to overlay to bypass scrollbar clipping
+            document.getElementById('combat-screen-overlay').appendChild(bubble);
 
             requestAnimationFrame(() => {
-                const rect = bubble.getBoundingClientRect();
+                const targetRect = wrapper.getBoundingClientRect();
+                const bubbleRect = bubble.getBoundingClientRect();
+
+                // Compute centered position above target icon
+                let left = targetRect.left + (targetRect.width / 2) - (bubbleRect.width / 2);
+                let top = targetRect.top - bubbleRect.height - 12; // 12px gap
+
+                // Constrain position within viewport boundaries
                 const leftMargin = 10;
                 const rightMargin = window.innerWidth - 10;
+                if (left < leftMargin) left = leftMargin;
+                else if (left + bubbleRect.width > rightMargin) left = rightMargin - bubbleRect.width;
 
-                if (rect.left < leftMargin) {
-                    const shiftAmt = leftMargin - rect.left;
-                    bubble.style.transform = `translateX(calc(-50% + ${shiftAmt}px))`;
-                    bubble.style.setProperty('--arrow-offset', `calc(50% - ${shiftAmt}px)`);
-                } else if (rect.right > rightMargin) {
-                    const shiftAmt = rect.right - rightMargin;
-                    bubble.style.transform = `translateX(calc(-50% - ${shiftAmt}px))`;
-                    bubble.style.setProperty('--arrow-offset', `calc(50% + ${shiftAmt}px)`);
-                }
+                // Dynamically offset the speech bubble pointer arrow
+                const arrowCenterX = targetRect.left + (targetRect.width / 2);
+                const arrowOffsetInBubble = arrowCenterX - left;
+                const arrowOffsetPct = (arrowOffsetInBubble / bubbleRect.width) * 100;
+
+                bubble.style.position = 'absolute';
+                bubble.style.bottom = 'auto';
+                bubble.style.transform = 'none'; // Deactivate CSS translate to prevent cut-off issues
+                bubble.style.top = top + 'px';
+                bubble.style.left = left + 'px';
+                bubble.style.setProperty('--arrow-offset', `${arrowOffsetPct}%`);
             });
         });
 
@@ -11877,6 +12144,185 @@
             renderCombatBoard();
 
             startSurpriseStrikePhase(side);
+        };
+    }
+
+    function showTbrTargetSelectPopup() {
+        activeCombatState.tbrDecisions = [];
+        const tbrContainers = [];
+
+        // Locate attacking Tactical Bomber containers
+        document.querySelectorAll(`#combat-attacker-board .combat-unit-container`).forEach(container => {
+            const wrapper = container.querySelector('.combat-unit-wrapper');
+            if (wrapper && wrapper.dataset.unitType === 'TBR') {
+                tbrContainers.push({ container, wrapper });
+            }
+        });
+
+        if (tbrContainers.length === 0) {
+            runNextSurpriseStep();
+            return;
+        }
+
+        tbrContainers.forEach(({ container, wrapper }) => {
+            const totalCount = parseInt(wrapper.dataset.count || '1', 10);
+            const id = wrapper.querySelector('.unit-stack-group').getAttribute('id');
+            
+            const decision = { id, total: totalCount, targetSelect: totalCount, normal: 0 };
+            activeCombatState.tbrDecisions.push(decision);
+
+            const bubble = document.createElement('div');
+            bubble.className = 'sub-speech-bubble';
+            bubble.innerHTML = `
+                <div style="font-weight: bold; font-size: 11px; color: #ffd700; text-transform: uppercase;">Tactical Bomber Actions</div>
+                <div style="font-size: 11px; color: #ccc;">Stack Total: <strong>${totalCount}</strong></div>
+                <div style="display: flex; align-items: center; justify-content: space-between; width: 100%; font-size: 12px; margin-top: 5px;">
+                    <span>Target Select:</span>
+                    <div style="display: flex; align-items: center; gap: 6px;">
+                        <button class="sub-adjust-btn minus" style="background:#2a221d; color:#ffd700; border:1px solid #8C7B6A; width:20px; height:20px; cursor:pointer; font-weight:bold; line-height:1; padding:0;">-</button>
+                        <span class="sub-adjust-val" style="width:15px; text-align:center; font-weight:bold;">${totalCount}</span>
+                        <button class="sub-adjust-btn plus" style="background:#2a221d; color:#ffd700; border:1px solid #8C7B6A; width:20px; height:20px; cursor:pointer; font-weight:bold; line-height:1; padding:0;">+</button>
+                    </div>
+                </div>
+                <div style="font-size: 11px; color: #a8d8b0; width: 100%; text-align: left; margin-top: 2px;">
+                    Normal Attack: <span class="sub-submerge-val">0</span>
+                </div>
+            `;
+
+            const valSpan = bubble.querySelector('.sub-adjust-val');
+            const normalSpan = bubble.querySelector('.sub-submerge-val');
+            const btnMinus = bubble.querySelector('.minus');
+            const btnPlus = bubble.querySelector('.plus');
+
+            const updateDisplay = () => {
+                valSpan.textContent = decision.targetSelect;
+                normalSpan.textContent = decision.normal;
+                btnMinus.disabled = decision.targetSelect <= 0;
+                btnPlus.disabled = decision.targetSelect >= decision.total;
+            };
+
+            btnMinus.onclick = (e) => {
+                e.stopPropagation();
+                if (decision.targetSelect > 0) {
+                    decision.targetSelect--;
+                    decision.normal++;
+                    updateDisplay();
+                }
+            };
+
+            btnPlus.onclick = (e) => {
+                e.stopPropagation();
+                if (decision.targetSelect < decision.total) {
+                    decision.targetSelect++;
+                    decision.normal--;
+                    updateDisplay();
+                }
+            };
+
+            updateDisplay();
+            
+            // Append directly to overlay to bypass scrollbar clipping
+            document.getElementById('combat-screen-overlay').appendChild(bubble);
+
+            requestAnimationFrame(() => {
+                const targetRect = wrapper.getBoundingClientRect();
+                const bubbleRect = bubble.getBoundingClientRect();
+
+                // Compute centered position above target icon
+                let left = targetRect.left + (targetRect.width / 2) - (bubbleRect.width / 2);
+                let top = targetRect.top - bubbleRect.height - 12; // 12px gap
+
+                // Constrain position within viewport boundaries
+                const leftMargin = 10;
+                const rightMargin = window.innerWidth - 10;
+                if (left < leftMargin) left = leftMargin;
+                else if (left + bubbleRect.width > rightMargin) left = rightMargin - bubbleRect.width;
+
+                // Dynamically offset the speech bubble pointer arrow
+                const arrowCenterX = targetRect.left + (targetRect.width / 2);
+                const arrowOffsetInBubble = arrowCenterX - left;
+                const arrowOffsetPct = (arrowOffsetInBubble / bubbleRect.width) * 100;
+
+                bubble.style.position = 'absolute';
+                bubble.style.bottom = 'auto';
+                bubble.style.transform = 'none'; // Deactivate CSS translate to prevent cut-off issues
+                bubble.style.top = top + 'px';
+                bubble.style.left = left + 'px';
+                bubble.style.setProperty('--arrow-offset', `${arrowOffsetPct}%`);
+            });
+        });
+
+        let confirmBtn = document.getElementById('combat-confirm-hits-btn');
+        if (!confirmBtn) {
+            confirmBtn = document.createElement('button');
+            confirmBtn.id = 'combat-confirm-hits-btn';
+            confirmBtn.style.cssText = "position:absolute; bottom:90px; left:50%; transform:translateX(-50%); padding:12px 45px; font-family:'Georgia', serif; font-size:16px; font-weight:bold; background:#6D5C4C; color:#E0D8B0; border:1px solid #8C7B6A; border-radius:5px; cursor:pointer; z-index:1000; box-shadow: 0 4px 10px rgba(0,0,0,0.5); transition: background 0.2s;";
+            document.getElementById('combat-screen-overlay').appendChild(confirmBtn);
+        }
+        confirmBtn.textContent = `CONFIRM ATTACKER TACTICAL BOMBER DECISIONS`;
+        confirmBtn.style.display = 'block';
+
+        confirmBtn.onclick = () => {
+            confirmBtn.style.display = 'none';
+            document.querySelectorAll('.sub-speech-bubble').forEach(b => b.remove());
+
+            // Process normal attack decisions and split stacks
+            activeCombatState.tbrDecisions.forEach(group => {
+                if (group.normal > 0) {
+                    const tbrUnit = activeCombatState.Attackers.find(u => u.id === group.id || u.templateId === group.id);
+                    if (tbrUnit) {
+                        tbrUnit.count -= group.normal;
+                        const normalCopy = {
+                            ...tbrUnit,
+                            id: tbrUnit.id + "-normalTbr-" + Math.random(),
+                            templateId: tbrUnit.templateId || tbrUnit.id,
+                            count: group.normal,
+                            hasFiredSurpriseStrike: false, // will roll in standard combat
+                            loadedCargo: []
+                        };
+                        activeCombatState.Attackers.push(normalCopy);
+                    }
+                }
+            });
+
+            activeCombatState.Attackers = activeCombatState.Attackers.filter(u => u.count > 0);
+
+            // Flag remaining tactical bombers doing target select as surprise-strike fired
+            activeCombatState.Attackers.forEach(u => {
+                if (u.unitType === 'TBR' && u.hasFiredSurpriseStrike !== false && !u.id.includes("-normalTbr-")) {
+                    u.hasFiredSurpriseStrike = true;
+                }
+            });
+
+            // Convert to a flat list of decisions
+            const flattenedDecisions = [];
+            activeCombatState.tbrDecisions.forEach(group => {
+                for (let i = 0; i < group.targetSelect; i++) {
+                    flattenedDecisions.push({ id: group.id + "-" + i, action: 'Attack' });
+                }
+            });
+            activeCombatState.tbrDecisions = flattenedDecisions;
+
+            renderCombatBoard();
+
+            // Trigger target selection step
+            const targetCount = activeCombatState.tbrDecisions.filter(d => d.action === 'Attack').length;
+            if (targetCount === 0) {
+                runNextSurpriseStep();
+                return;
+            }
+
+            activeCombatState.assigningTbrTargets = true;
+            activeCombatState.assigningHits = true;
+            activeCombatState.targetSide = 'defender';
+            activeCombatState.unassignedHits = targetCount;
+            activeCombatState.tbrTargetsTotal = targetCount;
+
+            renderCombatBoard();
+            updateUnassignedHitsDisplay();
+
+            addConfirmButton(() => {});
+            showCustomModal("Target Selection", `Assign ${targetCount} Tactical Bomber Target Selects using the [+] and [-] buttons on the enemy units. Any unassigned target selects will roll as normal combat attacks instead.`);
         };
     }
 
@@ -12046,10 +12492,15 @@
                         // Determine if THIS specific unit icon should show a fire marker
                         let shipInstanceDamage = 0;
                         if (markersToAssign > 0) {
-                            // If it's a ship, it might represent a "Dead" ship (2 hits) or "Damaged" (1 hit)
-                            // For simplicity in the overlay, we show a "1" or high-intensity marker
-                            shipInstanceDamage = 1; 
-                            markersToAssign--;
+                            if (isShip) {
+                                // Split ship instances take up to 2 hits for capital ships, 1 hit for others
+                                const maxDamagePerInstance = ['BTS', 'ACC'].includes(u.unitType) ? 2 : 1;
+                                shipInstanceDamage = Math.min(markersToAssign, maxDamagePerInstance);
+                            } else {
+                                // Consolidated stacks (Infantry, Fighters, etc.) display the entire accumulated pool of hits
+                                shipInstanceDamage = markersToAssign;
+                            }
+                            markersToAssign -= shipInstanceDamage;
                         }
 
                         grouped[key] = { 
@@ -12113,8 +12564,8 @@
         // Early-exit check: Evaluate only screen-visible combat units.
         const attackersCount = getVisibleCombatUnitsCount(activeCombatState.Attackers, false);
         const defendersCount = getVisibleCombatUnitsCount(activeCombatState.Defenders, true);
-        if (activeCombatState.phase !== 'RESOLUTION' && (attackersCount === 0 || defendersCount === 0)) {
-            activeCombatState.phase = 'RESOLUTION';
+        if (activeCombatState.phase !== 'RESOLUTION' && activeCombatState.phase !== 'REMOVE_CASUALTIES' && (attackersCount === 0 || defendersCount === 0)) {
+            activeCombatState.phase = 'REMOVE_CASUALTIES';
         }
 
         switch(activeCombatState.phase) {
@@ -12330,17 +12781,14 @@
                 
                 // Auto-assign markers visually based on INDIVIDUAL unit capacity
                 document.querySelectorAll(`.combat-unit-wrapper[data-side="${targetSide}"]`).forEach(w => {
-                    const countTextEl = w.querySelector('.unit-count-text');
-                    const unitCount = countTextEl ? parseInt(countTextEl.textContent, 10) : 1;
+                    const unitCount = parseInt(w.dataset.count, 10) || 1;
                     const uType = w.dataset.unitType;
                     const isCapital = ['BTS', 'ACC'].includes(uType);
+                    const existingDmg = parseInt(w.dataset.damage, 10) || 0;
                     
-                    // Correctly assign 2 hits per capital ship, subtracting any pre-existing damage
+                    // Correctly assign 2 hits per capital ship, subtracting its instance-specific pre-existing damage
                     let hitCount = unitCount;
                     if (isCapital) {
-                        const uPower = w.dataset.power;
-                        const logicalUnit = targetPool.find(u => u.unitType === uType && u.power === uPower);
-                        const existingDmg = logicalUnit ? parseInt(logicalUnit.damage || 0, 10) : 0;
                         hitCount = (unitCount * 2) - existingDmg;
                     }
                     
@@ -12348,7 +12796,8 @@
                     const hitMarker = w.querySelector('.fire-hit-marker');
                     if (hitMarker) {
                         hitMarker.style.display = 'flex';
-                        hitMarker.firstChild.textContent = hitCount;
+                        // Displays the sum of pre-existing damage plus newly assigned hits
+                        hitMarker.firstChild.textContent = existingDmg + hitCount;
                     }
                     const valSpan = w.parentElement.querySelector('.combat-damage-val');
                     if (valSpan) valSpan.textContent = hitCount;
@@ -12400,7 +12849,9 @@
 
             if (diceCount > 0) {
                 const diceData = Array.from({length: diceCount}, () => ({ targetVal: 1 }));
-                let hits = await rollCombatDice(diceData);
+                
+                // Roll anti-aircraft dice with specific defender flag and AA label
+                let hits = await rollCombatDice(diceData, 'defender', false, true);
                 
                 if (hits > 0) {
                     activeCombatState.unassignedHits = hits;
@@ -12412,26 +12863,23 @@
                         
                         applyAssignedDamage('attacker');
 
-                        // 3. Extract cargo from SURVIVING Air Transports before they exit
+                        // Extract cargo from SURVIVING Air Transports
                         let survivingCargo = [];
                         activeCombatState.Attackers.forEach(u => {
                             if (u.unitType === 'SBR' && u.isActingAsTransport) {
-                                // These units are NOT lost; they are simply leaving the 
-                                // combat overlay. Do NOT add their cost to currentCombatLosses.
                                 if (u.loadedCargo) survivingCargo.push(...u.loadedCargo);
                                 u.loadedCargo = []; 
                             }
                         });
 
-                        // 4. Remove SBR Transports from the pool entirely (they fly home)
-                        activeCombatState.Attackers = activeCombatState.Attackers.filter(u => !(u.unitType === 'SBR' && u.isActingAsTransport));
-                        
-                        // 5. Re-insert the surviving cargo units as independent land combatants
+                        // Re-insert the surviving cargo units as independent land combatants while SBR stays in Attackers pool
                         activeCombatState.Attackers.push(...survivingCargo);
 
                         activeCombatState.phase = 'AMPHIBIOUS';                        
                         removeDefenderFacilities(); 
-                        executeCombatPhase();
+                        
+                        // Proceed to submarine surprise checks after AA casualties are resolved
+                        checkSubmarineSurprise();
                     });
                     
                     // IMPORTANT: Re-render the board so SBRs stay visible for hit assignment
@@ -12441,9 +12889,22 @@
             }
         }
         
+        // No AA roll or 0 hits: unload SBR cargo
+        let survivingCargo = [];
+        activeCombatState.Attackers.forEach(u => {
+            if (u.unitType === 'SBR' && u.isActingAsTransport) {
+                if (u.loadedCargo) survivingCargo.push(...u.loadedCargo);
+                u.loadedCargo = []; 
+            }
+        });
+        // Keep SBR Transports in the pool, just append the surviving cargo units
+        activeCombatState.Attackers.push(...survivingCargo);
+
         activeCombatState.phase = 'AMPHIBIOUS';
         removeDefenderFacilities();
-        executeCombatPhase();
+        
+        // Proceed to submarine surprise checks
+        checkSubmarineSurprise();
     }
 
     function removeDefenderFacilities() {
@@ -12538,8 +12999,10 @@
                 const mapIcons = svgWrapper.querySelectorAll(`[id="${rid}"]`);
                     if (u.count <= 0) {
                         mapIcons.forEach(el => {
-                            el.style.display = 'none';
-                            el.setAttribute('data-count', '0');
+                            // Completely remove damage markers and purge unit from DOM
+                            const mapMarker = el.querySelector('.map-damage-marker');
+                            if (mapMarker) mapMarker.remove();
+                            el.remove();
                         });
                         placedUnitsData = placedUnitsData.filter(item => item.element.id !== rid);
                         pool.splice(i, 1);
@@ -12581,7 +13044,7 @@
             if (hitsToApply <= 0) return;
             
             const uType = w.dataset.unitType;
-            const uPower = w.dataset.power; // <--- Add this
+            const uPower = w.dataset.power;
             const profileName = UNIT_ABBREVIATION_TO_PROFILE_NAME[uType] || uType;
 
             const profile = window.unitProfileData.find(p => p.unit_type.toLowerCase() === profileName.toLowerCase());
@@ -12590,53 +13053,275 @@
             for (let i = pool.length - 1; i >= 0; i--) {
                 if (hitsToApply <= 0) break;
                 let u = pool[i];
-                // Match both Type AND Power
-                if (u.unitType !== uType || u.power !== uPower) continue;
+                const rid = u.id; 
 
-                const isCapitalShip = ['BTS', 'ACC'].includes(u.unitType);
+                // 1. Try to apply hits directly to top-level unit
+                if (u.unitType === uType && u.power === uPower) {
+                    const isCapitalShip = ['BTS', 'ACC'].includes(u.unitType);
 
-                if (isCapitalShip) {
-                    while (hitsToApply > 0 && u.count > 0) {
-                        if (u.damage >= 1) {
-                            u.count--;
-                            u.damage = 0;
-                            hitsToApply--;
-                            if (side === 'attacker') currentCombatLosses.atk += unitCost;
-                            else currentCombatLosses.def += unitCost;
-                        } else {
-                            u.damage = 1;
-                            hitsToApply--;
+                    if (isCapitalShip) {
+                        while (hitsToApply > 0 && u.count > 0) {
+                            if (u.damage >= 1) {
+                                u.count--;
+                                u.damage = 0;
+                                hitsToApply--;
+                                if (side === 'attacker') currentCombatLosses.atk += unitCost;
+                                else currentCombatLosses.def += unitCost;
+                            } else {
+                                u.damage = 1;
+                                hitsToApply--;
+                            }
                         }
+                    } else {
+                        const sub = Math.min(u.count, hitsToApply);
+                        u.count -= sub;
+                        hitsToApply -= sub;
+                        if (side === 'attacker') currentCombatLosses.atk += (sub * unitCost);
+                        else currentCombatLosses.def += (sub * unitCost);
                     }
-                } else {
-                    const sub = Math.min(u.count, hitsToApply);
-                    u.count -= sub;
-                    hitsToApply -= sub;
-                    if (side === 'attacker') currentCombatLosses.atk += (sub * unitCost);
-                    else currentCombatLosses.def += (sub * unitCost);
+
+                    // Sync to Map
+                    const mapIcons = svgWrapper.querySelectorAll(`[id="${rid}"]`);
+                    if (u.count <= 0) {
+                        pool.splice(i, 1);
+                        mapIcons.forEach(el => {
+                            const mapMarker = el.querySelector('.map-damage-marker');
+                            if (mapMarker) mapMarker.remove();
+                            el.remove();
+                        });
+                        placedUnitsData = placedUnitsData.filter(item => item.element.id !== rid);
+                    } else {
+                        mapIcons.forEach(el => {
+                            el.setAttribute('data-count', u.count);
+                            el.setAttribute('data-damage', u.damage || 0);
+                            updateMapUnitDamageMarker(el); 
+                        });
+                    }
                 }
 
-                // Sync to Map
-                const rid = u.id;
-                const mapIcons = svgWrapper.querySelectorAll(`[id="${rid}"]`);
-                if (u.count <= 0) {
-                    pool.splice(i, 1);
-                    mapIcons.forEach(el => {
-                        el.setAttribute('data-count', 0);
-                        el.style.display = 'none';
-                    });
-                    placedUnitsData = placedUnitsData.filter(item => item.element.id !== rid);
-                } else {
-                    mapIcons.forEach(el => {
-                        el.setAttribute('data-count', u.count);
-                        el.setAttribute('data-damage', u.damage);
-                        updateMapUnitDamageMarker(el); 
-                    });
+                // 2. Try to apply hits to cargo inside transports
+                if (hitsToApply > 0 && u.loadedCargo && u.loadedCargo.length > 0) {
+                    for (let j = u.loadedCargo.length - 1; j >= 0; j--) {
+                        if (hitsToApply <= 0) break;
+                        let c = u.loadedCargo[j];
+                        if (c.unitType === uType && c.power === uPower) {
+                            const sub = Math.min(c.count, hitsToApply);
+                            c.count -= sub;
+                            hitsToApply -= sub;
+                            if (side === 'attacker') currentCombatLosses.atk += (sub * unitCost);
+                            else currentCombatLosses.def += (sub * unitCost);
+                            
+                            // Safe Cargo Purge: Only remove cargo from the transport's array.
+                            // Do not delete SVG map elements or alter placedUnitsData, as those represent 
+                            // other active units (such as walked-in units) sharing the same parent ID.
+                            if (c.count <= 0) {
+                                u.loadedCargo.splice(j, 1);
+                            }
+                        }
+                    }
                 }
             }
             w.dataset.assignedHits = 0; 
         });
     }
+
+    // Define unified visual positioning and data sync helper
+    const syncSurvivorMapIcon = (survivor, finalSpace) => {
+        const lookupId = survivor.templateId || survivor.id; // Falls back to original ID for split units
+        
+        // 1. Check if we need to merge this survivor with another existing unit of the same type and power in the destination space
+        const existingUnit = placedUnitsData.find(u => 
+            u.placedIn === finalSpace && 
+            u.unitType === survivor.unitType && 
+            u.power === survivor.power && 
+            u.element.id !== survivor.id && 
+            u.element.id !== lookupId
+        );
+
+        if (existingUnit) {
+            const existingId = existingUnit.element.id;
+            const newCount = parseInt(existingUnit.count, 10) + parseInt(survivor.count, 10);
+            existingUnit.count = newCount;
+
+            svgWrapper.querySelectorAll(`[id="${existingId}"]`).forEach(el => {
+                el.setAttribute('data-count', newCount);
+                let txt = el.querySelector('.unit-count-text');
+                let countCircle = el.querySelector('.unit-count-circle');
+
+                if (newCount > 1) {
+                    if (txt) {
+                        txt.textContent = newCount;
+                    } else {
+                        const img = el.querySelector('image.unit-token');
+                        if (img) {
+                            const unitImageSize = parseFloat(img.getAttribute('width')) || 30;
+                            const imageX = parseFloat(img.getAttribute('x')) || 0;
+                            const imageY = parseFloat(img.getAttribute('y')) || 0;
+                            const countCircleCx = imageX + unitImageSize / 2;
+                            const countCircleCy = (imageY + unitImageSize / 2) + UNIT_BACKGROUND_CIRCLE_RADIUS;
+
+                            countCircle = el.ownerDocument.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                            countCircle.setAttribute('cx', countCircleCx);
+                            countCircle.setAttribute('cy', countCircleCy);
+                            countCircle.setAttribute('r', UNIT_COUNT_CIRCLE_RADIUS);
+                            countCircle.setAttribute('fill', '#FFEB3B');
+                            countCircle.setAttribute('stroke', 'white');
+                            countCircle.setAttribute('stroke-width', '0.5');
+                            countCircle.classList.add('unit-count-circle');
+                            el.appendChild(countCircle);
+
+                            txt = el.ownerDocument.createElementNS('http://www.w3.org/2000/svg', 'text');
+                            txt.textContent = newCount;
+                            txt.setAttribute('x', countCircleCx);
+                            txt.setAttribute('y', countCircleCy);
+                            txt.setAttribute('text-anchor', 'middle');
+                            txt.setAttribute('dominant-baseline', 'middle');
+                            txt.setAttribute('font-size', UNIT_COUNT_TEXT_FONT_SIZE);
+                            txt.setAttribute('fill', 'black');
+                            txt.setAttribute('stroke', 'none');
+                            txt.classList.add('unit-count-text');
+                            el.appendChild(txt);
+                        }
+                    }
+                } else {
+                    if (txt) txt.remove();
+                    if (countCircle) countCircle.remove();
+                }
+            });
+
+            svgWrapper.querySelectorAll(`[id="${survivor.id}"]`).forEach(el => el.remove());
+            placedUnitsData = placedUnitsData.filter(u => u.element.id !== survivor.id);
+            return;
+        }
+
+        // 2. No existing unit to merge with. If survivor.templateId is present and different from survivor.id,
+        // we must CLONE the template map element to avoid stealing the element representing left-behind units.
+        const mustClone = survivor.templateId && survivor.templateId !== survivor.id;
+
+        if (mustClone) {
+            const allMaps = document.querySelectorAll('.svg-content');
+            allMaps.forEach(svgEl => {
+                const templateEl = svgEl.querySelector(`[id="${survivor.templateId}"]`);
+                let cloneEl = svgEl.querySelector(`[id="${survivor.id}"]`);
+
+                if (templateEl && !cloneEl) {
+                    cloneEl = templateEl.cloneNode(true);
+                    cloneEl.setAttribute('id', survivor.id);
+                    
+                    // Clear any leftover count badges from the cloned template
+                    cloneEl.querySelectorAll('.unit-count-text, .unit-count-circle').forEach(el => el.remove());
+                    
+                    const unitLayer = svgEl.querySelector('[id^="unit-layer-"]') || templateEl.parentNode;
+                    unitLayer.appendChild(cloneEl);
+                }
+            });
+
+            // Add to placedUnitsData tracking array
+            const existsInFunctional = placedUnitsData.some(u => u.element.id === survivor.id);
+            if (!existsInFunctional) {
+                const templateObj = placedUnitsData.find(u => u.element.id === survivor.templateId);
+                const mainCloneEl = currentSvgElement.querySelector(`[id="${survivor.id}"]`);
+                
+                if (mainCloneEl) {
+                    placedUnitsData.push({
+                        element: mainCloneEl,
+                        originalTerritory: templateObj ? templateObj.originalTerritory : finalSpace,
+                        placedIn: finalSpace,
+                        unitType: survivor.unitType,
+                        power: survivor.power,
+                        count: survivor.count,
+                        x: templateObj ? templateObj.x : 0,
+                        y: templateObj ? templateObj.y : 0
+                    });
+                }
+            }
+        }
+
+        // 3. Relocate and update the element (either the clone or the direct unit)
+        const targetId = survivor.id; 
+        svgWrapper.querySelectorAll(`[id="${targetId}"]`).forEach(el => {
+            el.style.display = 'block';
+            el.setAttribute('data-count', survivor.count);
+            el.setAttribute('data-placed-in', finalSpace);
+
+            const img = el.querySelector('image.unit-token');
+            
+            // Morph the SBR back to its standard Strategic Bomber image at the end of the battle
+            if (survivor.unitType === 'SBR' && img) {
+                img.setAttribute('href', 'units/strategic-bomber.png');
+                img.setAttributeNS('http://www.w3.org/1999/xlink', 'href', 'units/strategic-bomber.png');
+            }
+
+            const unitWidth = img ? parseFloat(img.getAttribute('width')) : 30;
+            const unitHeight = img ? parseFloat(img.getAttribute('height')) : 30;
+
+            const targetPath = currentSvgElement.querySelector(`[data-name="${finalSpace}"]`);
+            const isFacility = SPECIAL_INFRASTRUCTURE_UNITS.includes(survivor.unitType);
+
+            if (targetPath && !isFacility) {
+                const coords = getAvailableCoordinate(finalSpace, unitWidth, unitHeight, targetPath, survivor.id);
+                const newX = coords.x;
+                const newY = coords.y;
+                el.setAttribute('transform', `translate(${newX}, ${newY})`);
+                
+                const pIdx = placedUnitsData.findIndex(u => u.element.id === survivor.id);
+                if (pIdx !== -1) {
+                    placedUnitsData[pIdx].x = newX;
+                    placedUnitsData[pIdx].y = newY;
+                }
+            }
+
+            let txt = el.querySelector('.unit-count-text');
+            let countCircle = el.querySelector('.unit-count-circle');
+            
+            if (survivor.count > 1) {
+                if (txt) {
+                    txt.textContent = survivor.count;
+                } else {
+                    const img = el.querySelector('image.unit-token');
+                    if (img) {
+                        const unitImageSize = parseFloat(img.getAttribute('width')) || 30;
+                        const imageX = parseFloat(img.getAttribute('x')) || 0;
+                        const imageY = parseFloat(img.getAttribute('y')) || 0;
+                        const countCircleCx = imageX + unitImageSize / 2;
+                        const countCircleCy = (imageY + unitImageSize / 2) + UNIT_BACKGROUND_CIRCLE_RADIUS;
+
+                        countCircle = el.ownerDocument.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                        countCircle.setAttribute('cx', countCircleCx);
+                        countCircle.setAttribute('cy', countCircleCy);
+                        countCircle.setAttribute('r', UNIT_COUNT_CIRCLE_RADIUS);
+                        countCircle.setAttribute('fill', '#FFEB3B');
+                        countCircle.setAttribute('stroke', 'white');
+                        countCircle.setAttribute('stroke-width', '0.5');
+                        countCircle.classList.add('unit-count-circle');
+                        el.appendChild(countCircle);
+
+                        txt = el.ownerDocument.createElementNS('http://www.w3.org/2000/svg', 'text');
+                        txt.textContent = survivor.count;
+                        txt.setAttribute('x', countCircleCx);
+                        txt.setAttribute('y', countCircleCy);
+                        txt.setAttribute('text-anchor', 'middle');
+                        txt.setAttribute('dominant-baseline', 'middle');
+                        txt.setAttribute('font-size', UNIT_COUNT_TEXT_FONT_SIZE);
+                        txt.setAttribute('fill', 'black');
+                        txt.setAttribute('stroke', 'none');
+                        txt.classList.add('unit-count-text');
+                        el.appendChild(txt);
+                    }
+                }
+            } else {
+                if (txt) txt.remove();
+                if (countCircle) countCircle.remove();
+            }
+        });
+
+        const idx = placedUnitsData.findIndex(u => u.element.id === survivor.id);
+        if (idx !== -1) {
+            placedUnitsData[idx].count = survivor.count;
+            placedUnitsData[idx].placedIn = finalSpace;
+        }
+        addDragListenersToUnits(); // Bind event listeners to the new element
+    };
 
     function resolveCombatWinner(isRetreat = false) {
         if (!activeCombatState) return;
@@ -12660,6 +13345,7 @@
         let isVictory = false;
         if (isRetreat) {
             status = "RETREAT";
+            activeCombatState.isRetreat = true; // Added flag to track retreat state
         } else if (defendersGone && !attackersGone) {
             status = "VICTORY";
             isVictory = true;
@@ -12719,8 +13405,10 @@
                         if (s !== primary) {
                             const rid = s.id;
                             svgWrapper.querySelectorAll(`[id="${rid}"]`).forEach(el => {
-                                el.style.display = 'none';
-                                el.setAttribute('data-count', '0');
+                                // Completely remove damage markers and purge consolidated units from DOM
+                                const mapMarker = el.querySelector('.map-damage-marker');
+                                if (mapMarker) mapMarker.remove();
+                                el.remove();
                             });
                             placedUnitsData = placedUnitsData.filter(item => item.element.id !== rid);
                         }
@@ -12740,158 +13428,20 @@
         // Update Universal Board State for survivors
         if (!universalBoardState[targetTerr]) universalBoardState[targetTerr] = [];
         
-        // Helper to find available coordinates or fall back to random polygon point
-        const getAvailableCoordinate = (finalSpace, unitWidth, unitHeight, targetPath, survivorId) => {
-            const threshold = 10; // Distance threshold to avoid overlap with other units in the same territory
-            
-            const isOccupied = (x, y) => {
-                return placedUnitsData.some(u => {
-                    if (u.placedIn !== finalSpace) return false;
-                    if (u.element.id === survivorId) return false;
-                    const dx = u.x - x;
-                    const dy = u.y - y;
-                    return Math.sqrt(dx * dx + dy * dy) < threshold;
-                });
-            };
-
-            // 1. Try unit-coordinates.json
-            if (window.unitCoordinatesMain && window.unitCoordinatesMain[finalSpace]) {
-                const coords = window.unitCoordinatesMain[finalSpace];
-                for (const coord of coords) {
-                    if (!isOccupied(coord.x, coord.y)) {
-                        return { x: coord.x, y: coord.y };
-                    }
-                }
-            }
-
-            // 2. Try unit-coordinates-backup.json
-            if (unitCoordinatesBackup && unitCoordinatesBackup[finalSpace]) {
-                const coords = unitCoordinatesBackup[finalSpace];
-                for (const coord of coords) {
-                    if (!isOccupied(coord.x, coord.y)) {
-                        return { x: coord.x, y: coord.y };
-                    }
-                }
-            }
-
-            // 3. Fallback: Find a random coordinate inside the target path
-            if (targetPath && typeof targetPath.isPointInFill === 'function') {
-                const bbox = targetPath.getBBox();
-                const svgPoint = currentSvgElement.createSVGPoint();
-                for (let attempt = 0; attempt < 200; attempt++) {
-                    const rx = bbox.x + Math.random() * bbox.width;
-                    const ry = bbox.y + Math.random() * bbox.height;
-                    svgPoint.x = rx;
-                    svgPoint.y = ry;
-                    if (targetPath.isPointInFill(svgPoint)) {
-                        // Offset by half dimensions to center the unit group over the selected point
-                        return { x: rx - unitWidth / 2, y: ry - unitHeight / 2 };
-                    }
-                }
-            }
-
-            // 4. Absolute Fallback: Center of the bounding box
-            if (targetPath) {
-                const bbox = targetPath.getBBox();
-                return {
-                    x: bbox.x + bbox.width / 2 - unitWidth / 2,
-                    y: bbox.y + bbox.height / 2 - unitHeight / 2
-                };
-            }
-
-            return { x: 0, y: 0 };
-        };
-
-        // Define unified visual positioning and data sync helper
-        const syncSurvivorMapIcon = (survivor, finalSpace) => {
-            svgWrapper.querySelectorAll(`[id="${survivor.id}"]`).forEach(el => {
-                el.style.display = 'block';
-                el.setAttribute('data-count', survivor.count);
-                el.setAttribute('data-placed-in', finalSpace);
-
-                // Get size of unit image
-                const img = el.querySelector('image.unit-token');
-                const unitWidth = img ? parseFloat(img.getAttribute('width')) : 30;
-                const unitHeight = img ? parseFloat(img.getAttribute('height')) : 30;
-
-                // Visually move the piece using unit-coordinates, backup coordinates, or random path placement
-                const targetPath = currentSvgElement.querySelector(`[data-name="${finalSpace}"]`);
-                
-                // Keep pre-existing coordinates for stationary facilities (Complexes, Bases, etc.)
-                const isFacility = SPECIAL_INFRASTRUCTURE_UNITS.includes(survivor.unitType);
-
-                if (targetPath && !isFacility) {
-                    const coords = getAvailableCoordinate(finalSpace, unitWidth, unitHeight, targetPath, survivor.id);
-                    const newX = coords.x;
-                    const newY = coords.y;
-                    el.setAttribute('transform', `translate(${newX}, ${newY})`);
-                    
-                    // Sync coordinates in our functional array in memory
-                    const pIdx = placedUnitsData.findIndex(u => u.element.id === survivor.id);
-                    if (pIdx !== -1) {
-                        placedUnitsData[pIdx].x = newX;
-                        placedUnitsData[pIdx].y = newY;
-                    }
-                }
-
-                const txt = el.querySelector('.unit-count-text');
-                const countCircle = el.querySelector('.unit-count-circle');
-                
-                if (survivor.count > 1) {
-                    if (txt) {
-                        txt.textContent = survivor.count;
-                    } else {
-                        // Recreate the count circle dynamically
-                        const img = el.querySelector('image.unit-token');
-                        if (img) {
-                            const unitImageSize = parseFloat(img.getAttribute('width')) || 30;
-                            const imageX = parseFloat(img.getAttribute('x')) || 0;
-                            const imageY = parseFloat(img.getAttribute('y')) || 0;
-                            const countCircleCx = imageX + unitImageSize / 2;
-                            const countCircleCy = (imageY + unitImageSize / 2) + UNIT_BACKGROUND_CIRCLE_RADIUS;
-
-                            const newCircle = el.ownerDocument.createElementNS('http://www.w3.org/2000/svg', 'circle');
-                            newCircle.setAttribute('cx', countCircleCx);
-                            newCircle.setAttribute('cy', countCircleCy);
-                            newCircle.setAttribute('r', UNIT_COUNT_CIRCLE_RADIUS);
-                            newCircle.setAttribute('fill', '#FFEB3B');
-                            newCircle.setAttribute('stroke', 'white');
-                            newCircle.setAttribute('stroke-width', '0.5');
-                            newCircle.classList.add('unit-count-circle');
-                            el.appendChild(newCircle);
-
-                            const newText = el.ownerDocument.createElementNS('http://www.w3.org/2000/svg', 'text');
-                            newText.textContent = survivor.count;
-                            newText.setAttribute('x', countCircleCx);
-                            newText.setAttribute('y', countCircleCy);
-                            newText.setAttribute('text-anchor', 'middle');
-                            newText.setAttribute('dominant-baseline', 'middle');
-                            newText.setAttribute('font-size', UNIT_COUNT_TEXT_FONT_SIZE);
-                            newText.setAttribute('fill', 'black');
-                            newText.setAttribute('stroke', 'none');
-                            newText.classList.add('unit-count-text');
-                            el.appendChild(newText);
-                        }
-                    }
-                } else {
-                    if (txt) txt.remove();
-                    if (countCircle) countCircle.remove();
-                }
-            });
-
-            // Update the functional tracking array
-            const idx = placedUnitsData.findIndex(u => u.element.id === survivor.id);
-            if (idx !== -1) {
-                placedUnitsData[idx].count = survivor.count;
-                placedUnitsData[idx].placedIn = finalSpace;
-            }
-        };
+        
 
         // 3. Handle Attacker survivors
         activeCombatState.Attackers.forEach(survivor => {
             const isSeaUnit = SEA_UNIT_TYPES.includes(survivor.unitType);
             const finalSpace = (!isSeaSpace && isSeaUnit) ? survivor.currentlyPlacedIn : targetTerr;
             syncSurvivorMapIcon(survivor, finalSpace);
+            
+            // Also sync any surviving cargo inside the transport
+            if (survivor.loadedCargo && survivor.loadedCargo.length > 0) {
+                survivor.loadedCargo.forEach(cargo => {
+                    syncSurvivorMapIcon(cargo, targetTerr);
+                });
+            }
         });
 
         // 4. Handle Defender survivors
@@ -12899,6 +13449,13 @@
             const isSeaUnit = SEA_UNIT_TYPES.includes(survivor.unitType);
             const finalSpace = (!isSeaSpace && isSeaUnit) ? survivor.currentlyPlacedIn : targetTerr;
             syncSurvivorMapIcon(survivor, finalSpace);
+            
+            // Also sync any surviving cargo inside the transport
+            if (survivor.loadedCargo && survivor.loadedCargo.length > 0) {
+                survivor.loadedCargo.forEach(cargo => {
+                    syncSurvivorMapIcon(cargo, targetTerr);
+                });
+            }
         });
 
         showCombatResults(status, isVictory);
@@ -12949,6 +13506,12 @@
         
         resultContainer.style.display = 'none';
         overlay.style.opacity = '0';
+        
+        // Revert all unit background circle borders to the default white outline
+        svgWrapper.querySelectorAll('.unit-background-circle').forEach(circle => {
+            circle.setAttribute('stroke', 'white');
+            circle.setAttribute('stroke-width', '0.5');
+        });
         
         const targetTerr = activeCombatState?.territory;
 
@@ -13006,11 +13569,255 @@
         
         setTimeout(() => {
             overlay.style.display = 'none';
-            delete combatPhaseData[targetTerr];
-            activeCombatState = null;
-            updateUniversalBoardState();
-            triggerConductCombatPhase(); 
+            if (activeCombatState && activeCombatState.isRetreat) {
+                // Start manual retreat routing instead of immediately clearing state
+                initiateRetreatMovement(targetTerr);
+            } else {
+                delete combatPhaseData[targetTerr];
+                activeCombatState = null;
+                updateUniversalBoardState();
+                triggerConductCombatPhase(); 
+            }
         }, 800);
+    }
+
+    function getAvailableCoordinate(finalSpace, unitWidth, unitHeight, targetPath, survivorId) {
+        const threshold = 10; // Distance threshold to avoid overlap with other units in the same territory
+        
+        const isOccupied = (x, y) => {
+            return placedUnitsData.some(u => {
+                if (u.placedIn !== finalSpace) return false;
+                if (u.element.id === survivorId) return false;
+                const dx = u.x - x;
+                const dy = u.y - y;
+                return Math.sqrt(dx * dx + dy * dy) < threshold;
+            });
+        };
+
+        // 1. Try unit-coordinates.json
+        if (window.unitCoordinatesMain && window.unitCoordinatesMain[finalSpace]) {
+            const coords = window.unitCoordinatesMain[finalSpace];
+            for (const coord of coords) {
+                if (!isOccupied(coord.x, coord.y)) {
+                    return { x: coord.x, y: coord.y };
+                }
+            }
+        }
+
+        // 2. Try unit-coordinates-backup.json
+        if (unitCoordinatesBackup && unitCoordinatesBackup[finalSpace]) {
+            const coords = unitCoordinatesBackup[finalSpace];
+            for (const coord of coords) {
+                if (!isOccupied(coord.x, coord.y)) {
+                    return { x: coord.x, y: coord.y };
+                }
+            }
+        }
+
+        // 3. Fallback: Find a random coordinate inside the target path
+        if (targetPath && typeof targetPath.isPointInFill === 'function') {
+            const bbox = targetPath.getBBox();
+            const svgPoint = currentSvgElement.createSVGPoint();
+            for (let attempt = 0; attempt < 200; attempt++) {
+                const rx = bbox.x + Math.random() * bbox.width;
+                const ry = bbox.y + Math.random() * bbox.height;
+                svgPoint.x = rx;
+                svgPoint.y = ry;
+                if (targetPath.isPointInFill(svgPoint)) {
+                    // Offset by half dimensions to center the unit group over the selected point
+                    return { x: rx - unitWidth / 2, y: ry - unitHeight / 2 };
+                }
+            }
+        }
+
+        // 4. Absolute Fallback: Center of the bounding box
+        if (targetPath) {
+            const bbox = targetPath.getBBox();
+            return {
+                x: bbox.x + bbox.width / 2 - unitWidth / 2,
+                y: bbox.y + bbox.height / 2 - unitHeight / 2
+            };
+        }
+
+        return { x: 0, y: 0 };
+    }
+
+    function initiateRetreatMovement(fromTerritory) {
+        const adjs = (territoryAdjacencies[fromTerritory]?.adjacent_to || []).map(String);
+        const activePower = activePowerForTech;
+        const alliance = AXIS_POWERS.has(activePower) ? AXIS_POWERS : ALLIED_POWERS;
+        const movingUnitAlliance = AXIS_POWERS.has(activePower) ? 'Axis' : 'Allies';
+        
+        const isSeaSpace = !isNaN(Number(fromTerritory));
+        // Filter survivors to only include those relevant to the battle space type
+        const survivors = activeCombatState.Attackers.filter(u => {
+            const isSeaUnit = SEA_UNIT_TYPES.includes(u.unitType);
+            if (isSeaSpace) {
+                // In sea battles, only sea units and air units can retreat
+                return isSeaUnit || airUnitTypes.includes(u.unitType);
+            } else {
+                // In land battles, only land units and air units retreat (sea transports stay parked in adjacent sea zones)
+                return !isSeaUnit || airUnitTypes.includes(u.unitType);
+            }
+        });
+
+        if (survivors.length === 0) {
+            cleanupRetreat(fromTerritory);
+            return;
+        }
+
+        const containsSeaUnits = survivors.some(u => SEA_UNIT_TYPES.includes(u.unitType));
+        const containsLandUnits = survivors.some(u => !SEA_UNIT_TYPES.includes(u.unitType) && !airUnitTypes.includes(u.unitType));
+
+        // Evaluate valid adjacent destinations based on unit composition, direct ownership, alliances, and pro-side alignment
+        const validDestinations = adjs.filter(adj => {
+            const el = currentSvgElement.querySelector(`[data-name="${adj}"]`);
+            if (!el) return false;
+            
+            const power = el.getAttribute('data-power');
+            const isSea = !isNaN(Number(adj));
+
+            if (power === 'Impassable') return false;
+
+            if (isSea) {
+                if (containsLandUnits) return false; // Land units cannot retreat to sea zones
+                
+                // If the retreating force contains air units, verify landing space on friendly Aircraft Carriers
+                const containsAirUnits = survivors.some(u => airUnitTypes.includes(u.unitType));
+                if (containsAirUnits) {
+                    const friendlyACCsCount = placedUnitsData.filter(u => 
+                        u.placedIn === adj && 
+                        u.unitType === 'ACC' && 
+                        alliance.has(u.power)
+                    ).reduce((sum, u) => sum + parseInt(u.count || 1, 10), 0);
+
+                    const preExistingAirUnits = placedUnitsData.filter(u => 
+                        u.placedIn === adj && 
+                        airUnitTypes.includes(u.unitType) && 
+                        alliance.has(u.power)
+                    ).reduce((sum, u) => sum + parseInt(u.count || 1, 10), 0);
+
+                    const totalCapacity = friendlyACCsCount * 2;
+                    const availableCapacity = Math.max(0, totalCapacity - preExistingAirUnits);
+
+                    const retreatingAirUnitsCount = survivors.filter(u => 
+                        airUnitTypes.includes(u.unitType)
+                    ).reduce((sum, u) => sum + parseInt(u.count || 1, 10), 0);
+
+                    // Retreat is not partial; if there isn't enough space for all retreating planes, this option is blocked
+                    if (retreatingAirUnitsCount > availableCapacity) {
+                        return false; 
+                    }
+                }
+                
+                // Sea zone must be empty of enemy units or occupied by friendly units
+                const hasEnemyUnits = placedUnitsData.some(u => 
+                    u.placedIn === adj && 
+                    SEA_UNIT_TYPES.includes(u.unitType) && 
+                    !alliance.has(u.power)
+                );
+                if (hasEnemyUnits) return false;
+
+                return true; 
+            } else {
+                if (containsSeaUnits) return false; // Sea units cannot retreat to land spaces
+                
+                // Friendly Check: Includes direct ownership, active alliance partners, and pro-side neutral alignment
+                const isDirectOwner = (power === activePower);
+                const isAllyOwner = alliance.has(power);
+                const isProSide = (movingUnitAlliance === 'Axis' && power === 'Pro-Axis Neutral') || 
+                                  (movingUnitAlliance === 'Allies' && power === 'Pro-Allied Neutral');
+
+                return isDirectOwner || isAllyOwner || isProSide;
+            }
+        });
+
+        if (validDestinations.length === 0) {
+            showCustomModal("No Path of Retreat", "There are no valid friendly territories or sea zones to retreat to. Surviving units are lost.");
+            survivors.forEach(survivor => {
+                svgWrapper.querySelectorAll(`[id="${survivor.id}"]`).forEach(el => el.remove());
+                placedUnitsData = placedUnitsData.filter(u => u.element.id !== survivor.id);
+            });
+            cleanupRetreat(fromTerritory);
+            return;
+        }
+
+        showCustomModal("Select Retreat Destination", "Please select an adjacent highlighted territory on the main map to retreat your surviving forces.");
+
+        const retreatHighlights = [];
+
+        validDestinations.forEach(dest => {
+            const paths = svgWrapper.querySelectorAll(`polygon[data-name="${dest}"], path[data-name="${dest}"]`);
+            paths.forEach(path => {
+                const originalFill = path.style.fill;
+                const originalOpacity = path.style.fillOpacity;
+                
+                const clone = path.cloneNode(true);
+                clone.removeAttribute('id');
+                clone.removeAttribute('class');
+                clone.style.fill = 'rgba(51, 207, 255, 0.45)'; // Bright cyan translucent overlay
+                clone.style.stroke = '#33CFFF';
+                clone.style.strokeWidth = '3px';
+                clone.style.pointerEvents = 'auto';
+                clone.style.cursor = 'pointer';
+
+                let highlightLayer = path.ownerSVGElement.querySelector('.top-highlight-layer');
+                if (!highlightLayer) {
+                    highlightLayer = path.ownerSVGElement.ownerDocument.createElementNS('http://www.w3.org/2000/svg', 'g');
+                    highlightLayer.setAttribute('class', 'top-highlight-layer');
+                    const bgLabels = path.ownerSVGElement.querySelector('[id^="background-labels-layer"]');
+                    if (bgLabels) path.ownerSVGElement.insertBefore(highlightLayer, bgLabels);
+                    else path.ownerSVGElement.appendChild(highlightLayer);
+                }
+                highlightLayer.appendChild(clone);
+
+                const clickHandler = (e) => {
+                    e.stopPropagation();
+                    executeRetreatTo(dest, survivors, fromTerritory);
+                    
+                    retreatHighlights.forEach(h => {
+                        if (h.clone && h.clone.parentNode) h.clone.parentNode.removeChild(h.clone);
+                    });
+                };
+
+                clone.addEventListener('click', clickHandler);
+                retreatHighlights.push({ clone, path, originalFill, originalOpacity });
+            });
+        });
+    }
+
+    function executeRetreatTo(destination, survivors, fromTerritory) {
+        const unitListText = [];
+
+        // 1. Consolidate split cargo survivors by parent identifier to prevent count loss
+        const consolidatedSurvivors = [];
+        survivors.forEach(survivor => {
+            const lookupId = survivor.templateId || survivor.id;
+            const existing = consolidatedSurvivors.find(s => (s.templateId || s.id) === lookupId);
+            if (existing) {
+                existing.count += survivor.count;
+            } else {
+                consolidatedSurvivors.push({ ...survivor });
+            }
+        });
+
+        // 2. Process each consolidated survivor using the robust map sync routine
+        consolidatedSurvivors.forEach(survivor => {
+            syncSurvivorMapIcon(survivor, destination);
+
+            const displayName = UNIT_ABBREVIATION_TO_PROFILE_NAME[survivor.unitType] || survivor.unitType;
+            unitListText.push(`${survivor.count}x ${displayName}`);
+        });
+
+        showCustomModal("Retreat Successful", `The following units retreated to ${destination}:\n\n` + unitListText.join('\n'));
+        cleanupRetreat(fromTerritory);
+    }
+
+    function cleanupRetreat(fromTerritory) {
+        delete combatPhaseData[fromTerritory];
+        activeCombatState = null;
+        updateUniversalBoardState();
+        triggerConductCombatPhase();
     }
 
     // Helper to ensure hits label is updated correctly
@@ -13035,7 +13842,15 @@
             statusText = `SELECT TARGETS: ${remaining} / ${total}`;
             statusColor = "#33CFFF"; 
             powerName = activeCombatState.attackerPower;
-            subNote = `<div style="font-size: 11px; color: #aaa; margin-top: 4px; font-style: italic;">Use +/- buttons on defenders</div>`;
+            subNote = `<div style="font-size: 11px; color: #aaa; margin-top: 4px; font-style: italic;">Use +/- buttons on defenders. Any unassigned target selects will roll as normal combat attacks.</div>`;
+        } else if (activeCombatState.assigningTbrTargets) {
+            const remaining = activeCombatState.unassignedHits;
+            const total = activeCombatState.tbrTargetsTotal;
+            
+            statusText = `SELECT TBR TARGETS: ${remaining} / ${total}`;
+            statusColor = "#33CFFF"; 
+            powerName = activeCombatState.attackerPower;
+            subNote = `<div style="font-size: 11px; color: #aaa; margin-top: 4px; font-style: italic;">Use +/- buttons on defenders (Infantry/Air/Transports are unselectable)</div>`;
         } else {
             // === Standard Combat Hit Assignment Mode ===
             const displayHits = Math.max(0, activeCombatState.unassignedHits);
@@ -13104,7 +13919,12 @@
                     notes.push(`<div style="font-size: 11px; color: #aaa; margin-top: 4px; font-style: italic;">Max air casualties allowed: ${maxAirCasualties}</div>`);
                 }
 
+                if (activeCombatState.assigningDefenderSurpriseHits) {
+                    notes.push(`<div style="font-size: 11px; color: #ff4444; margin-top: 4px; font-weight: bold; font-style: italic;">Air units cannot absorb submarine surprise strike hits.</div>`);
+                }
+
                 subNote = notes.join("");
+
             }
         }
 
@@ -13134,6 +13954,8 @@
         
         if (activeCombatState.assigningSubTargets) {
             btn.textContent = 'CONFIRM TARGET SELECTS';
+        } else if (activeCombatState.assigningTbrTargets) {
+            btn.textContent = 'CONFIRM TBR TARGET SELECTS';
         } else {
             btn.textContent = 'CONFIRM CASUALTIES';
         }
@@ -13142,6 +13964,7 @@
         updateUnassignedHitsDisplay();
 
         btn.onclick = async () => {
+            const unassignedAtClick = activeCombatState.unassignedHits;
             if (activeCombatState.unassignedHits > 0) {
                 const type = activeCombatState.assigningSubTargets ? "target selects" : "hits";
                 
@@ -13151,9 +13974,12 @@
                 const subsPresent = targetPool.some(u => u.unitType === 'SUB');
 
                 let warningMessage = `You have ${activeCombatState.unassignedHits} unassigned ${type} remaining. If you continue, these unassigned ${type} will do nothing and be discarded.`;
-                
-                // Append custom warning if submarines are present on the target side
-                if (subsPresent) {
+                    
+                    if (activeCombatState.assigningSubTargets) {
+                        warningMessage = `You have ${activeCombatState.unassignedHits} unassigned target selects remaining. If you continue, these unassigned submarines will roll as normal combat attacks instead of target selects.`;
+                    } else if (activeCombatState.assigningTbrTargets) {
+                        warningMessage = `You have ${activeCombatState.unassignedHits} unassigned target selects remaining. If you continue, these unassigned tactical bombers will roll as normal combat attacks instead of target selects.`;
+                    } else if (subsPresent) {
                     warningMessage += ` Note: Assignment may have to be left incomplete because the maximum number of hits allowed on submarines might not be enough to absorb all hits.`;
                 }
 
@@ -13192,6 +14018,34 @@
                 activeCombatState.assigningSubTargets = false;
                 activeCombatState.assigningHits = false;
 
+                // Revert unassigned submarine target selects back to the standard rolling pool
+                if (unassignedAtClick > 0) {
+                    let remainingToRevert = unassignedAtClick;
+                    for (let i = activeCombatState.Attackers.length - 1; i >= 0; i--) {
+                        const u = activeCombatState.Attackers[i];
+                        if (u.unitType === 'SUB' && u.hasFiredSurpriseStrike === true) {
+                            const toRevertFromThis = Math.min(u.count, remainingToRevert);
+                            u.count -= toRevertFromThis;
+                            remainingToRevert -= toRevertFromThis;
+
+                            const revertedCopy = {
+                                ...u,
+                                id: u.id + "-revertedSub-" + Math.random(),
+                                templateId: u.templateId || u.id,
+                                count: toRevertFromThis,
+                                hasFiredSurpriseStrike: false, // will roll normally in standard combat
+                                loadedCargo: []
+                            };
+                            activeCombatState.Attackers.push(revertedCopy);
+
+                            if (u.count <= 0) {
+                                activeCombatState.Attackers.splice(i, 1);
+                            }
+                            if (remainingToRevert <= 0) break;
+                        }
+                    }
+                }
+
                 if (targetedUnits.length > 0) {
                     // 1. Determine Submarine attack target value (check if active power has Super Submarines)
                     const subProfile = window.unitProfileData.find(p => p.unit_type === 'Submarine');
@@ -13227,86 +14081,44 @@
                             if (item.successfulHits > 0) {
                                 const unit = item.unit;
                                 const isCapitalShip = ['BTS', 'ACC'].includes(unit.unitType);
-                                
-                                // Retrieve the exact unit profile to get its IPC cost
-                                const profileName = UNIT_ABBREVIATION_TO_PROFILE_NAME[unit.unitType] || unit.unitType;
-                                const profile = window.unitProfileData.find(p => p.unit_type.toLowerCase() === profileName.toLowerCase());
-                                const unitCost = parseInt(profile?.cost || 0, 10);
-                                
+                                let hits = item.successfulHits;
+
                                 if (isCapitalShip) {
-                                    let hits = item.successfulHits;
-                                    let currentDamage = parseInt(unit.damage || 0, 10);
-                                    
                                     while (hits > 0 && unit.count > 0) {
-                                        if (currentDamage === 1) {
-                                            // Capital ship takes its second hit and is destroyed
-                                            unit.count--;
-                                            currentDamage = 0;
+                                        // Calculate remaining HP of the capital ship stack dynamically
+                                        let remainingHP = (unit.count * 2) - (unit.damage || 0) - ((unit.pendingCountAdjustment || 0) * 2) - (unit.pendingDamage || 0);
+                                        if (remainingHP <= 0) {
+                                            totalExcessHits += hits;
+                                            hits = 0;
+                                            break;
+                                        }
+
+                                        let totalDamageFound = (unit.damage || 0) + (unit.pendingDamage || 0);
+                                        if (totalDamageFound >= 1) {
+                                            const currentAdjust = unit.pendingCountAdjustment || 0;
+                                            if (currentAdjust < unit.count) {
+                                                unit.pendingCountAdjustment = currentAdjust + 1;
+                                                unit.pendingDamage = 0;
+                                            } else {
+                                                totalExcessHits++;
+                                            }
                                             hits--;
-                                            // Record the IPC loss for the defender
-                                            currentCombatLosses.def += unitCost;
                                         } else {
-                                            // Capital ship absorbs its first hit as damage
-                                            currentDamage = 1;
+                                            unit.pendingDamage = 1;
                                             hits--;
                                         }
                                     }
-                                    
-                                    unit.damage = currentDamage;
-                                    
-                                    if (hits > 0) {
-                                        totalExcessHits += hits;
-                                    }
-                                    
-                                    // Sync this logical change back to the map immediately
-                                    const mapIcons = svgWrapper.querySelectorAll(`[id="${unit.id}"]`);
-                                    if (unit.count <= 0) {
-                                        mapIcons.forEach(el => {
-                                            el.style.display = 'none';
-                                            el.setAttribute('data-count', '0');
-                                        });
-                                        placedUnitsData = placedUnitsData.filter(item => item.element.id !== unit.id);
-                                    } else {
-                                        mapIcons.forEach(el => {
-                                            el.setAttribute('data-count', unit.count);
-                                            el.setAttribute('data-damage', unit.damage);
-                                            updateMapUnitDamageMarker(el);
-                                        });
-                                    }
                                 } else {
-                                    // Standard 1-HP unit logic
-                                    const killed = Math.min(unit.count, item.successfulHits);
-                                    unit.count -= killed;
-                                    
-                                    // Record the IPC losses for the defender
-                                    currentCombatLosses.def += (killed * unitCost);
-                                    
-                                    const excess = item.successfulHits - killed;
+                                    const remainingHealth = unit.count - (unit.pendingCountAdjustment || 0);
+                                    const sub = Math.min(remainingHealth, hits);
+                                    unit.pendingCountAdjustment = (unit.pendingCountAdjustment || 0) + sub;
+                                    const excess = hits - sub;
                                     if (excess > 0) {
                                         totalExcessHits += excess;
-                                    }
-                                    
-                                    // Sync this logical change back to the map immediately
-                                    const mapIcons = svgWrapper.querySelectorAll(`[id="${unit.id}"]`);
-                                    if (unit.count <= 0) {
-                                        mapIcons.forEach(el => {
-                                            el.style.display = 'none';
-                                            el.setAttribute('data-count', '0');
-                                        });
-                                        placedUnitsData = placedUnitsData.filter(item => item.element.id !== unit.id);
-                                    } else {
-                                        mapIcons.forEach(el => {
-                                            el.setAttribute('data-count', unit.count);
-                                            const countText = el.querySelector('.unit-count-text');
-                                            if (countText) countText.textContent = unit.count;
-                                        });
                                     }
                                 }
                             }
                         });
-
-                        // Clean up any fully eliminated units from the active defending pool
-                        activeCombatState.Defenders = activeCombatState.Defenders.filter(u => u.count > 0);
 
                         renderCombatBoard(); 
 
@@ -13323,7 +14135,46 @@
                             updateUnassignedHitsDisplay();
                             
                             addConfirmButton(() => {
-                                forceImmediateRemoval('defender');
+                                // Staging standard/excess hits on defenders (non-destructive)
+                                const wrappers = document.querySelectorAll('.combat-unit-wrapper[data-side="defender"]');
+                                wrappers.forEach(w => {
+                                    let hits = parseInt(w.dataset.assignedHits || 0);
+                                    if (hits <= 0) return;
+                                    const uType = w.dataset.unitType;
+                                    const uPower = w.dataset.power;
+
+                                    for (let i = activeCombatState.Defenders.length - 1; i >= 0; i--) {
+                                        if (hits <= 0) break;
+                                        let u = activeCombatState.Defenders[i];
+
+                                        if (u.unitType === uType && u.power === uPower) {
+                                            const isCapitalShip = ['BTS', 'ACC'].includes(u.unitType);
+                                            if (isCapitalShip) {
+                                                while (hits > 0 && u.count > 0) {
+                                                    let totalDamageFound = (u.damage || 0) + (u.pendingDamage || 0);
+                                                    if (totalDamageFound >= 1) {
+                                                        const currentAdjust = u.pendingCountAdjustment || 0;
+                                                        if (currentAdjust < u.count) {
+                                                            u.pendingCountAdjustment = currentAdjust + 1;
+                                                            u.pendingDamage = 0;
+                                                        }
+                                                        hits--;
+                                                    } else {
+                                                        u.pendingDamage = 1;
+                                                        hits--;
+                                                    }
+                                                }
+                                            } else {
+                                                const remainingHealth = u.count - (u.pendingCountAdjustment || 0);
+                                                const sub = Math.min(remainingHealth, hits);
+                                                u.pendingCountAdjustment = (u.pendingCountAdjustment || 0) + sub;
+                                                hits -= sub;
+                                            }
+                                        }
+                                    }
+                                    w.dataset.assignedHits = 0;
+                                });
+
                                 applyAssignedDamage('defender');
                                 runNextSurpriseStep();
                             });
@@ -13336,6 +14187,223 @@
                     executeCombatPhase();
                 }
                 return; 
+            }
+
+            // --- BRANCH 1.5: Finishing TBR Target Selection ---
+            if (activeCombatState.assigningTbrTargets) {
+                const wrappers = document.querySelectorAll('.combat-unit-wrapper[data-side="defender"]');
+                const targetedUnits = [];
+                
+                wrappers.forEach(w => {
+                    const hits = parseInt(w.dataset.assignedHits || 0);
+                    if (hits > 0) {
+                        const uType = w.dataset.unitType;
+                        const uPower = w.dataset.power;
+                        const unit = activeCombatState.Defenders.find(d => d.unitType === uType && d.power === uPower);
+                        if (unit) {
+                            targetedUnits.push({ unit, hits });
+                        }
+                        w.dataset.assignedHits = 0; // Reset temporary count
+                    }
+                });
+
+                activeCombatState.assigningTbrTargets = false;
+                activeCombatState.assigningHits = false;
+
+                // Revert unassigned target selects back to standard roll pool
+                if (unassignedAtClick > 0) {
+                    let remainingToRevert = unassignedAtClick;
+                    for (let i = activeCombatState.Attackers.length - 1; i >= 0; i--) {
+                        const u = activeCombatState.Attackers[i];
+                        if (u.unitType === 'TBR' && u.hasFiredSurpriseStrike === true && !u.id.includes("-normalTbr-")) {
+                            const toRevertFromThis = Math.min(u.count, remainingToRevert);
+                            u.count -= toRevertFromThis;
+                            remainingToRevert -= toRevertFromThis;
+
+                            const revertedCopy = {
+                                ...u,
+                                id: u.id + "-revertedTbr-" + Math.random(),
+                                templateId: u.templateId || u.id,
+                                count: toRevertFromThis,
+                                hasFiredSurpriseStrike: false, // will roll in standard combat
+                                loadedCargo: []
+                            };
+                            activeCombatState.Attackers.push(revertedCopy);
+
+                            if (u.count <= 0) {
+                                activeCombatState.Attackers.splice(i, 1);
+                            }
+                            if (remainingToRevert <= 0) break;
+                        }
+                    }
+                }
+
+                if (targetedUnits.length > 0) {
+                    // Determine attack value (3 base, boosted to 4 with Fighter or Tank)
+                    const tbrProfile = window.unitProfileData.find(p => p.unit_type === 'Tactical Bomber');
+                    let tbrAtkVal = tbrProfile ? parseInt(tbrProfile.attack_value) : 3;
+                    const hasAtkFtrOrTank = activeCombatState.Attackers.some(u => u.unitType === 'FTR' || u.unitType === 'TANK');
+                    if (hasAtkFtrOrTank) {
+                        tbrAtkVal = 4;
+                    }
+
+                    let diceData = [];
+                    targetedUnits.forEach(item => {
+                        item.successfulHits = 0;
+                        for (let i = 0; i < item.hits; i++) {
+                            const rollVal = getBalancedDieRoll();
+                            const isHit = rollVal <= tbrAtkVal;
+                            if (isHit) {
+                                item.successfulHits++;
+                            }
+                            diceData.push({
+                                targetVal: tbrAtkVal,
+                                rollValue: rollVal
+                            });
+                        }
+                    });
+
+                    // Trigger 3D Dice Simulation on screen and apply successful hits upon resolution
+                    rollCombatDice(diceData, 'attacker', false).then(() => {
+                        let totalExcessHits = 0;
+                        targetedUnits.forEach(item => {
+                            if (item.successfulHits > 0) {
+                                const unit = item.unit;
+                                const isCapitalShip = ['BTS', 'ACC'].includes(unit.unitType);
+                                let hits = item.successfulHits;
+
+                                if (isCapitalShip) {
+                                    while (hits > 0 && unit.count > 0) {
+                                        // Calculate remaining HP of the capital ship stack dynamically
+                                        let remainingHP = (unit.count * 2) - (unit.damage || 0) - ((unit.pendingCountAdjustment || 0) * 2) - (unit.pendingDamage || 0);
+                                        if (remainingHP <= 0) {
+                                            totalExcessHits += hits;
+                                            hits = 0;
+                                            break;
+                                        }
+
+                                        let totalDamageFound = (unit.damage || 0) + (unit.pendingDamage || 0);
+                                        if (totalDamageFound >= 1) {
+                                            const currentAdjust = unit.pendingCountAdjustment || 0;
+                                            if (currentAdjust < unit.count) {
+                                                unit.pendingCountAdjustment = currentAdjust + 1;
+                                                unit.pendingDamage = 0;
+                                            } else {
+                                                totalExcessHits++;
+                                            }
+                                            hits--;
+                                        } else {
+                                            unit.pendingDamage = 1;
+                                            hits--;
+                                        }
+                                    }
+                                } else {
+                                    const remainingHealth = unit.count - (unit.pendingCountAdjustment || 0);
+                                    const sub = Math.min(remainingHealth, hits);
+                                    unit.pendingCountAdjustment = (unit.pendingCountAdjustment || 0) + sub;
+                                    const excess = hits - sub;
+                                    if (excess > 0) {
+                                        totalExcessHits += excess;
+                                    }
+                                }
+                            }
+                        });
+
+                        renderCombatBoard(); 
+                        applyAssignedDamage('defender');
+
+                        if (totalExcessHits > 0) {
+                            // Convert excess target selects into standard defender hit assignment
+                            activeCombatState.unassignedHits = totalExcessHits;
+                            activeCombatState.assigningHits = true;
+                            activeCombatState.targetSide = 'defender';
+                            
+                            renderCombatBoard();
+                            updateUnassignedHitsDisplay();
+                            
+                            addConfirmButton(() => {
+                                const wrappers = document.querySelectorAll('.combat-unit-wrapper[data-side="defender"]');
+                                wrappers.forEach(w => {
+                                    let hits = parseInt(w.dataset.assignedHits || 0);
+                                    if (hits <= 0) return;
+                                    const uType = w.dataset.unitType;
+                                    const uPower = w.dataset.power;
+
+                                    for (let i = activeCombatState.Defenders.length - 1; i >= 0; i--) {
+                                        if (hits <= 0) break;
+                                        let u = activeCombatState.Defenders[i];
+
+                                        if (u.unitType === uType && u.power === uPower) {
+                                            const isCapitalShip = ['BTS', 'ACC'].includes(u.unitType);
+                                            if (isCapitalShip) {
+                                                while (hits > 0 && u.count > 0) {
+                                                    let totalDamageFound = (u.damage || 0) + (u.pendingDamage || 0);
+                                                    if (totalDamageFound >= 1) {
+                                                        const currentAdjust = u.pendingCountAdjustment || 0;
+                                                        if (currentAdjust < u.count) {
+                                                            u.pendingCountAdjustment = currentAdjust + 1;
+                                                            u.pendingDamage = 0;
+                                                        }
+                                                        hits--;
+                                                    } else {
+                                                        u.pendingDamage = 1;
+                                                        hits--;
+                                                    }
+                                                }
+                                            } else {
+                                                const remainingHealth = u.count - (u.pendingCountAdjustment || 0);
+                                                const sub = Math.min(remainingHealth, hits);
+                                                u.pendingCountAdjustment = (u.pendingCountAdjustment || 0) + sub;
+                                                hits -= sub;
+                                            }
+                                        }
+                                    }
+                                    w.dataset.assignedHits = 0;
+                                });
+
+                                applyAssignedDamage('defender');
+                                runNextSurpriseStep();
+                            });
+                        } else {
+                            runNextSurpriseStep();
+                        }
+                    });
+                } else {
+                    renderCombatBoard();
+                    runNextSurpriseStep();
+                }
+                return; 
+            }
+
+            // --- BRANCH 1.9: Immediate Casualty Logic (AAA, Amphibious Bombardment, Defending Submarine Surprise) ---
+            const isImmediateCasualtyPhase = 
+                activeCombatState.phase === 'AAA' || 
+                activeCombatState.phase === 'AMPHIBIOUS' || 
+                activeCombatState.assigningDefenderSurpriseHits === true;
+
+            if (isImmediateCasualtyPhase) {
+                const sideToHit = activeCombatState.targetSide;
+                
+                // Process and apply damage directly to the counts/DOM immediately
+                forceImmediateRemoval(sideToHit);
+                
+                // Ensure no pending values remain to avoid double-dipping at the end of the round
+                const pool = sideToHit === 'attacker' ? activeCombatState.Attackers : activeCombatState.Defenders;
+                pool.forEach(u => {
+                    u.pendingCountAdjustment = 0;
+                    u.pendingDamage = 0;
+                    if (u.loadedCargo) {
+                        u.loadedCargo.forEach(c => {
+                            c.pendingCountAdjustment = 0;
+                            c.pendingDamage = 0;
+                        });
+                    }
+                });
+
+                activeCombatState.assigningHits = false;
+                renderCombatBoard();
+                callback();
+                return; // Bypass standard deferred casualty logic
             }
 
             // --- BRANCH 2: Standard Casualty Logic (Dice Hits) ---
@@ -13391,11 +14459,11 @@
                         }
                     }
 
-                    // Sync map visuals across clones
+                    // Sync map visuals across clones safely
                     svgWrapper.querySelectorAll(`[id="${rid}"]`).forEach(el => {
                         const unitType = el.getAttribute('data-unit-type');
                         if (['BTS', 'ACC'].includes(unitType) || SPECIAL_INFRASTRUCTURE_UNITS.includes(unitType)) {
-                            el.setAttribute('data-damage', u.damage);
+                            el.setAttribute('data-damage', u.damage || 0);
                             updateMapUnitDamageMarker(el);
                         }
                     });
@@ -13403,8 +14471,8 @@
             });
 
             activeCombatState.assigningHits = false;
-            callback(); 
-            renderCombatBoard(); 
+            renderCombatBoard(); // Render the board FIRST to update post-casualty unit elements
+            callback(); // Then run the callback to safely transition phases and spawn speech bubbles
         };
     }
 
@@ -13415,6 +14483,33 @@
             resolveCombatWinner();
             return;
         }
+
+        // Helper counters to calculate remaining vs original unit counts
+        const getCurrentAttackerCountByType = (unitType) => {
+            let count = 0;
+            activeCombatState.Attackers.forEach(u => {
+                if (u.unitType === unitType) count += u.count;
+                if (u.loadedCargo) {
+                    u.loadedCargo.forEach(c => {
+                        if (c.unitType === unitType) count += c.count;
+                    });
+                }
+            });
+            return count;
+        };
+
+        const getInitialAttackerCountByType = (unitType) => {
+            let count = 0;
+            activeCombatState.initialAttackers.forEach(u => {
+                if (u.unitType === unitType) count += u.count;
+                if (u.loadedCargo) {
+                    u.loadedCargo.forEach(c => {
+                        if (c.unitType === unitType) count += c.count;
+                    });
+                }
+            });
+            return count;
+        };
         
         let btnBox = document.createElement('div');
         btnBox.id = 'combat-retreat-box';
@@ -13434,7 +14529,32 @@
         btnBox.appendChild(continueBtn);
         document.getElementById('combat-screen-overlay').appendChild(btnBox);
         
-        retreatBtn.onclick = () => { btnBox.remove(); resolveCombatWinner(true); };
+        retreatBtn.onclick = () => {
+            // Verify if transported units have been completely removed by count
+            const remainingToDestroy = [];
+            if (activeCombatState.initialTransported) {
+                for (const [unitType, initialCount] of Object.entries(activeCombatState.initialTransported)) {
+                    if (initialCount > 0) {
+                        const currentCount = getCurrentAttackerCountByType(unitType);
+                        const initialTotal = getInitialAttackerCountByType(unitType);
+                        const destroyed = initialTotal - currentCount;
+                        const needed = Math.max(0, initialCount - destroyed);
+                        if (needed > 0) {
+                            const name = UNIT_ABBREVIATION_TO_PROFILE_NAME[unitType] || unitType;
+                            remainingToDestroy.push(`${needed} ${name}`);
+                        }
+                    }
+                }
+            }
+
+            if (remainingToDestroy.length > 0) {
+                showCustomModal("Retreat Blocked", `Retreat is not possible until the transported land units are destroyed. You must still remove: ${remainingToDestroy.join(", ")} before you can retreat.`);
+                return;
+            }
+
+            btnBox.remove(); 
+            resolveCombatWinner(true); 
+        };
         continueBtn.onclick = () => { 
             btnBox.remove(); 
             console.log("=== STARTING NEXT COMBAT ROUND ===");
@@ -13442,20 +14562,11 @@
             // Reset surprise strike flags on attackers and defenders for the new round
             activeCombatState.Attackers.forEach(u => {
                 if (u.unitType === 'SUB') delete u.hasFiredSurpriseStrike;
+                if (u.unitType === 'TBR') delete u.hasFiredSurpriseStrike; // Reset TBR strike flags
             });
             activeCombatState.Defenders.forEach(u => {
                 if (u.unitType === 'SUB') delete u.hasFiredSurpriseStrike;
             });
-
-            console.log(
-              "ATTACKERS",
-              JSON.parse(JSON.stringify(activeCombatState.Attackers))
-            );
-
-            console.log(
-              "DEFENDERS",
-              JSON.parse(JSON.stringify(activeCombatState.Defenders))
-            );
 
             // Set default phase to ATTACKER_ROLL for after the surprise round resolves
             activeCombatState.phase = 'ATTACKER_ROLL';
