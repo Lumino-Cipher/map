@@ -123,13 +123,13 @@
     "territory": "Western United States",
     "unitType": "Air Base",
     "x": 2876.437255859375,
-    "y": 197.23989868164062
+    "y": 477.23989868164062
   },
   {
     "territory": "Western United States",
     "unitType": "Naval Base",
-    "x": 2835.891357421875,
-    "y": 234.43157958984375
+    "x": 2876.891357421875,
+    "y": 504.43157958984375
   },
   {
     "territory": "Hawaiian Islands",
@@ -363,7 +363,7 @@
     "territory": "Western United States",
     "unitType": "Minor Industrial Complex",
     "x": 2925.6448974609375,
-    "y": 212.75657653808594
+    "y": 522.75657653808594
   },
   {
     "territory": "Southern Italy",
